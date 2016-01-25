@@ -8,7 +8,7 @@ Figure
 This White Paper provides .  
 
 *   Chapter 2 – What is an API – styles of APIs
-*   Chapter 3 – What is an open standard.	The process.  The economic value
+*   Chapter 3 – The role of open standards in APIs.	The process.  The economic value
 *   Chapter 4 – existing OGC standards relevant to APIs
 *   Chapter 5 – How to use OGC standards in constructing your API
 *   Chapter 6 – future work of the OGC to support open APIs.

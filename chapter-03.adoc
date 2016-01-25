@@ -1,6 +1,31 @@
-== Asciidoc Table
+== Chapter 3 – The role of open standards in APIs.	
 
-Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum (((pasaj)))pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler.
+=== Open stanards benefits
+
+By agreeing there is an ecomonic value
+
+The process.  The economic value
+
+=== The need for open standards in APIs
+
+
+http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] "The thousands of APIs created over the past 7 years are superficially similar but mutually incompatible. 
+
+* “Everyone has a slightly different view of basic real-world concepts&nbsp;like “person” and “event”. 
+* “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
+* “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json&nbsp;media type."
+
+
+=== OGC's role
+
+–Similar to WMT converging web mapping, OGC can play a leading role in the convergence of the numerous RESTful mapping APIs   
+
+OGC must continue to lead the development of standards that embrace the full richness of geospatial information
+
+* Appreciate the leadership of innovative organizations
+* Deliver high-end functionality for critical functions
+* Inform the marketplace on geospatial accuracy
+
 
 
 .Table Title (Optional)

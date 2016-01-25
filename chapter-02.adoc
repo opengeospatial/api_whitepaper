@@ -1,25 +1,40 @@
-== Source Codes
+== What is an API – styles of APIs
 
-1500'lerden beri kullanılmakta olan standard Lorem Ipsum metinleri ilgilenenler için yeniden üretilmiştir. Çiçero tarafından yazılan 1.10.32 ve 1.10.33 bölümleri de 1914 H. (((Rackham)))Rackham çevirisinden alınan İngilizce sürümleri eşliğinde özgün biçiminden yeniden üretilmiştir.
+=== Definitions
 
-.Editable.java
-[source,java]
-----
-public interface Editable{
+==== API as defined in wikipedia
 
-    void useAsciidocFX();
+In https://en.wikipedia.org/wiki/Computer_programming[computer programming], an **application programming interface** (**API**) is a set of https://en.wikipedia.org/wiki/Subroutine[routines], protocols, and tools for building https://en.wikipedia.org/wiki/Software_application[software and applications.]
 
-}
-----
+An API expresses a https://en.wikipedia.org/wiki/Software_component[software component] in terms of its operations, inputs, outputs, and underlying types, defining functionalities that are independent of their respective implementations, which allows definitions and implementations to vary without compromising the interface. A good API makes it easier to develop a program by providing all the building blocks, which are then put together by the programmer.
 
-[source,ruby]  
-.app.rb 
----- 
-require 'sinatra'
+An API may be for a web based system, operating system, or database system, and it provides facilities to develop applications for that system using a given programming language. As an example, a programmer who develops apps for Android may use an Android API to interact with hardware, like the front camera of an Android-based device.
 
-get '/hi' do # <1>
-  "Hello World!" # <2>
-end
-----
-<1> Hooks `/hi` path when get request
-<2> Returns "Hello World!"
+APIs often come in the form of a https://en.wikipedia.org/wiki/Library_(computing)[library] that includes specifications for https://en.wikipedia.org/wiki/Subroutine[routines], https://en.wikipedia.org/wiki/Data_structure[data structures], https://en.wikipedia.org/wiki/Class_(computer_programming)[object classes], and variables. In other cases, notably https://en.wikipedia.org/wiki/SOAP[SOAP] and https://en.wikipedia.org/wiki/REST[REST] https://en.wikipedia.org/wiki/Web_service[services], an API is simply a specification of https://en.wikipedia.org/wiki/Remote_procedure_call[remote calls] exposed to the API consumers.^https://en.wikipedia.org/wiki/Application_programming_interface#cite_note-1[[1]]^
+
+==== WebAPI as defined in Wikipedia
+
+A **web API** is an https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface] (API) for either a https://en.wikipedia.org/wiki/Web_server[web server] or a https://en.wikipedia.org/wiki/Web_browser[web browser].
+
+A https://en.wikipedia.org/wiki/Server-side[server-side] web API is a programmatic https://en.wikipedia.org/wiki/Interface_(computing)[interface] consisting of one or more publicly exposed endpoints to a defined https://en.wikipedia.org/wiki/Request-response[request-response] message system, typically expressed in https://en.wikipedia.org/wiki/JSON[JSON] or https://en.wikipedia.org/wiki/XML[XML], which is exposed via the web--most commonly by means of an https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol[HTTP]-based web server. 
+
+==== API in TB 11 REST Engineering Report
+
+Application Programming Interface (API) - an interface definition that permits invoking services from application programs without knowing details of their internal implementation.
+
+==== Probrammable API
+
+API Endpoint
+
+=== Discussion of Defintions
+
+Agree that it is interface and not the internalimplementation.  
+
+Inconsistent if an API is 
+
+* code in a programming language or 
+* web protocol (http) structures, or
+* requirements in a specification that the interface must meet.
+
+The term has come to imply a much broader discussion, e.g., the basis for marketing your company as defined by the http://www.programmableweb.com/news/apis-are-user-interfaces-just-different-users-mind/analysis/2015/12/03[ProgrammableWeb]: "The groundswell of interest in APIs has given birth to a cottage industry that isn’t so cottage anymore: the API economy."
+
