@@ -1,103 +1,37 @@
 [preface]
-== Example Preface
+== Preface
 
-<title></title>
+This White Paper provides a discussion of Application Programming Interfaces (APIs) to support discussion of possible actions in the Open Geospatial Consortium.
 
-	<style type="text/css">
-		@page { margin: 0.79in }
-		p { margin-bottom: 0.1in; direction: ltr; font-size: 12pt; line-height: 120%; text-align: left; orphans: 2; widows: 2 }
-		a:link { color: #0000ff }
-		a.ctl:link { font-family: "Times New Roman" }
-	</style>
+* Chapter 1 – What is an API?
+* Chapter 2 – API examples for Web Mapping
+* Chapter 3 – The role of open standards in APIs.	
+* Chapter 4 – Using parts of OGC stnadards in APIs 
+* Chapter 5 – Future work of the OGC to support open APIs.
 
-<font size="4" style="font-size: 14pt">**Abstract**</font>
 
-This White Paper supports development of APIs in an open standards
-environment:
 
-*   What is an API?
-
-*   What is an open standard?
-
-*   How can OGC open standards help you develop your APIs
-
-These topics have been discussed in OGC.
-
-<font size="4" style="font-size: 14pt">**Keywords**</font>
+**Keywords**
 
 ogcdoc, OGC documents, api, standards
 
-<font size="4" style="font-size: 14pt">**Submitters of this document**</font>
+
+**Submitters of this document**
 
 All questions regarding this white paper should be directed to the
 editor or the submitters:
 
-<center>
-
-|====
-| 				
-<font color="#ff0000"><font color="#00000a"><font size="2" style="font-size: 9pt">Name</font></font></font>
-
-			 | 				
-<font color="#ff0000"><font color="#00000a"><font size="2" style="font-size: 9pt">Affiliation</font></font></font>
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Chris
-				Holmes</font></font></font>
-
-			 | 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Planet
-				Labs</font></font></font>
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Dave
-				Wesloh</font></font></font>
-
-			 | 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">NGA</font></font></font>
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Gary</font></font></font>
-
-			 | 				
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Arnulf
-				Christl</font></font></font>
-
-			 | 				
-
-| 				
-
-			 | 				
-
-| 				
-
-			 | 				
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Scott
-				Simmons</font></font></font>
-
-			 | 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">OGC</font></font></font>
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">Bart
-				de Lathower</font></font></font>
-
-			 | 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">OGC</font></font></font>
-
-| 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">George
-				Percivall</font></font></font>
-
-			 | 				
-<font color="#008000"><font color="#000000"><font size="2" style="font-size: 9pt">OGC</font></font></font>
-
-|====
-
-</center>
-
-  
+.Document Contributors
+[options="header,footer"]
+|=======================
+|Name|Affiliation    
+|Chris Holmes   |Planet Labs     
+|Dave Wesloh    |NGA   
+|Gary Gale    |What 3 Words     
+|Arnulf Christl    |Metaspatial
+|Josh Lieberman |Tumbling Walls
+|   | 
+| Scott Simmons  |OGC
+|Bart de Lathower   |OGC 
+|George Percivall, editor   |OGC 
+|=======================

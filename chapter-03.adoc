@@ -1,5 +1,12 @@
 == Chapter 3 – The role of open standards in APIs.	
 
+== When is an API "open"
+
+Use Standards and policy and OpenStand defintions.
+
+
+The term has come to imply a much broader discussion, e.g., the basis for marketing your company as defined by the http://www.programmableweb.com/news/apis-are-user-interfaces-just-different-users-mind/analysis/2015/12/03[ProgrammableWeb]: "The groundswell of interest in APIs has given birth to a cottage industry that isn’t so cottage anymore: the API economy."
+
 === Open stanards benefits
 
 By agreeing there is an ecomonic value
@@ -15,6 +22,9 @@ http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richards
 * “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json&nbsp;media type."
 
+=== SensorThing
+
+=== The OpenAPI Specification (fka The Swagger Specification)
 
 === OGC's role
 
