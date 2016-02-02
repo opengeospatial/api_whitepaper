@@ -1,27 +1,28 @@
-= Chapter 1 – What is an API?
+= Chapter 1. What is an API?
 
-This chapter provides discussion of several software engineering definitions for APIs.
+This chapter provides discussion of software engineering definitions for APIs and Application Protocols.  OGC Web Service Standards are web protocols. APIs are code that implement protocols.  APIs may implement REST design principles.
 
-== API is an interface
+== APIs are interfaces
 
 An https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] is a set of routines, protocols, and tools for building software and applications.
 
-An API is an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange.  It is this notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
+An API is an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
 
 As defined in https://portal.opengeospatial.org/files/?artifact_id=64860[OGC® Testbed 11 REST Interface Engineering Report], OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs without knowing details of their internal implementation.
 
-== API is source code and structure
+
+== APIs are source code and structure
 
 In the recent http://www.cafc.uscourts.gov/content/oracle-america-inc-v-google-inc-opinion[Oracle v. Google decision] an API was described using the following concepts:
 
-* APIs are written in source code of two types: (1) declaring code; and (2) implementing code. For interoperability the declaring code must be followed exactly.  The implementing code need not be reused.  
+* APIs are written in source code of two types: (1) declaring code; and (2) implementing code. For interoperability the declaring code must be followed exactly. The implementing code need not be reused.  
 * The API code consists of classes and methods in an taxonomy with structure, sequence, and organization (SSO)
 
 (Note: Many issues decided in Oracle v. Google are not related to software engineering and so are not discussed in this chapter.)
 
 == OGC GeoAPI is code and structure
 
-http://www.geoapi.org/[The OGC GeoAPI standard] provides a set of Java language programming interfaces for geospatial applications.
+http://www.geoapi.org/[The OGC GeoAPI standard]provides a set of Java language programming interfaces for geospatial applications.
 
 The GeoAPI interfaces closely follow the abstract model and concrete specifications published collaboratively by the http://www.isotc211.org/[International Organization for Standardization] (ISO) in its 19100 series of documents and the http://www.opengeospatial.org/[Open Geospatial Consortium] (OGC) in its abstract and implementation specifications.
 
@@ -35,13 +36,24 @@ A server-side WebAPI is a programmatic interface consisting of one or more publi
 
 A client-side WebAPI is a programmatic interface to extend functionality within web browser or other HTTP client. Originally these were most commonly in the form of native plug-in architectures however most newer ones target standardized JavaScript bindings.
 
-== OGC Standards for WebAPIs
+== OGC Protocols for WebAPIs
 
-http://www.opengeospatial.org/standards[OGC Standards] applicable to WebAPIs include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS.
+http://www.opengeospatial.org/standards[OGC Web Service (OWS) Standards] applicable to WebAPIs include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS.
 
-These OGC Web Service standards define requirements for server-side WebAPIs. The requirements cover function and structure of the protocols to be met by the WebAPIs.  The standards provide conformance tests to confirm that the requirements are met by implementations.  The OGC standards as currently written do not specify source code so they cannot strickly be called APIs.  As currently written the OGC Web Service Standards are more properly labeled as communication protocols.
+The OWS standards define requirements for server-side WebAPIs. The requirements cover function and structure of the protocols to be met by the WebAPIs. The OWS standards as currently written do not specify source code so cannot be called APIs.  
 
-The existing OGC web service standards could be used to assess conformance of WebAPIs, i.e., source code, to the requirements in the OGC standards.  To do so a different set of conformance classes would need to be written.
+As currently written the OWS Standards are protocols standards. https://en.wikipedia.org/wiki/Application_layer#Application_layer_protocolsl[Application protocols] specify interfaces and operations. For example, http is a protocol standard. The OWS standards provide conformance tests to confirm that peformance requirements are met by implementations.  The OWS standards do not specify code.
+
+The existing OWS standards could be used to assess conformance of WebAPIs, i.e., source code, to the requirements in the OGC standards.  To do so a different set of conformance classes would need to be written in the OGC Standards.
+
+== Summary
+
+* APIs are "client libraries" - libraries of code used to develop a client.
+* OGC Web Service standards specify web protocols based on http.
+* OWS standards have been implemented in numerous APIs - see Chapter 2.
+* Its not unusual to see a Protocol be incorrectly labeled as an API.
+* REST guidelines for web protocols may be implemented as REST APIs
+
 
 
 

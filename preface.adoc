@@ -1,15 +1,19 @@
 [preface]
 == Preface
 
-This White Paper provides a discussion of Application Programming Interfaces (APIs) to support discussion of possible actions in the Open Geospatial Consortium.
+OGC defines interfaces that enable interoperability of geospatial applications. API’s are a popular method to implement interfaces for accessing spatial data. This White Paper provides a discussion of Application Programming Interfaces (APIs) to support discussion of possible actions in the Open Geospatial Consortium (OGC).
 
 * Chapter 1 – What is an API?
-* Chapter 2 – API examples for Web Mapping
-* Chapter 3 – The role of open standards in APIs.	
-* Chapter 4 – Using parts of OGC stnadards in APIs 
-* Chapter 5 – Future work of the OGC to support open APIs.
+* Chapter 2 – Web Mapping API examples
+* Chapter 3 – OGC essentials for APIs
+* Chapter 4 – Open standards and APIs.
+* Chapter 5 – OGC support for open APIs
 
+This is a complex topic.  We have a road of education, discussion, implementation and consensus ahead of us. This paper should help answer questions like:
 
+* If you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose?  
+* If you are developing your API how can you include essential geospatial elements reused from previous best practice?
+* How to overcome “walls” of complexity and build on success of “pointy” APIs  that they are small and simple
 
 **Keywords**
 

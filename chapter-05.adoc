@@ -1,48 +1,46 @@
-== Using Mathematical Formulas
+= Chapter 5. OGC support for open APIs
 
-http://www.mathjax.org/[MathJax] is an open source JavaScript display engine for (((mathematics)))mathematics that works in all browsers. In addition to png output, you can produce svg output also. Just change the extension.
+== Discussion in OGC meetings
 
-.Tex Example
-[math,file="tex-formula.png"]
---
-\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{u} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xyz
-\end{align}
---
+Many of the ideas in this paper were presented and discussed in the OGC Architecture DWG in Nottingham, September 2015.  Excerpts include:
 
-You can use (((Tex)))Tex or (((MathML)))MathML languages for describing mathematical formulas in AsciidocFX. AsciidocFX converts this textual formulas as png image.
+* Problem statement: if you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose.  
+* There are plenty of simple API providers that get maps to the web, we don’t need to compete, but should be part of the “spectrum” of user communities. 
+* Trying to overcome “walls” of complexity; success of “pointy” APIs is that they are small and simple
+* The boundary should be that OGC does not create code.  We do the “I,” do we want to do part of the “AP?”  Answer: we want to do “P” – not apps
 
-.MathML Example
-[math,file="mathml-formula.png"]
---
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>x</mi>
-  <mo>=</mo>
-  <mrow>
-    <mfrac>
-      <mrow>
-        <mo>&#x2212;</mo>
-        <mi>b</mi>
-        <mo>&#xB1;</mo>
-        <msqrt>
-          <msup>
-            <mi>b</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>&#x2212;</mo>
-          <mn>4</mn>
-          <mi>a</mi>
-          <mi>c</mi>
-        </msqrt>
-      </mrow>
-      <mrow>
-        <mn>2</mn>
-        <mi>a</mi>
-      </mrow>
-    </mfrac>
-  </mrow>
-  <mtext>.</mtext>
-</math>
---
+== Specific actions
+
+These actions are recommended in the context of the OWS Common revision:
+
+=== OGC API Essentials.  
+
+Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements. Create a micro website  aimed at developers building API's, that introduces the useful pieces with references the full OGC specs. And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
+
+=== REST Interface development 
+
+Further develop the use of RESTful approaches for OGC web service interfaces.  Use the results documented in OGC Testbed 11 REST Interface Engineering Report (OGC 15-052r1). 
+
+=== Learn from SensorThings API
+
+Consider the results of SensorThings API development in the further development of OGC web service interfaces.
+
+=== Simple Abstract Service and Resource Model 
+
+The objective of this “thought experiment” is to show that object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances. See John Herring's note)
+
+=== Standard community activities
+Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages. Consider using the https://openapis.org/specification[OpenAPI Specification]  to define a standard, language-agnostic interface to REST APIs. (OpenAPI was previously called The Swagger Specification)
+
+== OGC's role
+
+OGC can continue to lead the development of standards that embrace the full richness of geospatial information
+
+* Appreciate the leadership of innovative organizations
+* Deliver high-end functionality for critical functions
+* Inform the marketplace on geospatial accuracy
+
+Similar to how the OGC Web Mapping Testbed in 1999 resulted in a convergence of web mapping, OGC can now play a leading role in the supporting the world of APIs by defining OGC API Essentials and RESTful web mapping standards.   
+
+
+

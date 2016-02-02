@@ -1,10 +1,14 @@
-= Chapter 2 – Web Mapping API examples 
+= Chapter 2. Web Mapping API examples 
 
-== Popular web mapping APIs
+== Web mapping APIs
 
-APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. Several of these APIs are presented below as examples.  None of the APIs listed in this section is "open" as defined in the next Chapter.
+Web mapping APIs provide access to maps over the web.  They are Client-side WebAPIs as defined in the prevoius chapter.  While web maping APIs are defined in multiple programming languages, the examples here focus on Javascript.
 
-=== Google Maps
+APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. 
+
+Most the the APIs listed below implement the OWS Protocols either explicitly or the API provides an extension method for adding protocols.
+
+== Google Maps
 
 https://developers.google.com/maps[Google Maps APIs] are available for Android, iOS, web browsers in Javascript and via HTTP web services.  The Google Maps API pulls from Google Map servers and may be configured to pull from other servers.
 
@@ -20,8 +24,7 @@ Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed o
 
 Center is of type https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude. This cautionary note is provided: "Although the default map projection associates longitude with the x-coordinate of the map, and latitude with the y-coordinate, the latitude coordinate is always written__first__, followed by the longitude. A separate page describes https://developers.google.com/maps/documentation/javascript/maptypes#MapCoordinates[MapCoordinates] including the use of https://en.wikipedia.org/wiki/World_Geodetic_System[World Geodetic System WGS84] and  https://en.wikipedia.org/wiki/Mercator_projection[Mercator projection].
 
-
-=== OpenLayers
+== OpenLayers
 
 http://openlayers.org/[OpenLayers] is an open source library for displaying map data in web browsers.  Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources. The OGC Web Map Services are supported.
 
@@ -49,7 +52,7 @@ An ol.View has a projection that determines the coordinate system of the center 
 
 The zoom option is a convenient way to specify the map resolution. The available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution. 
 
-=== MapQuest API for OpenStreetMap
+== MapQuest API for OpenStreetMap
 
 http://open.mapquestapi.com/staticmap/#getmap[The MapQuest Open API] accesses 
 MapQuest Open tiles (made from OSM data). The method ``"getmap"`` takes a latitude/longitude pair and will center the static map image over that center point. 
@@ -69,7 +72,7 @@ function doClick() {
 };
 ----
 
-=== Mapbox
+== Mapbox
 
 Tiles
 
@@ -90,42 +93,3 @@ https://api.mapbox.com/v4/mapbox.edf947b8/5/6/11.grid.json?access_token=<your%20
 
 Request a 256x256 image tile or UTFGrid for a given {mapid}. The {z}, {x}, and {y} parameters must be integer coordinates describing the tile position according to the XYZ tiling scheme. The tile {format}defaults to png but can be used to adjust the image quality, format, and scale factor.
 
-== OGC APIs
-
-=== OWS Lib
-
-https://github.com/geopython/OWSLib
-
-=== SensorThings
-
-http://www.sensorup.com/docs/#get45
-
-=== Web Map Service and WMTS as an API
-
-http://docs.opengeospatial.org/is/13-082r2/13-082r2.html[WMTS Simple] 
-
-This profile targets implementation by simple RESTful clients that assume a Web Mercator TileMatrixSet (or a World CRS84 TileMatrixSet), ignores the WMTS ServiceMetadata document entirely they are provided with tile-URL templates as inputs, with all but {TileMatrix}, {TileCol} and {TileRow} resolved. The tile URL templates include, as literals, the base URL of the server, the name of the desired layer, TileMatrixSet information, possible style information, the index ordering that the server expects and an indication of the desired file format. A layer in a WMTS server conformant to this simple profile can be advertised by email, a website or any other means by providing a text like this:
-
-----
-A WMTS 1.0.0 service that can be accessed with a standard WMTS client application at (http://mycompany.com/wmts) using the WMTS simple profile, with the following templates:
-
-The ‘Oceans’ layer:
-http://mycompany.com/wmts/1.0.0/tiles/oceans/default/smerc/{TileMatrix}/{TileCol}/{TileRow}.png
-
-The ‘Transportation’ layer (Rand-McNally style):
-http://mycompany.com/wmts/1.0.0/tiles/transportation/RandMcNally/smerc/{TileMatrix}/{TileCol}/{TileRow}.png”
-----
-
-== "API Design is Stuck in 2008"
-
-[http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/]   [Richardson] has observed "The thousands of APIs created over the past seven years are superficially similar but mutually incompatible. Everyone has a slightly different view of basic real-world concepts like “person” and “event”. This lack of agreement makes it impossible to create client-side software that can be reused between APIs. It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
-
-===  B11 REST ER
-
-TB12 REST ER assessment of WMS and WMTS as Restful APIs
-
-From Josh Lieberman:
-
-There are two senses in which there term API seems to be used. One is the most basic definition supported by the service being invoked. In the case of REST, that is generally the HTTP requests and responses. This sounds like a service interface, but in the context of REST it’s useful to call this an API, since the most extreme forms of Fielding-defined REST presume that all of the application logic also comes from the server. We wanted to consider REST API’s as building blocks of applications that are themselves not necessarily defined by the REST service, i.e. the way that OGC (and most everyone else) views Web services.
-
-The other sense is the adaptation of that basic interface into another application programming technology, such as a toolkit that enables a Java or Python developer to use procedure or function calls to drive the HTTP interaction. The term API is used both for the language specific interface, and for the code that implements it. That definitely gets confusing. So code samples either comprising such a toolkit or invoking it are useful for developer guidance but only if it is made clear that they aren't how the service API is fundamentally defined. That said, 15-052 is definitely only a preliminary work. The question is how to follow up on it.

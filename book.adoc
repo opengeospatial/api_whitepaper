@@ -10,12 +10,6 @@ George Percivall
 
 include::preface.adoc[]
 
-include::colophon.adoc[]
-
-include::dedication.adoc[]
-
-include::glossary.adoc[]
-
 include::chapter-01.adoc[]
 
 include::chapter-02.adoc[]
@@ -25,13 +19,3 @@ include::chapter-03.adoc[]
 include::chapter-04.adoc[]
 
 include::chapter-05.adoc[]
-
-include::chapter-06.adoc[]
-
-include::chapter-07.adoc[]
-
-include::chapter-08.adoc[]
-
-include::bibliography.adoc[]
-
-include::index.adoc[]
