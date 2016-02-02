@@ -8,20 +8,20 @@ This paper covers these topics
 - Web Mapping API examples
 - OGC essentials for APIs
 - Open standards and APIs
-- OGC support for open APIs.
+- OGC support for open APIs
 
-[a]
-------------
+------
 ### About
 This white paper is to support futher discussions and possible actions by the OGC programs. This document is not a standard.
 
 This white paper was developed based on multiple discussions in the OGC Stanards Program. Contributors are listed in the Preface.
-------------
+
+----
 ###Contributing
 
 The contributor understands that any contributions, if accepted by the OGC Membership, shall be incorporated into the formal OGC GeoPackage standards document and that all copyright and  intellectual property shall be vested to the OGC.
 
-------------
+----
 ###Editing and commenting
 
 The editors are accepting public comments and suggested revisions to this paper via GitHub. 
