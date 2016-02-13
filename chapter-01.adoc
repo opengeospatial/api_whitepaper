@@ -1,32 +1,37 @@
 == Chapter 1. What is an API?
 
-This chapter provides discussion of software engineering definitions for APIs and Application Protocols.  OGC Web Service Standards are web protocols. APIs are code that implement protocols.  APIs may implement REST design principles.
+This chapter provides discussion of software engineering definitions for APIs and Application Protocols. 
+ 
+The purpose of an API is to provide a well-known interface between two components of a software system.  These components may reside in the same address space (intra-process), be separate processes on the same machine (inter-process), or separate processes on different machines (distributed).  In many cases the difference is transparent to the user.  Microsofts DCOM, for example, provides the same interface to DCOM objects regardless of where the code actually runs.
+
+An API has two parts.  First is the software which implements the interface.  Second is the documentation of that interface.  When discussing an API it is important to understand which part is under discussion. 
+
+Protocols are often confused for APIs.  Protocols define a set of processes, controls, and encodings for the exchange of information between two software modules interoperating over some communications media.  Most protocols are defined at the wire level.  They address what has to transpire on the wire for the transactions to work.  They do not address how the software on either end of the transaction should be implemented.  The IEEE 802.3 family of protocols defines the Ethernet Data Link layer.  It does not tell you how to implement it or what to do with it once you have it.  802.3 is not an API.
+    
+OGC Web Service Standards are protocols. They describe what happens on the wire.  GeoAPI is an API.  It describes how to access and use OGC Web Service protocols.  The two are complimentary, but different.
 
 === APIs are interfaces
 
-An https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] is a set of routines, protocols, and tools for building software and applications.
-
-An API is an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
+Wikipedia https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
 
 As defined in https://portal.opengeospatial.org/files/?artifact_id=64860[OGC® Testbed 11 REST Interface Engineering Report], OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs without knowing details of their internal implementation.
-
 
 === APIs are source code and structure
 
 In the recent http://www.cafc.uscourts.gov/content/oracle-america-inc-v-google-inc-opinion[Oracle v. Google decision] an API was described using the following concepts:
 
 * APIs are written in source code of two types: (1) declaring code; and (2) implementing code. For interoperability the declaring code must be followed exactly. The implementing code need not be reused.  
-* The API code consists of classes and methods in an taxonomy with structure, sequence, and organization (SSO)
+* The API code consists of classes and methods in a taxonomy with structure, sequence, and organization (SSO)
 
 (Note: Many issues decided in Oracle v. Google are not related to software engineering and so are not discussed in this chapter.)
 
 === OGC GeoAPI is code and structure
 
-http://www.geoapi.org/[The OGC GeoAPI standard]provides a set of Java language programming interfaces for geospatial applications.
+http://www.geoapi.org/[The OGC GeoAPI standard] provides a set of Java language programming interfaces for geospatial applications.
 
 The GeoAPI interfaces closely follow the abstract model and concrete specifications published collaboratively by the http://www.isotc211.org/[International Organization for Standardization] (ISO) in its 19100 series of documents and the http://www.opengeospatial.org/[Open Geospatial Consortium] (OGC) in its abstract and implementation specifications.
 
-The GeoAPI interfaces provide a layer which separates client code, which would call the API, from library code, which implements the API. This follows a similar pattern to the well known http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/[JDBC] API which provides a standardized interface to databases. Clients can use the JDBC API without concern for the particular implementation which they will use. Various groups have implemented different subsets of GeoAPI, see the http://www.geoapi.org/implementations.html[list of known implementations] for details.
+The GeoAPI interfaces provide a layer which separates client code, which would call the API, from library code, which implements the API. This follows a similar pattern to the well-known http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/[JDBC] API which provides a standardized interface to databases. Clients can use the JDBC API without concern for the particular implementation which they will use. Various groups have implemented different subsets of GeoAPI, see the http://www.geoapi.org/implementations.html[list of known implementations] for details.
 
 === WebAPI defined
 
@@ -42,14 +47,18 @@ http://www.opengeospatial.org/standards[OGC Web Service (OWS) Standards] applica
 
 The OWS standards define requirements for server-side WebAPIs. The requirements cover function and structure of the protocols to be met by the WebAPIs. The OWS standards as currently written do not specify source code so cannot be called APIs.  
 
-As currently written the OWS Standards are protocols standards. https://en.wikipedia.org/wiki/Application_layer#Application_layer_protocolsl[Application protocols] specify interfaces and operations. For example, http is a protocol standard. The OWS standards provide conformance tests to confirm that peformance requirements are met by implementations.  The OWS standards do not specify code.
+As currently written the OWS Standards are protocols standards. https://en.wikipedia.org/wiki/Application_layer#Application_layer_protocolsl[Application protocols] specify interfaces and operations. For example, http is a protocol standard. The OWS standards provide conformance tests to confirm that performance requirements are met by implementations.  The OWS standards do not specify code.
 
 The existing OWS standards could be used to assess conformance of WebAPIs, i.e., source code, to the requirements in the OGC standards.  To do so a different set of conformance classes would need to be written in the OGC Standards.
+
+=== Landing Pages as an API
+
+The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.  In this pattern, users follow links from one resource to the next.  Each resource provides the information needed to proceed to the next set of resources.  This pattern assumes a trivial protocol (URLs over HTTP) which can be implemented directly by users and within documents.  Landing Pages are an emerging approach to document an API using this pattern.  A landing page is a collection of web pages which document the API.  The web pages also include URLs which can be executed directly to exercise the advertised capabilities.  In essence, the documentation and implantation are one.        
 
 === Summary
 
 * APIs are "client libraries" - libraries of code used to develop a client.
 * OGC Web Service standards specify web protocols based on http.
 * OWS standards have been implemented in numerous APIs - see Chapter 2.
-* Its not unusual to see a Protocol be incorrectly labeled as an API.
+* It?s not unusual to see a Protocol be incorrectly labeled as an API.
 * REST guidelines for web protocols may be implemented as REST APIs
