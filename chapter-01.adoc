@@ -29,7 +29,7 @@ In the recent http://www.cafc.uscourts.gov/content/oracle-america-inc-v-google-i
 
 http://www.geoapi.org/[The OGC GeoAPI standard] provides a set of Java language programming interfaces for geospatial applications.
 
-The GeoAPI interfaces closely follow the abstract model and concrete specifications published collaboratively by the http://www.isotc211.org/[International Organization for Standardization] (ISO) in its 19100 series of documents and the http://www.opengeospatial.org/[Open Geospatial Consortium] (OGC) in its abstract and implementation specifications.
+The GeoAPI interfaces closely follow the abstract model and concrete specifications published collaboratively by the http://www.isotc211.org/[International Organization for Standardization] (ISO) in its 19100 series of documents and the http://www.opengeospatial.org/[Open Geospatial Consortium] (OGC) in its abstract and implementation standards.
 
 The GeoAPI interfaces provide a layer which separates client code, which would call the API, from library code, which implements the API. This follows a similar pattern to the well-known http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/[JDBC] API which provides a standardized interface to databases. Clients can use the JDBC API without concern for the particular implementation which they will use. Various groups have implemented different subsets of GeoAPI, see the http://www.geoapi.org/implementations.html[list of known implementations] for details.
 
