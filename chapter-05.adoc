@@ -29,8 +29,17 @@ Consider the results of SensorThings API development in the further development 
 
 The objective of this “thought experiment” is to show that object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances. See John Herring's note)
 
-=== Standard community activities
-Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages. Consider using the https://openapis.org/specification[OpenAPI Specification]  to define a standard, language-agnostic interface to REST APIs. (OpenAPI was previously called The Swagger Specification)
+=== API Design Tools
+API Design Tools allow coordinated design, prototype, document and test of APIs. Examples of API Design Tools include: 
+
+** https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md[Swagger] is being developed in to the https://github.com/OAI/OpenAPI-Specification[the Open API Initiative]. Swagger™ can be used to describe and document RESTful APIs.  The Swagger specification defines a set of files required to describe such an API. These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages. Additional utilities can also take advantage of the resulting files, such as testing tools.
+** https://github.com/apiaryio/api-blueprint/[API Blueprint] is a high-level API design language for web APIs. With API Blueprint you can  prototype and model APIs to be created or describe already deployed APIs.
+** http://raml.org/[RESTful API Modeling Language (RAML)] supports management of API lifecycle from design to sharing. RAML defines an application of http://yaml.org/spec/1.2/spec.html[YAML] that provides mechanisms for the definition of RESTful APIs, while providing provisions with which source code generators for client and server source code and comprehensive user documentation can be created.
+
+OGC use of an API design tool would provide auto-generated documents and and client libraries.  If OGC started using these to design new API's it would generate the assets that developers expect.
+
+=== WebIDL for Conceptual Modeling
+Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages. 
 
 == OGC's role
 
