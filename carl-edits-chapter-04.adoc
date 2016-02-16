@@ -54,7 +54,7 @@ Standards were previously "a winner takes all" game.  Winner-takes-all markets a
 
 Making Open and Machine Readable the New Default for Government Information is an https://www.federalregister.gov/articles/2013/05/14/2013-11533/making-open-and-machine-readable-the-new-default-for-government-information[Executive Order] by the US president. https://www.whitehouse.gov/sites/default/files/omb/memoranda/2013/m-13-13.pdf[The OMB Directive] that implements the executive order requires US agencies to use machine readable and open formats, data standards, and common core and extensible metadata for all new information creation and collection efforts. 
 
-== Open standards and APIs
+== So Many APIs
 
 There are many APIs available - most are not open as defined in this section.  http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.   http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that "The thousands of APIs are superficially similar but mutually incompatible: 
 
@@ -70,6 +70,8 @@ There are those in the geospatial community that believe that an Open API is com
 
 Current IT best practices define an Open API as a freely available API that provides a developer with programmatic access to a software application or service. The programmatic access is typically to proprietary software stacks but can also be to open source software, or a combination of both. These APIs use sets of technologies that enable websites and/or client applications to interact with each other by using REST, SOAP, JavaScript and other web technologies.  These APIs have allowed web communities to create an open architecture for sharing content and data between communities and applications.  A very typical application for an Open API is to access data: tweets, geolocation(s), maps, stock quotes, weather sensors, and so forth. An Open API is published on the internet and is free to use by anyone – including a company’s competitors. Further, the licenses for most Open APIs tend to be unrestrictive – such as similar to Creative Commons or the Apache license. Do not confuse the API license with the Terms of Use/Service (ToS) related to any data accessed by the API!! This is a very important distinction. ToS related to data accessed by the API tend to be very restrictive – just check out the Twitter or Google ToS.
 
-Most Open APIs have a strong reliance on standards: OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more. From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards. These API implementations of OGC standards are providing new requirements into the OGC standards process – and the ongoing discussions in the OGC about the role of APIs in the OGC standards development process.
+== Open Standards and APIs
+
+Most Open APIs have a strong reliance on standards: OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more. From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards. These API implementations of OGC standards are providing new requirements into the OGC standards process – and the ongoing discussions in the OGC about the role of APIs in the OGC standards development process. The OGC Members have developed several open APIs as part of the OGC standards process. So, the API itself can also be a standard. GeoAPI is an example.
 
 The steps listed in the next Chapter support the development of Open APIs.
