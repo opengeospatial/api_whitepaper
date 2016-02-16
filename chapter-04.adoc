@@ -4,7 +4,7 @@
 
 To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-== What is Open?
+== What is Open? (Perhaps should be What is a Standards Setting Organization. the following does not define "open")
 
 There are multiple defintions of open standards processes.  This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
@@ -16,6 +16,20 @@ There are multiple defintions of open standards processes.  This set of criteria
 6. There should be reference implementations, competing implementations, and test methods to validate conformance as appropriate.
 
 [Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
+
+== What is an open standard?
+
+The OGC defines Open Standards as standards that are:
+
+    Freely and publicly available – They are available free of charge and unencumbered by patents and other intellectual property.
+    Non discriminatory – They are available to anyone, any organization, any time, anywhere with no restrictions.
+    No license fees - There are no charges at any time for their use.
+    Vendor neutral - They are vendor neutral in terms of their content and implementation concept and do not favor any vendor over another.
+    Data neutral – The standards are independent of any data storage model or format.
+    Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
+
+The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers, whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects. 
+[From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards [Collaborative White Paper between the OGC and OSGeo]]
 
 == The Value of Open Standards
 
