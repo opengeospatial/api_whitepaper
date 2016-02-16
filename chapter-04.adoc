@@ -29,7 +29,8 @@ The OGC defines Open Standards as standards that are:
     Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
 
 The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers, whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects. 
-[From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards [Collaborative White Paper between the OGC and OSGeo]]
+
+[From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]]
 
 == The Value of Open Standards
 
@@ -60,5 +61,7 @@ There are many APIs available - most are not open as defined in this section.  h
 * “Everyone has a slightly different view of basic real-world concepts&nbsp;like “person” and “event”. 
 * “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
+
+==What is an Open API?
 
 The steps listed in the next Chapter support the development of Open APIs.
