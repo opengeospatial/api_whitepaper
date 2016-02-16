@@ -1,10 +1,10 @@
 = Chapter 4. Open standards and APIs.	
 
-== Effective standards
+== Effective Standards
 
 To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-== What is Open?
+== What is Open? (Perhaps should be What is a Standards Setting Organization. the following does not define "open")
 
 There are multiple defintions of open standards processes.  This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
@@ -17,7 +17,22 @@ There are multiple defintions of open standards processes.  This set of criteria
 
 [Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-== The value of open standards
+== What is an open standard?
+
+The OGC defines Open Standards as standards that are:
+
+    Freely and publicly available – They are available free of charge and unencumbered by patents and other intellectual property.
+    Non discriminatory – They are available to anyone, any organization, any time, anywhere with no restrictions.
+    No license fees - There are no charges at any time for their use.
+    Vendor neutral - They are vendor neutral in terms of their content and implementation concept and do not favor any vendor over another.
+    Data neutral – The standards are independent of any data storage model or format.
+    Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
+
+The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers, whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects. 
+
+[From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]]
+
+== The Value of Open Standards
 
 Google official blog - about open
 https://googleblog.blogspot.com/2009/12/meaning-of-open.html
@@ -39,12 +54,24 @@ Standards were previously "a winner takes all" game.  Winner-takes-all markets a
 
 Making Open and Machine Readable the New Default for Government Information is an https://www.federalregister.gov/articles/2013/05/14/2013-11533/making-open-and-machine-readable-the-new-default-for-government-information[Executive Order] by the US president. https://www.whitehouse.gov/sites/default/files/omb/memoranda/2013/m-13-13.pdf[The OMB Directive] that implements the executive order requires US agencies to use machine readable and open formats, data standards, and common core and extensible metadata for all new information creation and collection efforts. 
 
-== Open standards and APIs
+== So Many APIs
 
 There are many APIs available - most are not open as defined in this section.  http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.   http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that "The thousands of APIs are superficially similar but mutually incompatible: 
 
 * “Everyone has a slightly different view of basic real-world concepts&nbsp;like “person” and “event”. 
 * “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
+
+An interesting fact is that the number one category of web APIs by far is Mapping with more than 4,500 APIs. This is more than Social, Mobile or Finance! 
+
+== What is an Open API?
+
+There are those in the geospatial community that believe that an Open API is completely open. The API is free, unencumbered by any IPR, has a non-restrictive license, is open source, and most importantly does not require a proprietary software stack to actually use the API. While most anyone in the geospatial and broader IT world would agree on most of the listed aspects of an Open API, the last “requirement” of not accessing a proprietary software stack is counter to current IT best practices. Further, for example, an Open API defined by an SSO such as the OGC often enables interoperable access to proprietary software stacks.
+
+Current IT best practices define an Open API as a freely available API that provides a developer with programmatic access to a software application or service. The programmatic access is typically to proprietary software stacks but can also be to open source software, or a combination of both. These APIs use sets of technologies that enable websites and/or client applications to interact with each other by using REST, SOAP, JavaScript and other web technologies.  These APIs have allowed web communities to create an open architecture for sharing content and data between communities and applications.  A very typical application for an Open API is to access data: tweets, geolocation(s), maps, stock quotes, weather sensors, and so forth. An Open API is published on the internet and is free to use by anyone – including a company’s competitors. Further, the licenses for most Open APIs tend to be unrestrictive – such as similar to Creative Commons or the Apache license. Do not confuse the API license with the Terms of Use/Service (ToS) related to any data accessed by the API!! This is a very important distinction. ToS related to data accessed by the API tend to be very restrictive – just check out the Twitter or Google ToS.
+
+== Open Standards and APIs
+
+Most Open APIs have a strong reliance on standards: OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more. From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards. These API implementations of OGC standards are providing new requirements into the OGC standards process – and the ongoing discussions in the OGC about the role of APIs in the OGC standards development process. The OGC Members have developed several open APIs as part of the OGC standards process. So, the API itself can also be a standard. GeoAPI is an example.
 
 The steps listed in the next Chapter support the development of Open APIs.
