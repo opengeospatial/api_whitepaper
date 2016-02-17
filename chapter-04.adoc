@@ -1,4 +1,4 @@
-== 4. Open standards and APIs.	
+== Open standards and APIs.	
 
 === Effective Standards
 
@@ -58,7 +58,7 @@ Making Open and Machine Readable the New Default for Government Information is a
 
 There are many APIs available - most are not open as defined in this section.  http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.   http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that "The thousands of APIs are superficially similar but mutually incompatible: 
 
-* “Everyone has a slightly different view of basic real-world concepts&nbsp;like “person” and “event”. 
+* “Everyone has a slightly different view of basic real-world concepts like “person” and “event”. 
 * “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
 

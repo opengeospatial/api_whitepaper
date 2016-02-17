@@ -1,4 +1,4 @@
-==  3. OGC essentials for APIs
+== OGC essentials for APIs
 
 === The Idea of OGC API Essentials
 

@@ -1,4 +1,4 @@
-== 5. OGC support for open APIs
+== OGC support for open APIs
 
 === Discussion in OGC meetings
 

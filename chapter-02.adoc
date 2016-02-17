@@ -1,4 +1,4 @@
-== 2. Web Mapping API examples 
+== Web Mapping API examples 
 
 === Web mapping APIs
 
@@ -103,8 +103,8 @@ Two of the Map State Options
 
 |====
 | Option | Type | Default | Description
-| ``**center**`` | ``http://leafletjs.com/reference-1.0.0.html#latlng[LatLng]`` | ``null`` | Initial geographical center of the map.
-| ``**zoom**`` | ``Number`` | ``null`` | Initial map zoom.
+| **center** | http://leafletjs.com/reference-1.0.0.html#latlng[LatLng] | null | Initial geographical center of the map.
+| **zoom** | Number | null | Initial map zoom.
 |====  
 
 The LatLng type is a geographical point with a latitude and longitude.  No CRS is identify in the Leaflet API page for the LatLng coordinates.
