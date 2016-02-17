@@ -1,4 +1,4 @@
-== What is an API?
+== Chapter 1. What is an API?
 
 This chapter provides discussion of software engineering definitions for APIs and Application Protocols. 
  

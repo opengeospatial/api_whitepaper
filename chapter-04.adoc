@@ -1,18 +1,10 @@
-== Open standards and APIs.	
+= Chapter 4. Open standards and APIs.	
 
-<<<<<<< Updated upstream
 == Effective Standards
 
 To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
 == What is an open stanards setting organization? 
-=======
-=== Effective standards
-
-To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
-
-=== What is Open?
->>>>>>> Stashed changes
 
 There are multiple defintions of open standards processes.  This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
@@ -25,7 +17,6 @@ There are multiple defintions of open standards processes.  This set of criteria
 
 [Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-<<<<<<< Updated upstream
 == What is an open standard?
 
 The OGC defines Open Standards as standards that are:
@@ -42,9 +33,6 @@ The OGC's Open Standards are specifications for interfaces and encodings that en
 [From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]]
 
 == The Value of Open Standards
-=======
-=== The value of open standards
->>>>>>> Stashed changes
 
 Google official blog - about open
 https://googleblog.blogspot.com/2009/12/meaning-of-open.html
@@ -58,19 +46,15 @@ http://www.acilallen.com.au/cms_files/ACIL_spatial%20information_NewZealand.pdf[
 "A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand. Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.  
 Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue. This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."  
 
-=== Winner takes some in software standards
+== Winner takes some in software standards
 
 Standards were previously "a winner takes all" game.  Winner-takes-all markets are where products tend to “tip” toward a single standard, e.g. VHS over Betamax. Due to technology change, markets have switched from an analog winner-takes-all to digital winners-take-some markets [http://cacm.acm.org/magazines/2013/5/163756-strategies-for-tomorrows-winners-take-some-digital-goods-markets/fulltext[Kemerer, et.al]].   Markets characterized by multiple competing software standards have room for more than one winner, unlike traditional hardware markets. Conversion across platforms increasingly allows coexistence of multiple winners. In the case of digital image formats several competing standards, including .jpg, .gif, .png, .bmp, and .tiff, have coexisted for years. Although some formats tend to be more popular than others, there is little tendency toward a winner-takes-all outcome
 
-=== Open Access policies depend on open standards
+== Open Access policies depend on open standards
 
 Making Open and Machine Readable the New Default for Government Information is an https://www.federalregister.gov/articles/2013/05/14/2013-11533/making-open-and-machine-readable-the-new-default-for-government-information[Executive Order] by the US president. https://www.whitehouse.gov/sites/default/files/omb/memoranda/2013/m-13-13.pdf[The OMB Directive] that implements the executive order requires US agencies to use machine readable and open formats, data standards, and common core and extensible metadata for all new information creation and collection efforts. 
 
-<<<<<<< Updated upstream
 == So Many APIs
-=======
-=== Open standards and APIs
->>>>>>> Stashed changes
 
 There are many APIs available - most are not open as defined in this section.  http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.   http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that "The thousands of APIs are superficially similar but mutually incompatible: 
 
