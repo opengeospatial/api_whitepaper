@@ -34,7 +34,6 @@ editor or the submitters:
 |Gary Gale    |What 3 Words     
 |Arnulf Christl    |Metaspatial
 |Josh Lieberman |Tumbling Walls
-|   | 
 | Scott Simmons  |OGC
 |Bart de Lathower   |OGC 
 |George Percivall, editor   |OGC 
