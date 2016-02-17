@@ -10,6 +10,8 @@ This paper covers these topics
 - Open standards and APIs
 - OGC support for open APIs
 
+OGC Document 16-019
+
 ------
 ### About
 This white paper is to support futher discussions and possible actions by the OGC programs. This document is not a standard.
