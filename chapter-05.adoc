@@ -1,35 +1,35 @@
-= Chapter 5. OGC support for open APIs
+== 5. OGC support for open APIs
 
-== Discussion in OGC meetings
+=== Discussion in OGC meetings
 
-Many of the ideas in this paper were presented and discussed in the OGC Architecture DWG in Nottingham, September 2015.  Excerpts include:
+Many of the ideas in this paper were presented and discussed in the OGC Architecture DWG in Nottingham, September 2015.  Excerpts of that discussion include:
 
 * Problem statement: if you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose.  
 * There are plenty of simple API providers that get maps to the web, we don’t need to compete, but should be part of the “spectrum” of user communities. 
 * Trying to overcome “walls” of complexity; success of “pointy” APIs is that they are small and simple
 * The boundary should be that OGC does not create code.  We do the “I,” do we want to do part of the “AP?”  Answer: we want to do “P” – not apps
 
-== Specific actions
+=== Specific actions
 
 These actions are recommended in the context of the OWS Common revision:
 
-=== OGC API Essentials.  
+==== OGC API Essentials.  
 
 Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements. Create a micro website  aimed at developers building API's, that introduces the useful pieces with references the full OGC specs. And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
 
-=== REST Interface development 
+==== REST Interface development 
 
 Further develop the use of RESTful approaches for OGC web service interfaces.  Use the results documented in OGC Testbed 11 REST Interface Engineering Report (OGC 15-052r1). 
 
-=== Learn from SensorThings API
+==== Learn from SensorThings API
 
 Consider the results of SensorThings API development in the further development of OGC web service interfaces.
 
-=== Simple Abstract Service and Resource Model 
+==== Simple Abstract Service and Resource Model 
 
 The objective of this “thought experiment” is to show that object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances. See John Herring's note)
 
-=== API Design Tools
+==== API Design Tools
 API Design Tools allow coordinated design, prototype, document and test of APIs. Examples of API Design Tools include: 
 
 ** https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md[Swagger] is being developed in to the https://github.com/OAI/OpenAPI-Specification[the Open API Initiative]. Swagger™ can be used to describe and document RESTful APIs.  The Swagger specification defines a set of files required to describe such an API. These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages. Additional utilities can also take advantage of the resulting files, such as testing tools.
@@ -38,10 +38,10 @@ API Design Tools allow coordinated design, prototype, document and test of APIs.
 
 OGC use of an API design tool would provide auto-generated documents and and client libraries.  If OGC started using these to design new API's it would generate the assets that developers expect.
 
-=== WebIDL for Conceptual Modeling
+==== WebIDL for Conceptual Modeling
 Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages. 
 
-== OGC's role
+=== OGC's role
 
 OGC can continue to lead the development of standards that embrace the full richness of geospatial information
 

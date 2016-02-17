@@ -1,8 +1,8 @@
-== Chapter 2. Web Mapping API examples 
+== 2. Web Mapping API examples 
 
 === Web mapping APIs
 
-Web mapping APIs provide access to maps over the web.  They are Client-side WebAPIs as defined in the prevoius chapter.  While web maping APIs are defined in multiple programming languages, the examples here focus on Javascript.
+Web mapping APIs defined code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the prevoius chapter.  While web maping APIs are defined in multiple programming languages, the examples here focus on Javascript.
 
 APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. 
 
@@ -28,7 +28,7 @@ Center is of type https://developers.google.com/maps/documentation/javascript/re
 
 ==== OpenLayers
 
-http://openlayers.org/[OpenLayers] is an open source library for displaying map data in web browsers.  Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources. The OGC Web Map Services are supported.
+http://openlayers.org/[OpenLayers] is an open source library for displaying map data in web browsers.  Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources. The OGC Web Services are supported.
 
 The core component of OpenLayers 3 is the map (ol.Map). For a map to render, a view, one or more layers, and a target container are needed:
 
@@ -74,10 +74,10 @@ function doClick() {
 };
 ----
 |=======================
-| Request Parameter | Description | Example Request Data | Required
-| center | A center point for the map image. | 40.039401,-76.307078 | Yes, if the bestfit parameter is not present and no POIs are present
-| zoom | Specifies zoom level for the map image. | A valid zoom integer. See http://open.mapquestapi.com/staticmap/zoomToScale.html[Zoom to Scale Mapping] for information on scales versus zoom levels. | Yes, if the center parameter is present, the scale parameter is not present, and no POIs are present  
-Note: zoom overrides scale
+| Request Parameter | Description | Example Request Data 
+| center | A center point for the map image. | 40.039401,-76.307078 
+| zoom | Specifies zoom level for the map image. | A valid zoom integer. See http://open.mapquestapi.com/staticmap/zoomToScale.html[Zoom to Scale Mapping] for information on scales versus zoom levels.  
+
 |=======================
 
 ==== Leaflet

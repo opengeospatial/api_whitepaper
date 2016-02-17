@@ -5,11 +5,11 @@ OGC defines interfaces that enable interoperability of geospatial applications. 
 
 * Chapter 1 – What is an API?
 * Chapter 2 – Web Mapping API examples
-* Chapter 3 – OGC essentials for APIs
-* Chapter 4 – Open standards and APIs.
-* Chapter 5 – OGC support for open APIs
+* Chapter 3 – OGC Essentials for APIs
+* Chapter 4 – Open Standards and APIs.
+* Chapter 5 – OGC Support for Open APIs
 
-This is a complex topic.  We have a road of education, discussion, implementation and consensus ahead of us. This paper should help answer questions like:
+This is a complex topic.  We have a road of education, discussion, implementation and consensus ahead of us. This paper aims to help answer questions like:
 
 * If you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose?  
 * If you are developing your API how can you include essential geospatial elements reused from previous best practice?
