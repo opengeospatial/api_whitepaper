@@ -20,4 +20,5 @@ include::chapter-04.adoc[]
 
 include::chapter-05.adoc[]
 
-OGC Document 16-019
+OGC Document 16-019 
+Status: Prepared for review at OGC TC March 2016 
