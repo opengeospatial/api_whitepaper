@@ -1,10 +1,9 @@
 = OGC Open Geospatial APIs - White Paper
-George Percivall
 :doctype: book
 :encoding: utf-8
 :lang: en
 :toc: left
-:toclevels: 2
+:toclevels: 3
 :numbered:
 
 

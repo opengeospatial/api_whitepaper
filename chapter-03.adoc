@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 ﻿= Chapter 3. OGC essentials for APIs
+=======
+== OGC essentials for APIs
+>>>>>>> Stashed changes
 
-== The Idea of OGC API Essentials
+=== The Idea of OGC API Essentials
 
 OGC API Essentials are a small subset of OGC standards essential for the most widespread use in the Internet and Web of geospatial information.  The main deliverable is a published list of component parts. 
 
@@ -8,7 +12,7 @@ Discussions in OGC have identified value in recommending small bits of OGC speci
 
 This approach identifies pieces that are standardized and easily use.  It is anticipate that this would raise awareness of OGC in API providers.  Reuse of OGC API Essentials would lead to consistency, accuracy and reuse across the various APIs. And ideally there are lots of small client libraries that can be incorporated in to the libraries API producers provide.
 
-== OGC API Essentials - initial list
+=== OGC API Essentials - initial list
 
 The following specifications are an initial set of OGC Essential Standards to support 'geospatial components for everyone'.  (Some specs exist, some need to be developed.  Not all are OGC standards)
 
@@ -35,12 +39,16 @@ The following specifications are an initial set of OGC Essential Standards to su
 *   GeoRSS Simple
 
 
-== How to move forward
+=== How to move forward
 
 OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective as a common way to access pieces of OGC web services, regardless of which service is accessed.  OWS Common Next Generation need not look all that different inside if built from this perspective, but what differences were present would be quite impactful. 
 
 Going beyond developing and maintaining an OGC API Essential list, there additional value in OGC providing a form of concordance between the many and varied representation forms. Along the lines of “this is what a point is comprised of, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.  Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon and so on within an API's or code library's interface.
 
+<<<<<<< Updated upstream
 OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.  There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on. Take a look at the sterling work done with https://github.com/phayes/geoPHP [GeoPHP].
 
 
+=======
+OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.  There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on. Take a look at the sterling work done with https://github.com/phayes/geoPHP[GeoPHP].
+>>>>>>> Stashed changes

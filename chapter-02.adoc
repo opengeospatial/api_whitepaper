@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 == Chapter 2. Web Mapping API examples 
+=======
+==  Web Mapping API examples 
+>>>>>>> Stashed changes
 
 === Web mapping APIs
 
@@ -8,7 +12,11 @@ APIs for web mapping was the topic of a recent posting by http://www.programmabl
 
 Most the the APIs listed below implement the OWS Protocols either explicitly or the API provides an extension method for adding protocols.
 
+<<<<<<< Updated upstream
 ==== Google Maps
+=======
+=== Google Maps
+>>>>>>> Stashed changes
 
 https://developers.google.com/maps[Google Maps APIs] are available for Android, iOS, web browsers in Javascript and via HTTP web services.  The Google Maps API pulls from Google Map servers and may be configured to pull from other servers.
 
@@ -24,9 +32,13 @@ Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed o
 
 Center is of type https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude. This cautionary note is provided: "Although the default map projection associates longitude with the x-coordinate of the map, and latitude with the y-coordinate, the latitude coordinate is always written__first__, followed by the longitude. A separate page describes https://developers.google.com/maps/documentation/javascript/maptypes#MapCoordinates[MapCoordinates] including the use of https://en.wikipedia.org/wiki/World_Geodetic_System[World Geodetic System WGS84] and  https://en.wikipedia.org/wiki/Mercator_projection[Mercator projection].
 
+<<<<<<< Updated upstream
 
 
 ==== OpenLayers
+=======
+=== OpenLayers
+>>>>>>> Stashed changes
 
 http://openlayers.org/[OpenLayers] is an open source library for displaying map data in web browsers.  Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources. The OGC Web Map Services are supported.
 
@@ -54,7 +66,11 @@ An ol.View has a projection that determines the coordinate system of the center 
 
 The zoom option is a convenient way to specify the map resolution. The available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution. 
 
+<<<<<<< Updated upstream
 ==== MapQuest API for OpenStreetMap
+=======
+=== MapQuest API for OpenStreetMap
+>>>>>>> Stashed changes
 
 http://open.mapquestapi.com/staticmap/#getmap[The MapQuest Open API] accesses 
 MapQuest Open tiles (made from OSM data). The method ``"getmap"`` takes a latitude/longitude pair and will center the static map image over that center point. 
@@ -80,7 +96,11 @@ function doClick() {
 Note: zoom overrides scale
 |=======================
 
+<<<<<<< Updated upstream
 ==== Leaflet
+=======
+=== Mapbox
+>>>>>>> Stashed changes
 
 http://leafletjs.com/[Leaflet] is an open-source JavaScript library for interactive maps. L.map is the central class of the http://leafletjs.com/reference-1.0.0.html[Leaflet API] used to create a map on a page and manipulate it. http://leafletjs.com/reference-1.0.0.html#tilelayer-wms[TileLayer.WMS] is used to dispaly WMS services as tile layers on the map.
 
