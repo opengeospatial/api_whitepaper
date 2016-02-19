@@ -15,11 +15,11 @@ These actions are recommended in the context of the OWS Common revision:
 
 ==== OGC API Essentials.  
 
-Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements. Create a micro website  aimed at developers building API's, that introduces the useful pieces with references the full OGC specs. And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
+Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements. Create a micro website  aimed at developers building API's, that introduces the useful pieces with references to the full OGC specs. And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
 
 ==== REST Interface development 
 
-Further develop the use of RESTful approaches for OGC web service interfaces.  Use the results documented in OGC Testbed 11 REST Interface Engineering Report (OGC 15-052r1). 
+Further develop the use of RESTful approaches for OGC web service interfaces.  Use the results documented in the OGC Testbed 11 REST Interface Engineering Report (OGC 15-052r1). 
 
 ==== Learn from SensorThings API
 
@@ -36,7 +36,7 @@ API Design Tools allow coordinated design, prototype, document and test of APIs.
 ** https://github.com/apiaryio/api-blueprint/[API Blueprint] is a high-level API design language for web APIs. With API Blueprint you can  prototype and model APIs to be created or describe already deployed APIs.
 ** http://raml.org/[RESTful API Modeling Language (RAML)] supports management of API lifecycle from design to sharing. RAML defines an application of http://yaml.org/spec/1.2/spec.html[YAML] that provides mechanisms for the definition of RESTful APIs, while providing provisions with which source code generators for client and server source code and comprehensive user documentation can be created.
 
-OGC use of an API design tool would provide auto-generated documents and and client libraries.  If OGC started using these to design new API's it would generate the assets that developers expect.
+OGC use of an API design tool would provide auto-generated documents and client libraries.  If OGC started using these to design new API's it would generate the assets that developers expect.
 
 ==== WebIDL for Conceptual Modeling
 Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages. 
