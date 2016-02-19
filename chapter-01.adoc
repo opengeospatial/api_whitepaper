@@ -8,11 +8,11 @@ An API has two parts.  First is the software which implements the interface.  Se
 
 Protocols are often confused for APIs.  Protocols define a set of processes, controls, and encodings for the exchange of information between two software modules interoperating over some communications media.  Protocols define what is transmitted "over the wire".  Protocols specify what has to transpire on the wire for the transactions to work.  They do not address how the software on either end of the transaction should be implemented. 
     
-OGC's Web Service Standards are Protocols - they describe what happens on the wire.  OGC's GeoAPI is an API - it describes code interfaes for accesing and use geospatial objects.  The two are complimentary, but different.
+OGC's Web Service Standards are Protocols - they describe what happens on the wire.  OGC's GeoAPI is an API - it describes code interfaces for accessing and using geospatial objects.  The two are complimentary, but different.
 
 === APIs are interfaces
 
-Wikipedia https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
+The https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] entry on Wikipedia defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
 
 As defined in https://portal.opengeospatial.org/files/?artifact_id=64860[OGC® Testbed 11 REST Interface Engineering Report], OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs without knowing details of their internal implementation.
 
@@ -53,7 +53,13 @@ The existing OWS standards could be used to assess conformance of WebAPIs, i.e.,
 
 === Landing Pages as an API
 
-The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.  In this pattern, users follow links from one resource to the next.  Each resource provides the information needed to proceed to the next set of resources.  This pattern assumes a protocol (URLs over HTTP).  Landing Pages are an emerging approach to document an API using this pattern.  A landing page is a collection of web pages which document the API.  The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities.        
+The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.  In this pattern, users follow links from one resource to the next.  Each resource provides the information needed to proceed to the next set of resources.  This pattern assumes a simple protocol (URLs over HTTP).  Landing Pages are an emerging approach to document an API using this pattern.  A landing page is a collection of web pages which document the API.  The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities.
+
+Two examples of landing page APIs are:
+http://developer.deere.com/#/home/landing[John Deer] and
+http://dev.twitter.com/overview/documentation[Twitter]
+
+
 
 === Summary
 
