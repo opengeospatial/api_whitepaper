@@ -8,6 +8,7 @@ Many of the ideas in this paper were presented and discussed in the OGC Architec
 * There are plenty of simple API providers that get maps to the web, we don’t need to compete, but should be part of the “spectrum” of user communities. 
 * Trying to overcome “walls” of complexity; success of “pointy” APIs is that they are small and simple
 * The boundary should be that OGC does not create code.  We do the “I,” do we want to do part of the “AP?”  Answer: we want to do “P” – not apps
+* API’s complement a data/information offering, are very specific and serve only 1 purpose: provide (easy, developer friendly) web access to that data. These API’s tend to be RESTful.
 
 === Specific actions
 
