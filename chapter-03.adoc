@@ -2,9 +2,9 @@
 
 === The Idea of OGC API Essentials
 
-OGC API Essentials are a small subset of OGC standards essential for the most widespread use in the Internet and Web of geospatial information.  
+OGC API Essentials are a small subset of the capabilities defined in OGC standards which would be very useful to developers for the Internet and Web of geospatial information.  
 
-Discussions in OGC have identified value in recommending small bits of OGC specifications for API providers to use.  Basically as an alternative to using a full-fledged service interface like WMS or WCS, the OGC API Essentials highlight how Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are concepts useful in Web API's. 
+Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.  Many OGC standards are already modular.  As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules, such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web API's. 
 
 This approach identifies pieces that are standardized and easy to use.  It is anticipated that this will raise awareness of OGC in API providers.  Reuse of OGC API Essentials will lead to consistency, accuracy and reuse across the various APIs. And ideally there are lots of small client libraries that can be incorporated in to the libraries API producers provide.
 
@@ -37,9 +37,9 @@ The following specifications are an initial set of OGC Essential Standards to su
 
 === Moving forward on OGC API Essentials
 
-OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective as a common way to access pieces of OGC web services, regardless of which service is accessed.  OWS Common Next Generation need not look all that different inside if built from this perspective, but what differences were present would be quite impactful. 
+OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective.  It would provide a common way to access pieces of OGC capability without having to implement a full OGC interface.  "OWS Common Next Generation" need not look all that different inside if built from this perspective, but what differences there are would have quite an impact. 
 
-Going beyond developing and maintaining an OGC API Essential list, there additional value in OGC providing a form of concordance between the many and varied representation forms. Along the lines of “this is what a point is comprised of, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.  Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon and so on within an API's or code library's interface.
+Going beyond developing and maintaining an OGC API Essential list, there is additional value in OGC providing a form of concordance between the many and varied representation forms. Along the lines of “this is what a point is comprised of, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.  Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon and so on within an API's or code library's interface.
 
 OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.  There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on. Take a look at the sterling work done with https://github.com/phayes/geoPHP [GeoPHP].
 
