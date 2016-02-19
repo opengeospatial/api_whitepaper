@@ -4,7 +4,7 @@
 
 To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-=== What is an open stanards setting organization? 
+=== What is an open standards setting organization? 
 
 There are multiple defintions of open standards processes.  This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
@@ -34,8 +34,8 @@ From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[C
 
 === The Value of Open Standards
 
-Google official blog - about open
-https://googleblog.blogspot.com/2009/12/meaning-of-open.html
+
+https://googleblog.blogspot.com/2009/12/meaning-of-open.html[Google official blog - about open]
 
 https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&sig2=3OcyzglH1J3s2GqMHSQM0A[Geospatial Interoperability ROI study by NASA]:  
 " Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%. This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs...Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard. One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms, the same value could be achieved with $3.00 if the project were based on open standards."  
