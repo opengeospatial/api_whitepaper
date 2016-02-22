@@ -12,7 +12,7 @@ OGC's Web Service Standards are Protocols - they describe what happens on the wi
 
 === APIs are interfaces
 
-The https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] entry on Wikipedia defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.  
+The https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] entry on Wikipedia defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. The notion of "API as an Interface" makes the API discussion relevant to the activities of the OGC.  
 
 As defined in https://portal.opengeospatial.org/files/?artifact_id=64860[OGC® Testbed 11 REST Interface Engineering Report], OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs without knowing details of their internal implementation.
 
@@ -43,7 +43,7 @@ A client-side WebAPI is a programmatic interface to extend functionality within 
 
 === OGC Protocols for WebAPIs
 
-http://www.opengeospatial.org/standards[OGC Web Service (OWS) Standards] applicable to WebAPIs include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS.
+http://www.opengeospatial.org/standards[OGC Web Service (OWS) Standards] applicable to WebAPIs include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS. (NOTE - above ther is a statement that OGC interface standards are protocols .. .)
 
 The OWS standards define requirements for server-side WebAPIs. The requirements cover function and structure of the protocols to be met by the WebAPIs. The OWS standards as currently written do not specify source code so cannot be called APIs.  
 
@@ -63,8 +63,8 @@ http://dev.twitter.com/overview/documentation[Twitter]
 
 === Summary
 
-* APIs are "client libraries" - libraries of code used to develop a client.
+* APIs are "client libraries" - libraries of code used to develop a client. (NOTE: Not necessarily - what about service to service APIs or middleware busses?]
 * OGC Web Service standards specify web protocols based on http.
 * OWS standards have been implemented in numerous APIs - see Chapter 2.
-* It's not unusual to see a Protocol be incorrectly labeled as an API.
+* It is not unusual to see a Protocol be incorrectly labeled as an API.
 * REST guidelines for web protocols may be implemented as REST APIs
