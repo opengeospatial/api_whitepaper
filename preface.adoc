@@ -31,6 +31,7 @@ editor or the submitters:
 |Name|Affiliation    
 |Chris Holmes   |Planet Labs     
 |Dave Wesloh    |NGA   
+|Chuck Heazel   |WiSC Enterprises   
 |Gary Gale    |What 3 Words     
 |Arnulf Christl    |Metaspatial
 |Josh Lieberman |Tumbling Walls
