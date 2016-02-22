@@ -130,7 +130,7 @@ The LatLng type is a geographical point with a latitude and longitude.  No CRS i
 
 ==== Esri ArcGIS REST 
 
-http://resources.arcgis.com/en/help/arcgis-rest-api/index.html[The ArcGIS REST API] offers resources for working within a Portal for ArcGIS implementation or within ArcGIS Online. http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/[The Map Service] offers access to contents of a map hosted on a server.  http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/[Export Map] operation is peformance on a map service resource and returns a map image.
+http://resources.arcgis.com/en/help/arcgis-rest-api/index.html[The ArcGIS REST API] offers resources for working within a Portal for ArcGIS implementation or within ArcGIS Online. http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/[The Map Service] offers access to contents of a map hosted on a server.  http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/[Export Map] operation is peformed on a map service resource and returns a map image.
 
 Example Usage: Export a map. Include only the bounding box.
 ----
