@@ -16,7 +16,7 @@ OGC Document 16-019
 ### About
 This white paper is to support futher discussions and possible actions by the OGC programs. This document is not a standard.
 
-This white paper was developed based on multiple discussions in the OGC Stanards Program. Contributors are listed in the Preface.
+This white paper was developed based on multiple discussions in the OGC Standards Program. Contributors are listed in the Preface.
 
 ----
 ###Contributing
