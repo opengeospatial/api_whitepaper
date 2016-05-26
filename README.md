@@ -21,6 +21,7 @@ This white paper was developed based on multiple discussions in the OGC Standard
 ----
 ###Contributing
 
+The contributor understands that any contributions, if accepted by the OGC Membership, shall be incorporated into the formal OGC white paper and potentially OGC standards and that all copyright and  intellectual property shall be vested to the OGC.
 
 ----
 ###Editing and commenting
