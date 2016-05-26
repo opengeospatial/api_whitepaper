@@ -191,7 +191,7 @@ Several organizations are now posting their public APIs in multiple SDKs.  Faceb
 
 image::images/FBoffer.png[title=Managing multiple API Bindings]
 
-Documenting APIs in a defined manner is aided by using the https://openapis.org/[OpenAPIs] specificaiton which is an evolution of Swagger. It's an open specification for REST API's that lets you define sub-elements as well. Sub-elements can then live on their own and be shared by multiple APIs. There would be big value in porting select OGC essentials to the OpenAPI specification.  This would make the OGC Essentials more developer friendly.
+Documenting APIs in a defined manner is aided by using the https://openapis.org/[OpenAPIs] specificaiton which is an evolution of Swagger. It's an open specification for REST API's that lets you define sub-elements as well. Sub-elements can then live on their own and be shared by multiple APIs. There would be big value in porting select OGC essentials to the OpenAPI specification. This would make the OGC Essentials more developer friendly.
 
 Providing complete documentation of your API using OpenAPI/Swagger is a https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice]. This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
 
