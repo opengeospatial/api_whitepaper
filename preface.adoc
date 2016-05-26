@@ -19,6 +19,7 @@ This is a complex topic.  We have a road of education, discussion, implementatio
 
 ogcdoc, OGC documents, api, standards
 
+<<<
 
 **Submitters of this document**
 
@@ -26,7 +27,7 @@ All questions regarding this white paper should be directed to the
 editor or the submitters:
 
 .Document Contributors
-[options="header,footer"]
+[options="header"]
 |=======================
 |Name|Affiliation    
 |Chris Holmes   |Planet Labs     
@@ -35,7 +36,10 @@ editor or the submitters:
 |Gary Gale    |What 3 Words     
 |Arnulf Christl    |Metaspatial
 |Josh Lieberman |Tumbling Walls
-| Scott Simmons  |OGC
+|Carl Reed | personal contribution
+|John Herring | Oracle
+|David blodgett | USGS
+|Scott Simmons  |OGC
 |Bart de Lathower   |OGC 
-|George Percivall, editor   |OGC 
+|George Percivall   |OGC 
 |=======================

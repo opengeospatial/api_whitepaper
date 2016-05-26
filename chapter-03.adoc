@@ -24,11 +24,11 @@ The following specifications are an initial set of OGC Essential Standards to su
 
 *   CSS (CartoCSS is great, though get to interoperable core of 3 renderer implementations)
 
-*   GeoJSON: An extension to the JSON programing language which includes definitions for geometry and coordinate reference system objects.  These definitions are simplified versions of the Simple Feature definitions. (In the wild until IETF is done. Just adopt as is, don't change anything)
+*   GeoJSON: An extension to the JSON programing language which includes definitions for geometry and coordinate reference system objects.  These definitions are simplified versions of the Simple Feature definitions. (Nearing adoption in IETF)
 
 *   GeoPackage Features (with a	single set SRID)
 
-*   Simplified GeoPackage Tiles 	(just a direct representation of Simple Tiles scheme above)
+*   Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)
 
 *   GML Simple Features Level 0
 

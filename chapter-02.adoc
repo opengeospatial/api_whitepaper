@@ -1,13 +1,16 @@
-== Web Mapping API examples 
+== API examples 
 
-=== Web mapping APIs
+This chapter provides three examples of APIs.  First, multiple examples of Web Mapping APIs in the style of WebAPIs are provided. Second, several RESTful mapping APIs examples are provided.  Third is an example of how an organization can bring commonality of the protocol across several APIs provided by the organization.
 
-Web mapping APIs defined code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the prevoius chapter.  While web maping APIs are defined in multiple programming languages, the examples here focus on Javascript.
+=== Web mapping API examples
+
+Web mapping APIs defined code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the previous chapter.  While web mapping APIs are defined in multiple programming languages, the examples here focus on Javascript.
 
 APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. 
 
 Most the the APIs listed below implement the OWS Protocols either explicitly or the API provides an extension method for adding protocols.
 
+[float]
 ==== Google Maps
 
 https://developers.google.com/maps[Google Maps APIs] are available for Android, iOS, web browsers in Javascript and via HTTP web services.  The Google Maps API pulls from Google Map servers and may be configured to pull from other servers.
@@ -25,7 +28,7 @@ Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed o
 Center is of type https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude. This cautionary note is provided: "Although the default map projection associates longitude with the x-coordinate of the map, and latitude with the y-coordinate, the latitude coordinate is always written__first__, followed by the longitude. A separate page describes https://developers.google.com/maps/documentation/javascript/maptypes#MapCoordinates[MapCoordinates] including the use of https://en.wikipedia.org/wiki/World_Geodetic_System[World Geodetic System WGS84] and  https://en.wikipedia.org/wiki/Mercator_projection[Mercator projection].
 
 
-
+[float]
 ==== OpenLayers
 
 http://openlayers.org/[OpenLayers] is an open source library for displaying map data in web browsers.  Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources. The OGC Web Services are supported.
@@ -54,6 +57,7 @@ An ol.View has a projection that determines the coordinate system of the center 
 
 The zoom option is a convenient way to specify the map resolution. The available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution. 
 
+[float]
 ==== MapQuest API for OpenStreetMap
 
 http://open.mapquestapi.com/staticmap/#getmap[The MapQuest Open API] accesses 
@@ -80,6 +84,7 @@ function doClick() {
 
 |=======================
 
+[float]
 ==== Leaflet
 
 http://leafletjs.com/[Leaflet] is an open-source JavaScript library for interactive maps. L.map is the central class of the http://leafletjs.com/reference-1.0.0.html[Leaflet API] used to create a map on a page and manipulate it. http://leafletjs.com/reference-1.0.0.html#tilelayer-wms[TileLayer.WMS] is used to dispaly WMS services as tile layers on the map.
@@ -114,7 +119,7 @@ The LatLng type is a geographical point with a latitude and longitude.  No CRS i
 === Commonalities of the Web Mapping APIs
 
 .Commonalities of the Web Mapping APIs
-[options="header,footer"]
+[options="header"]
 |=======================
 |API|Center      |Zoom
 |Google Maps    |https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude.    | Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out, and larger zoom levels zoom in at a higher resolution.
@@ -125,9 +130,10 @@ The LatLng type is a geographical point with a latitude and longitude.  No CRS i
 
 
 
+ 
 
-=== REST GetMap Protocols
-
+=== RESTful Mapping Protocols
+[float]
 ==== Esri ArcGIS REST 
 
 http://resources.arcgis.com/en/help/arcgis-rest-api/index.html[The ArcGIS REST API] offers resources for working within a Portal for ArcGIS implementation or within ArcGIS Online. http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/[The Map Service] offers access to contents of a map hosted on a server.  http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/[Export Map] operation is peformance on a map service resource and returns a map image.
@@ -149,7 +155,7 @@ Example: bbox=-104,35.6,-94.32,41
 
 The bbox coordinates should always use a period as the decimal separator even in countries where traditionally a comma is used.
 |====
-
+[float]
 ==== Mapbox
 
 https://www.mapbox.com/developers/api/[Mapbox web services] accept ``GET`` requests and support both HTTP and HTTPS. Access to Mapbox web services requires an access token, which connects API requests to an account.  
@@ -179,8 +185,17 @@ Examples
 https://api.mapbox.com/v4/mapbox.streets/0/0/0.png?access_token=<your%20access%20token>
 https://api.mapbox.com/v4/mapbox.streets/0/0/0.jpg?access_token=<your%20access%20token>
 https://api.mapbox.com/v4/mapbox.edf947b8/5/6/11.grid.json?access_token=<your%20access%20token>
-
 ----
+
+=== Managing multiple API Bindings
+
+Several organizations are now posting their public APIs in multiple SDKs.  Facebook is an example of approach that is common. Figure 2 shows the Facebook Offer request in http - other bindings of the Offer API are displayed when the STK label is selected.   Similar examples can be found from https://stripe.com/docs/api[Stripe] and  https://www.planet.com/docs/v0/scenes/#data-products[Planet Labs].
+
+image::images/FBoffer.png[title=Managing multiple API Bindings]
+
+Documenting APIs in a defined manner is aided by using the https://openapis.org/[OpenAPIs] specificaiton which is an evolution of Swagger. It's an open specification for REST API's that lets you define sub-elements as well. Sub-elements can then live on their own and be shared by multiple APIs. There would be big value in porting select OGC essentials to the OpenAPI specification.  This would make the OGC Essentials more developer friendly.
+
+Providing complete documentation of your API using OpenAPI/Swagger is a https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice]. This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
 
 
 
