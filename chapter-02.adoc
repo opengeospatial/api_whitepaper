@@ -2,9 +2,7 @@
 
 This chapter provides three examples of APIs.  First, multiple examples of Web Mapping APIs in the style of WebAPIs are provided. Second, several RESTful mapping APIs examples are provided.  Third is an example of how an organization can bring commonality of the protocol across several APIs provided by the organization.
 
-=== Web mapping API examples
-
-Web mapping APIs defined code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the previous chapter.  While web mapping APIs are defined in multiple programming languages, the examples here focus on Javascript.
+Web mapping APIs define code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the previous chapter.  While web mapping APIs are defined in multiple programming languages, the examples in this chapter focus on Javascript.
 
 APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. 
 
@@ -136,7 +134,7 @@ The LatLng type is a geographical point with a latitude and longitude.  No CRS i
 [float]
 ==== Esri ArcGIS REST 
 
-http://resources.arcgis.com/en/help/arcgis-rest-api/index.html[The ArcGIS REST API] offers resources for working within a Portal for ArcGIS implementation or within ArcGIS Online. http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/[The Map Service] offers access to contents of a map hosted on a server.  http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/[Export Map] operation is peformance on a map service resource and returns a map image.
+http://resources.arcgis.com/en/help/arcgis-rest-api/index.html[The ArcGIS REST API] offers resources for working within a Portal for ArcGIS implementation or within ArcGIS Online. http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/[The Map Service] offers access to contents of a map hosted on a server.  http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/[Export Map] operation is peformed on a map service resource and returns a map image.
 
 Example Usage: Export a map. Include only the bounding box.
 ----
