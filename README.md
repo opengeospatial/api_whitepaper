@@ -10,7 +10,7 @@ This paper covers these topics
 - Open standards and APIs
 - OGC support for open APIs
 
-OGC Document 16-019
+OGC Document 16-019r1
 
 ------
 ### About
