@@ -16,11 +16,7 @@ Public APIs may or may not be Open APIs.  Open APIs adhear to open principles su
 
 === APIs in context
 
-<<<<<<< HEAD
-APIs are one of the tools used by software engineers and developers to design modular and interoperable systems.  From an OGC open standards perspective, APIs are understood in the context of standards and implementing code.
-=======
-The https://en.wikipedia.org/wiki/Application_programming_interface[application programming interface (API)] entry on Wikipedia defines an API as an interface that supports modularity and separation of components. The components can be implemented independently with the API serving as the common point of exchange. The notion of "API as an Interface" makes the API discussion relevant to the activities of the OGC.  
->>>>>>> origin/master
+APIs are one of the tools used by software engineers and developers to design modular and interoperable systems.  From an OGC open standards perspective, APIs are understood in the context of requirement specifications and implementing code.
 
 image::images/APIinContext.png[title=APIs in Context,scaledwidth="30%"]
 
@@ -78,7 +74,6 @@ http://dev.twitter.com/overview/documentation[Twitter]
 
 === Summary
 
-<<<<<<< HEAD
 * APIs are interfaces that implement requirements for protocols or data models
 * OGC Web Service standards specify web protocols based on http.
 * OWS standards have been implemented in numerous APIs - see Chapter 2.
