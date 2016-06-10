@@ -38,7 +38,7 @@ editor or the submitters:
 |Josh Lieberman |Tumbling Walls
 |Carl Reed | personal contribution
 |John Herring | Oracle
-|David blodgett | USGS
+|David Blodgett | USGS
 |Scott Simmons  |OGC
 |Bart de Lathower   |OGC 
 |George Percivall   |OGC 

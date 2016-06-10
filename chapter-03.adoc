@@ -1,38 +1,44 @@
-== OGC essentials for APIs
+== OGC Essentials for APIs
 
 === The Idea of OGC API Essentials
 
-OGC API Essentials are a small subset of the capabilities defined in OGC standards which would be very useful to developers for the Internet and Web of geospatial information.  
+OGC API Essentials as propsed in this Chapter are a small subset of the capabilities defined in OGC standards which would be very useful to developers for the Internet and Web of geospatial information.  
 
-Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.  Many OGC standards are already modular.  As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules, such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web API's. 
+Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.  Many OGC standards are already modular. Requirements for modularity are defined in the https://portal.opengeospatial.org/files/?artifact_id=34762[The Specification Model - A Standard for Modular specifications (08-131r3)].  As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules, such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web API's. 
 
 This approach identifies pieces that are standardized and easy to use.  It is anticipated that this will raise awareness of OGC in API providers.  Reuse of OGC API Essentials will lead to consistency, accuracy and reuse across the various APIs. And ideally there are lots of small client libraries that can be incorporated in to the libraries API producers provide.
 
 === OGC API Essentials - initial list
 
-The following specifications are an initial set of OGC Essential Standards to support 'geospatial components for everyone'.  (Some specs exist, some need to be developed.  Not all are OGC standards)
+The following specifications are an initial set of OGC Essential Standards to support 'geospatial components for everyone'. Not all of the following specifications are OGC standards.
 
-*   Simple Features for SQL: This standard defines the fundamental geometries and operations which underlie all OGC standards. (though put the 'ODBC/SQL numeric types' stuff in its own 'bronze' spec, no one uses it and its confusing)
+*   http://www.opengeospatial.org/standards/sfs[**OGC Simple Features for SQL**]: This standard defines the fundamental geometries and operations which underlie OGC standards.  Simple features are based on two-or-fewer dimensional geometric (point, curve and surface) entities in 2 or 3 spatial dimensions with linear or planar interpolation between vertices. 
 
-*   Well Known Text: This standard started as the text encoding of the Simple Features geometries.  The utility of this approach has spawned extensions outside of the Simple Features standard. (It is already planned as a separate document from current ISO/OGC standards.)
+*   http://www.opengeospatial.org/standards/wkt-crs[**OGC Well Known Text (WKT) for CRS**]: This Standard provides an updated version of WKT representation of coordinate reference systems. It extends the earlier WKT to allow for the description of coordinate operations. 
 
-*   Well Known Binary: This is a binary encoding of Well Known Text.  This standard originated as a part of the Simple Features standard.  (with an update for optimized ideas in GeoPackage and TinyWKB)
+*   **Well Known Text (WKT) for Geometry**: WKT for Geometry is currently specified in the http://www.opengeospatial.org/standards/sfa[OGC Simple Features - Architecture] standard. A standalone standard is currently being developed.
 
-*   CQL/Filter: Query languages including the Common Query Language from the Catalog standard and the OGC Filter language from the Filter Encoding standard.  (with the geo extensions, originally specified in the CSW spec - for filtering queries: Filter but not in xml)
+*   **Well Known Binary (WKB) for Geometry**: This is a binary encoding of WKT for Geometry.  WKB for Geometry is currently specified in the http://www.opengeospatial.org/standards/sfa[OGC Simple Features - Architecture] standard. A standalone standard is currently being developed including updates based on optimized ideas in GeoPackage and TinyWKB.
 
-*   WMTS Simple Tile Matrix:  
+*   http://portal.opengeospatial.org/files/?artifact_id=42729[**GML Simple Features**]: GML SF-O is aligned with OGC Simple Features for SQL including:
+Point, Curve (LineString), Surface (Polygon), Geometry, MultiPoint, MultiCurve,
+MultiSurface, and MultiGeometry.
 
-*   CSS (CartoCSS is great, though get to interoperable core of 3 renderer implementations)
+*   **OGC Common Query Language**: CQL is the query language defined in the http://www.opengeospatial.org/standards/cat[OGC Catalogue standard]
 
-*   GeoJSON: An extension to the JSON programing language which includes definitions for geometry and coordinate reference system objects.  These definitions are simplified versions of the Simple Feature definitions. (Nearing adoption in IETF)
+* http://www.opengeospatial.org/standards/filter[**OGC Filter Encoding**]: This standard describes an XML and KVP encoding of a system neutral syntax for expressing projections, selection and sorting clauses collectively called a query expression. These components are modular and intended to be used together or individually. 
 
-*   GeoPackage Features (with a	single set SRID)
+*   http://docs.opengeospatial.org/is/13-082r2/13-082r2.html[**OGC WMTS Simple**]: This profile of the OGC Web Map Tile Servcie defines two simple tile matrix sets: World Web Mercator TileMatrixSet and World CRS84 TileMatrixSet.  
 
-*   Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)
+*   http://www.opengeospatial.org/standards/geosparql[**OGC GeoSPARQL**] defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data. 
 
-*   GML Simple Features Level 0
+*   http://www.opengeospatial.org/standards/geopackage[*GeoPackage*] Features (with a	single set SRID) and Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)
 
-*   GeoRSS Simple
+*   **GeoJSON**: An extension to the JSON programing language which includes definitions for geometry and coordinate reference system objects.  These definitions are simplified versions of the Simple Feature definitions. (Nearing adoption in IETF)
+
+*   http://www.georss.org/[**GeoRSS**] Simple
+
+Several other specifications should be considered to be included in this list of essential specifications open API design, e.g., tile matrix specs.  Its important to limit the list to specifications which are "open" as defined in Chapter 4.
 
 
 === Moving forward on OGC API Essentials
@@ -41,6 +47,6 @@ OGC API Essentials could be part of the reworking of OWS Common from an implemen
 
 Going beyond developing and maintaining an OGC API Essential list, there is additional value in OGC providing a form of concordance between the many and varied representation forms. Along the lines of “this is what a point is comprised of, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.  Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon and so on within an API's or code library's interface.
 
-OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.  There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on. Take a look at the sterling work done with https://github.com/phayes/geoPHP [GeoPHP].
+OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.  There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on. Take a look at the sterling work done with https://github.com/phayes/geoPHP[GeoPHP].
 
 
