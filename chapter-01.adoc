@@ -18,7 +18,7 @@ Public APIs may or may not be Open APIs. Being "public" means that the API is vi
 
 APIs are tools used by software engineers and developers to design modular and interoperable systems.  From an OGC open standards perspective, APIs are understood in the context of requirement specifications and implementing code.
 
-image::images/APIinContext.png[title=APIs in Context,scaledwidth="30%"]
+image::images/APIinContext.png[title=APIs in Context,scaledwidth="40%"]
 
 
 **Requirements Specifications** are documents that define aspects of a protocol or data model to solve an  interoperability problem. A protocol is the set of requirements that end points in a distributed system use when they communicate. The requirements may be written in plain text or in a technology neutral modeling language like UML.  OGC standards specify requirements for interfaces and encodings using a modular approach (OGC 08-131r3). Implementations of an OGC standard must satisfy requirements as demonstrated by passing conformance tests. The requirements apply across multiple API implementations. 
@@ -45,9 +45,9 @@ The GeoAPI interfaces provide a layer which separates client code from applicati
 
 The Web follows the Internet approach of https://www.w3.org/TR/webarch/#protocol-interop[Protocol-Based Interoperability] where the protocols specifying the syntax, semantics, and sequencing constraints of the messages interchanged. Protocols designed to be resilient in the face of widely varying environments have helped the Web scale and have facilitated communication across multiple trust boundaries. Traditional APIs do not always take these constraints into account. One effect of protocol-based design is that the technology shared among agents often lasts longer than the agents themselves.  To support Web development the concept of a WebAPI was defined.  A https://en.wikipedia.org/wiki/Web_API[WebAPI] is an API for either a web server or a web browser.  
 
-image::images/Web_Programming_API.svg.png[]
+image::images/Web_Programming_API.svg.png[title=WebAPIs,scaledwidth="80%"]
 
-
+[float]
 ==== OGC Protocols for WebAPIs
 
 http://www.opengeospatial.org/standards[OGC Web Service (OWS) Standards] define Protocols that can be implemented as WebAPIs.  The OWS standards are Requirements Specifications that define a protocol and in some cases a data model. The OWS standards include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS. 

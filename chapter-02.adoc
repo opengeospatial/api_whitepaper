@@ -45,7 +45,7 @@ Many Web Mapping APIs have similar concepts sometimes with different names.  The
 
 Several organizations are now posting their public APIs in multiple SDKs for binding in multiple programming languages.  Facebook is an example of approach that is common. Figure 2 shows the Facebook "Offer" request in http - other bindings of the Offer API are displayed when the SDK label across the top is selected.   Similar examples can be found from https://stripe.com/docs/api[Stripe] and  https://www.planet.com/docs/v0/scenes/#data-products[Planet Labs].
 
-image::images/FBoffer.png[title=Managing multiple API Bindings]
+image::images/FBoffer.png[title=Managing multiple API Bindings,scaledwidth="80%"]
 
 Documenting APIs can be aided by using the approach of the  https://openapis.org/[OpenAPI Initiative (OAI)]. OAI is focused on defining a vendor netural API Description Format based on the Swagger Specification.  The approach will allow specification of REST APIs using modular sub-elements. Sub-elements can then live on their own and be shared by multiple APIs. There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification. This would make the OGC Essentials more developer friendly.
 
