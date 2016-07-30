@@ -24,7 +24,7 @@ From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[C
 
 === What is an open standards setting organization?
 
-There are multiple defintions of open standards processes.
+There are multiple definitions of open standards processes.
 This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
 1. The SSO must develop technical specifications.

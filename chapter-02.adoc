@@ -37,7 +37,7 @@ These API examples are followed by REST examples:
 === Commonalities of the Web Mapping APIs
 
 Many Web Mapping APIs have similar concepts sometimes with different names.
-The Table below lists two similar concepts of "Center" and "Zoom" thare are seen in the four example APIs.
+The Table below lists two similar concepts of "Center" and "Zoom" that are seen in the four example APIs.
 One consideration is that Web Mappping APIs might trace their designs to OGC API Essentials as defined in Chapter 3.
 For example the "Zoom" in each of the APIs can be related to the WMTS Simple TileMatrixSet.
 
@@ -62,7 +62,7 @@ Similar examples can be found from https://stripe.com/docs/api[Stripe] and  http
 image::images/FBoffer.png[title=Managing multiple API Bindings,scaledwidth="80%"]
 
 Documenting APIs can be aided by using the approach of the https://openapis.org/[OpenAPI Initiative (OAI)].
-OAI is focused on defining a vendor netural API Description Format based on the Swagger Specification.
+OAI is focused on defining a vendor neutral API Description Format based on the Swagger Specification.
 The approach will allow specification of REST APIs using modular sub-elements.
 Sub-elements can then live on their own and be shared by multiple APIs.
 There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.

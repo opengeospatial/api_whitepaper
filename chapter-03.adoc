@@ -2,7 +2,7 @@
 
 === The Idea of OGC API Essentials
 
-OGC API Essentials as propsed in this Chapter are a small subset of the capabilities defined in OGC standards
+OGC API Essentials as proposed in this Chapter are a small subset of the capabilities defined in OGC standards
 which would be very useful to developers for the Internet and Web of geospatial information.
 
 Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
