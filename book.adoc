@@ -34,9 +34,9 @@ It is subject to change without notice and may not be referred to as an OGC Stan
 Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements
 
 
-Document type: OGC® White Paper
-Document stage: Prepared for review at OGC TC June 2016
-Document language: English
+Document type: OGC® White Paper +
+Document stage: Prepared for review at OGC TC June 2016 +
+Document language: English +
 
 
 
