@@ -1,12 +1,20 @@
 == API Design using Open Standards
 
-How can OGC Stanards contribute to the design of open APIs for geospatial interoperabilty?  OGC Requirement Specifications provide protocols and data models that can serve as requirements for API design.  This Chapter discusses API design by considering existing APIs and several industry practices for managing multiple API bindings.
+How can OGC Stanards contribute to the design of open APIs for geospatial interoperabilty?
+OGC Requirement Specifications provide protocols and data models that can serve as requirements for API design.
+This Chapter discusses API design by considering existing APIs and several industry practices for managing multiple API bindings.
 
-=== Web Mapping API examples 
+=== Web Mapping API examples
 
-This section reviews examples of Web Mapping APIs. Web mapping APIs define code interfaces to access maps over the web.  They are Client-side WebAPIs as defined in the previous chapter.  While web mapping APIs are defined in multiple programming languages, the examples in this chapter focus on Javascript.
+This section reviews examples of Web Mapping APIs.
+Web mapping APIs define code interfaces to access maps over the web.
+They are Client-side WebAPIs as defined in the previous chapter.
+While web mapping APIs are defined in multiple programming languages,
+the examples in this chapter focus on Javascript.
 
-APIs for web mapping was the topic of a recent posting by http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web] with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo. 
+APIs for web mapping was the topic of a recent posting by
+http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web]
+with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo.
 
 Most the the APIs listed here implement the OWS Protocols either explicitly or the API provides an extension method for adding protocols.
 
@@ -22,13 +30,16 @@ The Web Mapping API code examples listed in the Appendix are from:
 
 These API examples are followed by REST examples:
 
-* Esri ArcGIS REST 
+* Esri ArcGIS REST
 
 * Mapbox
 
 === Commonalities of the Web Mapping APIs
 
-Many Web Mapping APIs have similar concepts sometimes with different names.  The Table below lists two similar concepts of "Center" and "Zoom" thare are seen in the four example APIs.  One consideration is that Web Mappping APIs might trace their designs to OGC API Essentials as defined in Chapter 3.  For example the "Zoom" in each of the APIs can be related to the WMTS Simple TileMatrixSet. 
+Many Web Mapping APIs have similar concepts sometimes with different names.
+The Table below lists two similar concepts of "Center" and "Zoom" thare are seen in the four example APIs.
+One consideration is that Web Mappping APIs might trace their designs to OGC API Essentials as defined in Chapter 3.
+For example the "Zoom" in each of the APIs can be related to the WMTS Simple TileMatrixSet.
 
 .Commonalities of the Web Mapping APIs
 [options="header"]
@@ -43,16 +54,20 @@ Many Web Mapping APIs have similar concepts sometimes with different names.  The
 
 === Managing multiple API Bindings
 
-Several organizations are now posting their public APIs in multiple SDKs for binding in multiple programming languages.  Facebook is an example of approach that is common. Figure 2 shows the Facebook "Offer" request in http - other bindings of the Offer API are displayed when the SDK label across the top is selected.   Similar examples can be found from https://stripe.com/docs/api[Stripe] and  https://www.planet.com/docs/v0/scenes/#data-products[Planet Labs].
+Several organizations are now posting their public APIs in multiple SDKs for binding in multiple programming languages.
+Facebook is an example of approach that is common.
+Figure 2 shows the Facebook "Offer" request in http - other bindings of the Offer API are displayed when the SDK label across the top is selected.
+Similar examples can be found from https://stripe.com/docs/api[Stripe] and  https://www.planet.com/docs/v0/scenes/#data-products[Planet Labs].
 
 image::images/FBoffer.png[title=Managing multiple API Bindings,scaledwidth="80%"]
 
-Documenting APIs can be aided by using the approach of the  https://openapis.org/[OpenAPI Initiative (OAI)]. OAI is focused on defining a vendor netural API Description Format based on the Swagger Specification.  The approach will allow specification of REST APIs using modular sub-elements. Sub-elements can then live on their own and be shared by multiple APIs. There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification. This would make the OGC Essentials more developer friendly.
+Documenting APIs can be aided by using the approach of the https://openapis.org/[OpenAPI Initiative (OAI)].
+OAI is focused on defining a vendor netural API Description Format based on the Swagger Specification.
+The approach will allow specification of REST APIs using modular sub-elements.
+Sub-elements can then live on their own and be shared by multiple APIs.
+There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.
+This would make the OGC Essentials more developer friendly.
 
-Providing complete documentation of your API using OpenAPI/Swagger is a https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice]. This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
-
-
-
-
-
-
+Providing complete documentation of your API using OpenAPI/Swagger is a
+https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice].
+This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
