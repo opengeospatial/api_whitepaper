@@ -1,6 +1,10 @@
-== Open standards and APIs.	
+== Open standards and APIs.
 
-To be effective a standard must be used. There are many routes by which a specification becomes an effective standard. In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization. Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs [Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
+To be effective a standard must be used.
+There are many routes by which a specification becomes an effective standard.
+In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
+Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs
+[Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
 === What is an Open Standard?
 
@@ -13,19 +17,21 @@ The OGC defines Open Standards as standards that are:
 5. Data neutral – The standards are independent of any data storage model or format.
 6. Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
 
-The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers, whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects. 
+The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers,
+whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects.
 
 From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]
 
-=== What is an open standards setting organization? 
+=== What is an open standards setting organization?
 
-There are multiple defintions of open standards processes.  This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
+There are multiple definitions of open standards processes.
+This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
-1. The SSO must develop technical specifications.  
-2. The SSO must be some type of legal entity.  
-3. The SSO must have a well-defined, legally acceptable set of procedures and processes.  
-4. The SSO must have a clear and legitimate IPR policy that requires, at a minimum, RAND licensing of all IPR included in its specifications.  
-5. The technical specifications created by the organization must be implemented by two or more competing entities prior to specification release, following widespread, web-based public review of the specification.  
+1. The SSO must develop technical specifications.
+2. The SSO must be some type of legal entity.
+3. The SSO must have a well-defined, legally acceptable set of procedures and processes.
+4. The SSO must have a clear and legitimate IPR policy that requires, at a minimum, RAND licensing of all IPR included in its specifications.
+5. The technical specifications created by the organization must be implemented by two or more competing entities prior to specification release, following widespread, web-based public review of the specification.
 6. There should be reference implementations, competing implementations, and test methods to validate conformance as appropriate.
 
 [Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
@@ -33,26 +39,41 @@ There are multiple defintions of open standards processes.  This set of criteria
 
 === The Value of Open Standards
 
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&sig2=3OcyzglH1J3s2GqMHSQM0A[Geospatial Interoperability ROI study by NASA]:  
-" Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%. This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs...Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard. One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms, the same value could be achieved with $3.00 if the project were based on open standards."  
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&sig2=3OcyzglH1J3s2GqMHSQM0A[Geospatial Interoperability ROI study by NASA]:
+"Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%.
+This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs...
+Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard.
+One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms,
+the same value could be achieved with $3.00 if the project were based on open standards."
 
 The NASA study provided important evidence that the adoption of standards can improve geospatial information sharing, foster improved decision-making, build business resilience, and lower maintenance and operations costs over time. http://www.ec-gis.org/sdi/ws/costbenefit2006/reports/report_sdi_crossbenefit%20.pdf[SDI Benefits Report]
 
 http://www.acilallen.com.au/cms_files/ACIL_spatial%20information_NewZealand.pdf[Spatial information in the New Zealand economy]:
-"A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand. Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.  
-Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue. This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."  
+"A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand.
+Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.
+Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue.
+This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."
 
 === So Many APIs
 
-There are many APIs available - most are not open as defined in this section.  http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.   http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that "The thousands of APIs are superficially similar but mutually incompatible: 
+There are many APIs available - most are not open as defined in this section.
+http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.
+http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that
+"The thousands of APIs are superficially similar but mutually incompatible:
 
-* “Everyone has a slightly different view of basic real-world concepts like “person” and “event”. 
-* “This lack of agreement makes it impossible to create client-side software that can be reused between APIs. 
+* “Everyone has a slightly different view of basic real-world concepts like “person” and “event”.
+* “This lack of agreement makes it impossible to create client-side software that can be reused between APIs.
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
 
 
 === Open Standards and APIs
 
-Most APIs have a strong reliance on open standards: OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more. From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards. These API implementations of OGC standards are providing new requirements into the OGC standards process – and the ongoing discussions in the OGC about the role of APIs in the OGC standards development process. The OGC Members have developed several open APIs as part of the OGC standards process. So, the API itself can also be a standard. GeoAPI is an example.
+Most APIs have a strong reliance on open standards:
+OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more.
+From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards.
+These API implementations of OGC standards are providing new requirements into the OGC standards process – and
+the ongoing discussions in the OGC about the role of APIs in the OGC standards development process.
+The OGC Members have developed several open APIs as part of the OGC standards process.
+So, the API itself can also be a standard. GeoAPI is an example.
 
 The steps listed in the next Chapter support the development of Open APIs.

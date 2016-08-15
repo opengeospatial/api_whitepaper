@@ -21,18 +21,22 @@ Publication Date: 2016-TBD +
 Approval Date: 2016-TBD +
 Submission Date:   +
 
-Copyright © 2016 Open Geospatial Consortium.  
+Copyright © 2016 Open Geospatial Consortium.
 
-To obtain additional rights of use, visit http://www.opengeospatial.org/legal/[http://www.opengeospatial.org/legal/]  
+To obtain additional rights of use, visit http://www.opengeospatial.org/legal/[http://www.opengeospatial.org/legal/]
 
 **Warning**
 
-This document is not an OGC Standard. This document is an OGC White Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard. Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements
+This document is not an OGC Standard.
+This document is an OGC White Paper and is therefore not an official position of the OGC membership.
+It is distributed for review and comment.
+It is subject to change without notice and may not be referred to as an OGC Standard.
+Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements
 
 
-Document type: OGC® White Paper  
-Document stage: Prepared for review at OGC TC June 2016  
-Document language: English
+Document type: OGC® White Paper +
+Document stage: Prepared for review at OGC TC June 2016 +
+Document language: English +
 
 
 
@@ -49,5 +53,3 @@ include::chapter-04.adoc[]
 include::chapter-05.adoc[]
 
 include::annex-a.adoc[]
-
- 
