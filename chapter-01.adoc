@@ -32,12 +32,12 @@ Public APIs may or may not be Open APIs.
 Being "public" means that the API is visible and accessible outside of the organization that owns the API.
 The organization that controls and promotes the API owns the API.
 Open APIs are similar to open standards in that Open APIs are managed as a public good and managed in an open process.
-Open APIs adhere to open principles such as those defined by https://open-stand.org/about-us/principles/[OpenStand]:
-1. Cooperation,
-2. Adherence to Principles (including broad consensus),
-3. Collective Empowerment,
-4. Availability, and
-5. Voluntary Adoption.
+Open APIs adhere to open principles such as those defined by https://open-stand.org/about-us/principles/[OpenStand]: +
+1. Cooperation, +
+2. Adherence to Principles (including broad consensus), +
+3. Collective Empowerment, +
+4. Availability, and +
+5. Voluntary Adoption. +
 OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.
 
 === APIs in context
@@ -81,7 +81,6 @@ without knowing details of their internal implementation.
 
 The APIs listed next show the diversity of the API concept
 while still retaining the core concept that "APIs are interfaces."
-[float]
 
 ==== OGC GeoAPI Standard
 
@@ -96,7 +95,6 @@ which provides a standardized interface to databases.
 Clients can use the JDBC API without concern for the particular implementation which they will use.
 Various groups have implemented different subsets of GeoAPI,
 see the http://www.geoapi.org/implementations.html[list of known implementations] for details.
-[float]
 
 ==== OGC SensorThings API
 
@@ -110,8 +108,6 @@ The SensorThings API part 1 identifies resources as entities that are relevant t
 http://www.opengeospatial.org/standards/netcdf[The OGC netCDF Standard] is a set of data formats that support the creation, access, and sharing of array-oriented scientific data. The netCDF data model and encodings are particularly well suited to providing data in forms familiar to atmospheric and oceanic scientists.
 
 Related to the data model and encodings listed in the netCDF standard are a set of APIs. Considering the popularity of the netCDF APIs they may be included in future extensions of the OGC netCDF standard. Bindings for C, Fortran, C++, Java are described in the http://portal.opengeospatial.org/files/?artifact_id=43733[CF-netCDF Core and Extensions Primer.]
-
-[float]
 
 ==== APIs and the Web - WebAPIs
 

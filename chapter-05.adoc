@@ -1,37 +1,37 @@
-== OGC support for Open APIs
+== Summary of ideas for OGC activities for Open APIs
 
 These actions are recommended in the context of the OWS Common revision:
 
-=== OGC Web Services and REST
+**OGC Web Services and REST**
 
 Building on several OGC activities and external contributions, update the OGC Web Services standards with changes that address RESTful principles.  This includes modeling the geospatial domain for example from OGC Testbed and Interoperability Experiment results.  Make OWS standards revisions in concert with the OWS Common Revision.  Standards Working Groups for each of the OWS Standards in concert with the OWS Common SWG should lead this effort.
 
-=== OWS Common
+**OWS Common**
 
 Update the OWS Common standard using RESTful approaches including the identification of resources.  Include OGC Essentials in the OWS Common.  The OWS Common Standards Working Group should lead this effort.
 
-=== OGC Essentials
+**OGC Essentials**
 
 Beginning with Chapter 3 of this White Paper establish an online version of OGC Essentials.  Make the elements of OGC Essentials readily availble for reuse in other standards and in APIs.  Support both the OGC and the broader community use of OGC Essentials.  Consider chartering a new SWG for OGC Essentials.
 Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements.
 Create a micro website aimed at developers building API's, that introduces the useful pieces with references to the full OGC specs.
 And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
 
-=== OGC approach to API Security
+**OGC approach to API Security**
 
 The OGC Security DWG should review API-centric security standards and best practices.  The Security DWG should make recommendations on approaches for API security that are well suited to OGC member applications.
 
-=== Open API Design in Interoperability Program
+**Open API Design in Interoperability Program**
 
 Prototype the API Design approach in an OGC Interoperability Program initiative, e.g., OGC Testbed 13.  The Interoperability Program working with Sponsoring organizations should define requirements that build on Section 2 approach.  This would include basing API design on the OWS Standards, OWS Common, OGC Essentials; working with the Open API Initiative for using OAS for OGC-based APIs; implement the OGC Security DWG recommendations for API Security; and prototype methods for managing multiple API bindings in the initiative.
 
-=== APIs in Architecture DWG
+**APIs in Architecture DWG**
 
 The Architecture DWG should regularly review the progress of OGC activities regarding APIs.
 For example, managing of multiple API bindings should be discussed in the context of supporting multiple protocols.  OGC SensorThings has developed an approach that should be consider for other OGC Standards.
 Another topic to be considered is the note from John Herrring, Oracle, on how object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances.
 
-=== Summary of OGC's role
+**Summary of OGC's role**
 
 OGC can continue to lead the development of standards that embrace the full richness of geospatial information building on the approaches of
 

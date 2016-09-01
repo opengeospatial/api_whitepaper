@@ -1,4 +1,6 @@
-=== APIs and implementation independence
+[appendix]
+
+== APIs and implementation independence
 
 Different APIs can provide different levels of isolation.
 An API package may be specific to a particular implementor,

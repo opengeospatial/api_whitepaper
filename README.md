@@ -10,7 +10,7 @@ This paper covers these topics
 - Open standards and APIs
 - OGC support for open APIs
 
-OGC Document 16-019r1
+OGC Document 16-019r2
 
 ------
 ### About
@@ -26,7 +26,7 @@ The contributor understands that any contributions, if accepted by the OGC Membe
 ----
 ###Editing and commenting
 
-The editors are accepting public comments and suggested revisions to this paper via GitHub. 
+The editors are accepting public comments and suggested revisions to this paper via GitHub.
 
 To suggest changes to the paper please fork the repository and submit a pull request with the desired changes. Please make one pull request per logical requested change and be sure to include a comment in the PR with any justification or reasoning on why the change is needed.
 

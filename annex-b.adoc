@@ -1,5 +1,7 @@
-== Annex B:  Web APIs for Environmental Data - CSIRO Report
+[appendix]
+== Web APIs for Environmental Data - CSIRO Report
 
+[float]
 === Introduction
 
 CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations on APIs for the Environmental data.
@@ -11,6 +13,7 @@ https://portal.opengeospatial.org/files/?artifact_id=68811&version=1
 
 Some excerpts from the report are listed in this annex.
 
+[float]
 === Executive Summary excerpts
 
 This report summarises existing practices for the publication of environmental data using Web APIs. The aim is to provide organisations with a well-informed basis to design consistent, cross-organisation Web APIs to access a range of environmental data products. While this report was conducted in a hydrology-specific activity (WIRADA), it takes a broader look at environmental data to contribute to a cross-domain view of Web APIs.
@@ -19,6 +22,7 @@ Some organisations (e.g. NOAA and UK Met Office) look to be using Web APIs as a 
 
 In this report we identify and provide brief overviews of the state of the art in Web API description languages (5.1), common response types (5.2) and management of Web APIs (5.3). This is an area of huge growth, following the proliferation of APIs on the Web. Consequently many of these practices are still immature, so we suggest being cautious when selecting API description languages and common response types.
 
+[float]
 ===  Survey of related domain APIs
 
 Section 4 of the report includes a survey of related domain APIs from these organizations and activities:
@@ -39,7 +43,7 @@ Section 4 of the report includes a survey of related domain APIs from these orga
 - THREDDS
 - ERDDAP
 
-
+[float]
 === Excerpts from Analysis
 
 The analysis in report is organized in these sections
@@ -55,6 +59,7 @@ The specification of a service is done using JSON or YAML that follows the Swagg
 
 Swagger was used in the WaterML2.0 part 2 Interoperability Experiment to document the CSIRO RESTful API22, as shown in Figure 15.
 
+[float]
 === Selected Observations
 
 Section 6 of the report provides observations in three areas of provisioning Web APIs:

@@ -1,18 +1,18 @@
 = OGC® Open Geospatial APIs - White Paper
-Open Geospatial Consortium Document OGC 16-019r1
+Open Geospatial Consortium Document OGC 16-019r2
 
 :doctype: book
 :encoding: utf-8
 :lang: en
 :toc: left
-:toclevels: 1
+:toclevels: 3
 :numbered:
 
 *OGC® Open Geospatial APIs - White Paper*
 
 External identifier of this OGC® document: TBD +
 URL for this OGC® document: TBD +
-Internal reference number of this OGC® document: OGC 16-019r1 +
+Internal reference number of this OGC® document: OGC 16-019r2 +
 Version: +
 Category: OGC® White Paper  +
 Editor: George Percivall +
@@ -35,12 +35,12 @@ Further, an OGC White Paper should not be referenced as required or mandatory te
 
 
 Document type: OGC® White Paper +
-Document stage: Prepared for review at OGC TC June 2016 +
+Document stage: Prepared for review at OGC TC September 2016 +
 Document language: English +
 
+<<<
 
-
-include::preface.adoc[]
+include::preface.adoc[Preface]
 
 include::chapter-01.adoc[]
 
@@ -61,5 +61,3 @@ include::annex-c.adoc[]
 include::annex-d.adoc[]
 
 include::annex-e.adoc[]
-
-include::annex-d.adoc[]

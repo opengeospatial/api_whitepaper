@@ -1,5 +1,8 @@
-== Annex C: The Open API Initiative and Specification
+[appendix]
 
+== The Open API Initiative and Specification
+
+[float]
 === OpenAPI Overview
 
 The goal of the https://openapis.org/specification[OpenAPI Specification] is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.
@@ -8,6 +11,7 @@ The capabilities of a service are described in the structure of the OpenAPI Spec
 
 A starting point for OpenAPI is this https://github.com/OAI/OpenAPI-Specification[GitHub project] where you will find the information about the OpenAPI Specification, a simple static sample of what it looks like, and some general information regarding the project.
 
+[float]
 === OpenAPI Governance and Mission
 
 The https://openapis.org/governance[Governance and Mission] of the Open API Initiative (OAI) is to provide an open source, technical community, within which industry participants may easily contribute to building a vendor-neutral, portable and an open specification for providing technical metadata for REST APIs - the “Open API Description Format” (OADF).
@@ -46,7 +50,7 @@ b.      All outbound specifications or code will be made available under the Apa
 
 c.      All documentation will be received and made available by OAI under the Creative Commons Attribution 4.0 International License.
 
-
+[float]
 === Relevance to OGC
 
 A telecon was held of OAI and OGC staff members on 2016-08-11 to discuss each others organization and to consider possible coordination.
@@ -74,7 +78,7 @@ After the telecon the OAI staff provided a series of relevant links, from the OA
 - https://apis.guru/browse-apis/[An unofficial, non-exhautive list of APIs leveraging the OAS Specification]
 
 An example of OAI activities is how Capital One was able to leverage the assistance from other OAI members before launching their open source code generation tool, now available on https://github.com/capitalone/oas-nodegen[GitHub].
-
+[float]
 === Summary Graphic
 
 image::images/annex-c-15459.png[]

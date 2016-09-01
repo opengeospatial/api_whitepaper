@@ -1,4 +1,6 @@
-== Annex E. Open APIs and Licensing
+[appendix]
+
+== Open APIs and Licensing
 
 This annex was written by Carl Reed, PhD, Carl Reed and Associates
 
