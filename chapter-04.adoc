@@ -3,8 +3,8 @@
 To be effective a standard must be used.
 There are many routes by which a specification becomes an effective standard.
 In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
-Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by SSOs
-[Simcoe in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
+Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
+ http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Simcoe in Standards and Public Policy].
 
 === What is an Open Standard?
 
@@ -64,6 +64,14 @@ http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richards
 * “Everyone has a slightly different view of basic real-world concepts like “person” and “event”.
 * “This lack of agreement makes it impossible to create client-side software that can be reused between APIs.
 * “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
+
+=== Licenses for APIs
+
+See Annex E for discussion of OpenAPIs and Licensing
+
+https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt[OGC GeoAPI license] is language developed by OGC.  Perhaps we should use a license that has broader use.
+
+https://github.com/opengeospatial/teamengine/blob/master/LICENSE.txt[The OGC Compliance Team Engine] uses the Apache 2.0 license
 
 
 === Open Standards and APIs

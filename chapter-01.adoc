@@ -17,8 +17,6 @@ APIs are useful in software development as they support modularity.
 Well defined interfaces allow separation of functionality into independent, interchangeable modules.
 APIs are often materialized as web-services,
 but are also commonly targeted at a specific programming language, typically Javascript.
-This difference in ‘level’ is arbitrary and they serve more or less the same purpose,
-to abstract useful functionality in a convenient interface.
 
 APIs are popular today as they allow an organization to publize their APIs for reuse.
 There are now over 12,000 public APIs available across a wide range of market sectors,
@@ -28,7 +26,7 @@ Public APIs enable an ecosystem that developers from other organizations use to 
 APIs are closely related to role of "platforms".
 For example the Facebook API provides functionality used by multiple organizations
 thereby advancing the market value of the Facebook platform.
-APIs promote “stickiness” to a platform.
+APIs may promote “stickiness” and "lock-in" to a platform.
 
 Public APIs may or may not be Open APIs.
 Being "public" means that the API is visible and accessible outside of the organization that owns the API.
@@ -58,8 +56,9 @@ Implementations of an OGC standard must satisfy requirements as demonstrated by 
 The requirements apply across multiple API implementations.
 
 **APIs** are interfaces that when backed by implementing code satisfy an interoperability need that may be documented in a Requirements Specification.
-The API package is a set of functions and procedure calls written in declarative code that enables a program to access an application.
-For bindings in most programming languages (C++, JAVA and other Object Oriented programming languages) the declarative code can be initially generated from UML and UML can be generated from the declarative code.  The design of an API must also take into account aspects of the particular programming language.
+ The API package is a set of structure, function and procedure protocol definitions written in declarative statements that enables a program to access an application package containing implementations for these functions and procedures using these protocols.
+ For bindings in most programming languages (C++, JAVA and other Object Oriented languages) the declarative code can be initially generated from UML defining the abstract API, using Model Drive Architecture (MDA) to produce the appropriate protocols.
+ Implementations may use any procedures they deem appropriate as long at the functional requirements of the original specification are upheld.
 
 **Applications** are software programs accessible by an API that meet user needs.
 Applications are distinct from system software including the operating system and system utilities.
@@ -83,6 +82,7 @@ without knowing details of their internal implementation.
 The APIs listed next show the diversity of the API concept
 while still retaining the core concept that "APIs are interfaces."
 [float]
+
 ==== OGC GeoAPI Standard
 
 http://www.geoapi.org/[The OGC GeoAPI standard] provides a set of Java language programming interfaces for geospatial applications.
@@ -97,14 +97,29 @@ Clients can use the JDBC API without concern for the particular implementation w
 Various groups have implemented different subsets of GeoAPI,
 see the http://www.geoapi.org/implementations.html[list of known implementations] for details.
 [float]
+
+==== OGC SensorThings API
+
+http://www.opengeospatial.org/standards/sensorthings[The OGC SensorThings API] provides an open, geospatial-enabled and unified way to interconnect the Internet of Things (IoT) devices, data, and applications over the Web. At a high level the OGC SensorThings API provides two main functionalities and each function is handled by a part. The two parts are the Sensing part and the Tasking part. The Sensing part provides a standard way to manage and retrieve observations and metadata from heterogeneous IoT sensor systems. The Tasking part is planned as a future work activity and will be defined in a separate document as the Part II of the SensorThings API.
+
+The SensorThings API part 1 identifies resources as entities that are relevant to IoT Sensing, e.g., Thing, Observation, Location, Sensor. SensorThings API  then grounds entities into entity sets and identifies URI components for requesting CRUD actions on those resources.  The CRUD actions are specified using the HTTP protocol as well as MQTT protocol.  MQTT is used to enhance the SensorThings service publish and subscribe capabilities. SensorThings API follows OData’s specification for requesting entities. However, SensorThings API does not follow the OData Common Schema Definition Language and should not be seen as an OData compliant API. SensorThings API’s future work will explore possible harmonization between SensorThings API and OData.
+
+
+==== OGC NetCDF Standard
+
+http://www.opengeospatial.org/standards/netcdf[The OGC netCDF Standard] is a set of data formats that support the creation, access, and sharing of array-oriented scientific data. The netCDF data model and encodings are particularly well suited to providing data in forms familiar to atmospheric and oceanic scientists.
+
+Related to the data model and encodings listed in the netCDF standard are a set of APIs. Considering the popularity of the netCDF APIs they may be included in future extensions of the OGC netCDF standard. Bindings for C, Fortran, C++, Java are described in the http://portal.opengeospatial.org/files/?artifact_id=43733[CF-netCDF Core and Extensions Primer.]
+
+[float]
+
 ==== APIs and the Web - WebAPIs
 
 The Web follows the Internet approach of https://www.w3.org/TR/webarch/#protocol-interop[Protocol-Based Interoperability]
-where the protocols specifying the syntax, semantics, and sequencing constraints of the messages interchanged.
-Protocols designed to be resilient in the face of widely varying environments have helped the Web scale
-and have facilitated communication across multiple trust boundaries.
+where the protocols specify the syntax, semantics, and sequencing constraints of the messages interchanged.
+Protocols designed to be resilient in the face of widely varying environments have helped the Web scale and have facilitated communication across multiple trust boundaries.
 Traditional APIs do not always take these constraints into account.
-One effect of protocol-based design is that the technology shared among agents often lasts longer than the agents themselves.
+One effect of protocol-based design is that the technology shared among components often lasts longer than the components themselves.
 To support Web development the concept of a WebAPI was defined.
 A https://en.wikipedia.org/wiki/Web_API[WebAPI] is an API for either a web server or a web browser.
 
@@ -118,12 +133,12 @@ The OWS standards are Requirements Specifications that define a protocol and in 
 The OWS standards include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS.
 
 The OWS standards define requirements to be satisfied by both client-side and server-side WebAPIs.
-The OWS standards as currently written do not specify declarative code bindings.
-The OWS standards do not specify API design, i.e., functions and procedure calls.
-Multiple API designs can satisfy the OWS requirements - as can be seen in Section 2.
+The OWS standards as currently written do not specify the declarative statements needed for an API package.
+The OWS standards do not specify API design rather they specify protocols that provide requirements for APIs.
+Multiple APIs with differing designs can satisfy the OWS requirements (See Section 2 Web Mapping examples for further discussion).
 
 The OWS standards are the basis for OGC Conformance Tests that are used to confirm that functional requirements are met by implementations.
-OGC Compliance Tests have predominatly focused on server-side testing, while more recently client-side compliance tests have been defined for WMS.
+OGC Compliance Tests have predominantly focused on server-side testing, while more recently client-side compliance tests have been defined for WMS.
 
 [float]
 ==== REST Architecture for OGC Web Services

@@ -1,0 +1,41 @@
+== Annex E. Open APIs and Licensing
+
+This annex was written by Carl Reed, PhD, Carl Reed and Associates
+
+This annex discusses issues and decisions you must make for licensing an Open API (http://www.opengeospatial.org/blog/4511). As stated in that blog, OGC standards are implemented in many software and application business models: Open Source, Open Source Commercial, Proprietary, and various combinations. In most situations, the use of OGC standards is enabled through some sort of API. The API allows developers, client applications and other services to have access to the functionality provided by implementing one or more OGC standard(s) as part of an API. What a developer can do – and cannot do – with the API is spelled out in the license associated with that API.
+
+There are a wide range of possible licenses you can select from (see URLs below). The ability to choose a license best suited for your Open API is good. However, at the same time that variety of choice can make selecting a license difficult. There are at least a dozen different licenses that can be used for an API.
+
+Therefore, this annex is meant to be informative and to help you think about what are the requirements for your Open API license and to select the most appropriate license for your Open API. The final decision on which license to use must be grounded in your business model and business/community requirements.
+
+There is a very broad selection of licensing options that you can choose for an Open API. Some of the more commonly used licenses are Apache 2.0, GPL, LGPL, and MIT. Each of these licenses specifies different rules for the use of an API. When selecting a license, you have to evaluate the rules of the license and how it lines up with the objectives and goals you have for your API. These rules typically cover topics like permissiveness, copyright restrictions, derivative works, liability, etc.
+
+The objectives for your Open API license may be similar to the objectives of a software license. These objectives can be summarized as 1.) defining the rules for using the API and 2.) limiting your liability in case of API failure. In either case remember that you are selecting a license for an Open API. Therefore, select a license that does not restrict anyone from using the API and developing applications based on the API.  The success of an open API program will depend on its ability to attract external developers and help them create truly valuable new apps that people actually want to use. Open API publishers need to engage developers and they need to make sure these developers are successful. Selecting the wrong license can severely inhibit success!
+
+Three terms that you will always encounter when dealing with licensing Open APIs are “copyleft”, “permissive”, and “derivative works”.
+
+"Copyleft" refers to licenses that allow derivative works but require them to use the same license as the original work.  https://jxself.org/what-is-copyleft.shtml
+
+A "permissive" license is simply a non-copyleft open source license — one that guarantees the freedoms to use, modify, and redistribute, but that permits proprietary derivative works.
+
+An absolute definition of “derivative work” is difficult. This is partly due to the fact that US Copyright law is a bit ambiguous on this subject and does not say anything about software.  I had one lawyer explain it to me this way, “The primary indication of whether a new program is a derivative work is whether the source code of the original program was used, modified, translated or otherwise changed in any way to create the new program.  If not, then I would argue that there is not a derivative work”.  Oracle versus Google is an example of how these ambiguities in terms of software and APIs can impact business. (https://en.wikipedia.org/wiki/Oracle_America,_Inc._v._Google,_Inc.)
+
+Additionally, there are other aspects related to the license and the terms of use for the API. Some of these considerations are:
+
+•	Make sure that you clearly identify the subject of the license. Providing such metadata as the full name of the API, version number, and subject of the API is important as the user of the API is provided a clear statement of the API being used.
+•	Consider the scope of rights. The scope of rights of an Open API license reflects what can be done with your API. For example, the clauses of the Google Maps API terms include the following: "If you develop a Maps API Implementation for use by other users, you must: (a) display to the users of your Maps API Implementation the link to Google's Terms of Use as presented through the Service or described in the Maps APIs Documentation . . .” and so forth.
+•	 Remember that in many cases an Open API provides access to proprietary processing services. You need to consider the terms of use for the underlying services/software.
+•	Another characteristic of your offering to consider in licensing is attribution. Will you have a requirement that any implementation or derivative work acknowledges your organization?
+•	If the API provides access to data, you then also need to consider the terms of use for your data repository or other data that your API is exposing.
+•	If there are financial considerations, such as a fee for a large number of transactions, then these need to be clearly stated.
+•	Do not change the terms of the license you choose. When you license an API, do not impose your personal views or requirements on others. Users of your API cannot take the legal and financial risk and as such may not implement your API.
+•	Finally, any license or terms of use that you decide on should have a very clearly stated limitation of liability. These limits are usually stated in licenses used with Open APIs and Open Source.
+
+A very easy to read list of considerations and characteristics of a license that is to be used with an “open” work such as an Open API is http://opendefinition.org/od/2.1/en/ .
+
+There are many good information resources on licensing for Open APIs, Source, and Data:
+
+•	A nice app for doing an initial selection of a license that meets your Open API business and/or community requirements: http://choosealicense.com/
+•	A summary table showing the key characteristics of all the commonly used license for open source and Open APIs: https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses
+
+Please read and research about licensing options before discussing license requirements within your organization and ultimately with legal counsel.  Legal counsel will make suggestions but the final decision will be yours or your organizations. You need to understand the licensing options within the context of your business and/or community requirements.

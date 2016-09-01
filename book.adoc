@@ -53,3 +53,11 @@ include::chapter-04.adoc[]
 include::chapter-05.adoc[]
 
 include::annex-a.adoc[]
+
+include::annex-b.adoc[]
+
+include::annex-c.adoc[]
+
+include::annex-d.adoc[]
+
+include::annex-e.adoc[]

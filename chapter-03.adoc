@@ -2,7 +2,7 @@
 
 === The Idea of OGC API Essentials
 
-OGC API Essentials as proposed in this Chapter are a small subset of the capabilities defined in OGC standards
+OGC API Essentials as proposed in this Chapter are a small subset of the capabilities defined in OGC standards and other open standards
 which would be very useful to developers for the Internet and Web of geospatial information.
 
 Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
@@ -10,7 +10,7 @@ Many OGC standards are already modular.
 Requirements for modularity are defined in the
 https://portal.opengeospatial.org/files/?artifact_id=34762[The Specification Model - A Standard for Modular specifications (08-131r3)].
 As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
-such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web API's.
+such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web APIs.
 
 This approach identifies pieces that are standardized and easy to use.
 It is anticipated that this will raise awareness of OGC in API providers.
@@ -54,7 +54,7 @@ Not all of the following specifications are OGC standards.
     These components are modular and intended to be used together or individually.
 
 *   http://docs.opengeospatial.org/is/13-082r2/13-082r2.html[**OGC WMTS Simple**]:
-    This profile of the OGC Web Map Tile Servcie defines two simple tile matrix sets:
+    This profile of the OGC Web Map Tile Service defines two simple tile matrix sets:
     World Web Mercator TileMatrixSet and World CRS84 TileMatrixSet.
 
 *   http://www.opengeospatial.org/standards/geosparql[**OGC GeoSPARQL**]
@@ -64,13 +64,13 @@ Not all of the following specifications are OGC standards.
 *   http://www.opengeospatial.org/standards/geopackage[*GeoPackage*] Features (with a single set SRID)
     and Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)
 
-*   **GeoJSON**: An extension to the JSON programing language which includes definitions for geometry and coordinate reference system objects.
-    These definitions are simplified versions of the Simple Feature definitions.
-    (Nearing adoption in IETF)
+*   https://tools.ietf.org/html/rfc7946[**GeoJSON**] defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents.
 
-*   http://www.georss.org/[**GeoRSS**] Simple
+*   http://www.georss.org/[**GeoRSS Simple**] supports basic geometries (point, line, box, polygon) in RSS.
 
-Several other specifications should be considered to be included in this list of essential specifications open API design, e.g., tile matrix specs.
+* http://www.opengeospatial.org/standards/owc[*OWS Context*] is a container for a set of services or inline content to be shared among clients while maintaining a consistent interpretation.
+
+Several other specifications should be considered to be included in this list of essential specifications for open API design.
 Its important to limit the list to specifications which are "open" as defined in Chapter 4.
 
 
@@ -83,9 +83,9 @@ but what differences there are would have quite an impact.
 
 Going beyond developing and maintaining an OGC API Essential list,
 there is additional value in OGC providing a form of concordance between the many and varied representation forms.
-Along the lines of “this is what a point is comprised of, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.
+Along the lines of “this is what a point comprises, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.
 Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon
-and so on within an API's or code library's interface.
+and so on within an APIs or code library's interface.
 
 OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality
 and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.

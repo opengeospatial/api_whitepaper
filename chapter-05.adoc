@@ -2,58 +2,42 @@
 
 These actions are recommended in the context of the OWS Common revision:
 
-=== OGC API Essentials.
+=== OGC Web Services and REST
 
+Building on several OGC activities and external contributions, update the OGC Web Services standards with changes that address RESTful principles.  This includes modeling the geospatial domain for example from OGC Testbed and Interoperability Experiment results.  Make OWS standards revisions in concert with the OWS Common Revision.  Standards Working Groups for each of the OWS Standards in concert with the OWS Common SWG should lead this effort.
+
+=== OWS Common
+
+Update the OWS Common standard using RESTful approaches including the identification of resources.  Include OGC Essentials in the OWS Common.  The OWS Common Standards Working Group should lead this effort.
+
+=== OGC Essentials
+
+Beginning with Chapter 3 of this White Paper establish an online version of OGC Essentials.  Make the elements of OGC Essentials readily availble for reuse in other standards and in APIs.  Support both the OGC and the broader community use of OGC Essentials.  Consider chartering a new SWG for OGC Essentials.
 Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements.
 Create a micro website aimed at developers building API's, that introduces the useful pieces with references to the full OGC specs.
 And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
 
-=== REST Interface development
+=== OGC approach to API Security
 
-Further develop the use of RESTful approaches for OGC web service interfaces.
-Use the results documented in the OGC Testbed 11 REST Interface Engineering Report (OGC 15-052r1).
+The OGC Security DWG should review API-centric security standards and best practices.  The Security DWG should make recommendations on approaches for API security that are well suited to OGC member applications.
 
-=== Learn from SensorThings API
+=== Open API Design in Interoperability Program
 
-Consider the results of SensorThings API development in the further development of OGC web service interfaces.
+Prototype the API Design approach in an OGC Interoperability Program initiative, e.g., OGC Testbed 13.  The Interoperability Program working with Sponsoring organizations should define requirements that build on Section 2 approach.  This would include basing API design on the OWS Standards, OWS Common, OGC Essentials; working with the Open API Initiative for using OAS for OGC-based APIs; implement the OGC Security DWG recommendations for API Security; and prototype methods for managing multiple API bindings in the initiative.
 
-=== Simple Abstract Service and Resource Model
+=== APIs in Architecture DWG
 
-The objective of this “thought experiment” is to show that object-oriented RPC (remote procedure call)
-SOA implementations can be mapped to a RESTful ROA implementations.
-The hypothesis is that abstract models in UML can be implemented as HTML instances.
-See John Herring's note)
+The Architecture DWG should regularly review the progress of OGC activities regarding APIs.
+For example, managing of multiple API bindings should be discussed in the context of supporting multiple protocols.  OGC SensorThings has developed an approach that should be consider for other OGC Standards.
+Another topic to be considered is the note from John Herrring, Oracle, on how object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances.
 
-=== API Design Tools
-API Design Tools allow coordinated design, prototype, document and test of APIs.
-Examples of API Design Tools include:
+=== Summary of OGC's role
 
-** https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md[Swagger]
-   is being developed in to the https://github.com/OAI/OpenAPI-Specification[the Open API Initiative].
-   Swagger™ can be used to describe and document RESTful APIs.
-   The Swagger specification defines a set of files required to describe such an API.
-   These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages.
-   Additional utilities can also take advantage of the resulting files, such as testing tools.
-** https://github.com/apiaryio/api-blueprint/[API Blueprint] is a high-level API design language for web APIs.
-   With API Blueprint you can  prototype and model APIs to be created or describe already deployed APIs.
-** http://raml.org/[RESTful API Modeling Language (RAML)] supports management of API lifecycle from design to sharing.
-   RAML defines an application of http://yaml.org/spec/1.2/spec.html[YAML] that provides mechanisms for the definition of RESTful APIs,
-   while providing provisions with which source code generators for client and server source code and comprehensive user documentation can be created.
-
-OGC use of an API design tool would provide auto-generated documents and client libraries.
-If OGC started using these to design new API's it would generate the assets that developers expect.
-
-=== WebIDL for Conceptual Modeling
-Consider using https://www.w3.org/TR/WebIDL/[W3C WebIDL] to define interfaces that could be implemented in multiple programming languages.
-
-=== OGC's role
-
-OGC can continue to lead the development of standards that embrace the full richness of geospatial information
+OGC can continue to lead the development of standards that embrace the full richness of geospatial information building on the approaches of
 
 * Appreciate the leadership of innovative organizations
 * Deliver high-end functionality for critical functions
 * Inform the marketplace on geospatial accuracy
 
 Similar to how the OGC Web Mapping Testbed in 1999 resulted in a convergence of web mapping,
-OGC can now play a leading role in the supporting the world of APIs by defining
-OGC API Essentials and RESTful web mapping standards.
+OGC can now play a leading role in the supporting the world of APIs by defining OGC API Essentials and RESTful web mapping standards.

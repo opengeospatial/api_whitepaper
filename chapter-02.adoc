@@ -1,73 +1,226 @@
 == API Design using Open Standards
 
-How can OGC Stanards contribute to the design of open APIs for geospatial interoperabilty?
-OGC Requirement Specifications provide protocols and data models that can serve as requirements for API design.
-This Chapter discusses API design by considering existing APIs and several industry practices for managing multiple API bindings.
+This Chapter discusses API design by considering the variation in existing geospatial APIs as the motivation for proposing API design based on open standards.  The objective is to promote wide spread interoperability based on open API design while maintaining competitive opportunities.
 
-=== Web Mapping API examples
+=== Objectives of API Design
 
-This section reviews examples of Web Mapping APIs.
-Web mapping APIs define code interfaces to access maps over the web.
-They are Client-side WebAPIs as defined in the previous chapter.
+The recent proliferation of APIs for geospatial applications has degraded the interoperability previously established by open standards.  This degradation is do both to the variability of API practices across the IT industry as well as variability in geospatial APIs specifically.
+
+Advancements in API practices is needed across the software development profession. "APIs are often difficult to use, and programmers at all levels, from novices to experts, repeatedly spend significant time learning new APIs. APIs are also often used incorrectly, resulting in bugs and sometimes significant security problems." (http://cacm.acm.org/magazines/2016/6/202645-improving-api-usability/["Improving API Usability" in the Communications of the ACM])
+
+The publication of geospatial data using APIs is advancing in many organizations.
+"Web APIs for Environmental Data", a report from CSIRO (See Annex B), provides organizations with a well-informed basis to design consistent, cross-organization APIs for access to a range of environmental data products.  Observations in the CSIRO report and listed in this Chapter provide examples of opportunities for improving geospatial API design.
+
+==== Web Mapping API examples
+
+This section provides examples of variation across existing geospatial APIs to demonstrate the need for improved API design practices.
+Web mapping APIs define interfaces to access maps over the web.
 While web mapping APIs are defined in multiple programming languages,
-the examples in this chapter focus on Javascript.
+the examples in this chapter focus on JavaScript.
 
-APIs for web mapping was the topic of a recent posting by
+APIs for web mapping were listed in
 http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23[The Programmable Web]
 with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo.
+Some of these APIs implement the WMS Protocol either explicitly or as an extension - others do not support WMS, defining their own semantics and syntax for web mapping.
 
-Most the the APIs listed here implement the OWS Protocols either explicitly or the API provides an extension method for adding protocols.
+Annex A lists details and code snippets for these Web Mapping API examples: Google Maps, OpenLayers, MapQuest API for OpenStreetMap, Leaflet.  Additionally two more RESTful examples are listed in Annex A: Esri ArcGIS REST and Mapbox.
 
-The Web Mapping API code examples listed in the Appendix are from:
+==== Variation in Web Mapping APIs
 
-* Google Maps
+The Web Mapping APIs listed in the Annex A use similar concepts sometimes in attributes differing names.
+The Table below lists two such attributes  - "Center" and "Zoom" - that are in the four example APIs.  "Center" is the center point of the web map to be displayed.  "Zoom" is related to the scale of the web map to be displayed.  The concepts for these attributes are similar in each API but the precise specification is different in each case.
 
-* OpenLayers
+The variability of similar concepts across different APIs as seen in Table 1 suggests an opportunity to quickly converge on a small set of "essential" attributes usable across otherwise disparate APIs.  This simple example motivates the discussion about geospatial domain mapping and OGC Essentials for geospatial APIs based on open standards.
 
-* MapQuest API for OpenStreetMap
-
-* Leaflet
-
-These API examples are followed by REST examples:
-
-* Esri ArcGIS REST
-
-* Mapbox
-
-=== Commonalities of the Web Mapping APIs
-
-Many Web Mapping APIs have similar concepts sometimes with different names.
-The Table below lists two similar concepts of "Center" and "Zoom" that are seen in the four example APIs.
-One consideration is that Web Mappping APIs might trace their designs to OGC API Essentials as defined in Chapter 3.
-For example the "Zoom" in each of the APIs can be related to the WMTS Simple TileMatrixSet.
-
-.Commonalities of the Web Mapping APIs
+.Comparison of Map-related attributes from several APIs
 [options="header"]
 |=======================
 |API|Center      |Zoom
-|Google Maps    |https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude.    | Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out, and larger zoom levels zoom in at a higher resolution.
-|Open Layers    |center     |The available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution.
-|MapQuest for OSM    |center    |zoom
-|Leaflet   | center    |zoom
+|**Google Maps**
+
+ https://developers.google.com/maps/documentation/javascript/reference#MapOptions[Map] constructor class   |https://developers.google.com/maps/documentation/javascript/reference#LatLng[LatLng] which is a point in geographical coordinates: latitude and longitude.
+
+(CRS is not discussed on the page where LatLng is defined)
+| Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out, and larger zoom levels zoom in at a higher resolution.  (Examples of Zoom range from 0 to 21)
+
+|**Open Layers**
+
+http://openlayers.org/en/v3.13.0/apidoc/ol.View.html[ol.Map] object
+|ol.Coordinate - a 2D coordinate.  The coordinate system is specified with the projection option. Default is undefined, and layer sources will not be fetched if this is not set.
+
+|zoomFactor	used to determine the resolution constraint. Default is 2.
+ Available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution.
+|**MapQuest for OSM**
+
+http://open.mapquestapi.com/staticmap/#getmap[getmap] method
+|A center point for the map image.
+
+(CRS unspecified)
+|Integer between 1 and  18 (http://open.mapquestapi.com/staticmap/zoomToScale.html[A table relating zoom to scale] is defined.)
+|**Leaflet**
+
+http://leafletjs.com/reference-1.0.0.html#map-factory[L.Map] factory class
+| LatLng geographic point as the center of the map.
+
+(No CRS specified for LatLng but altitude is height of WGS84 ellipsoid)
+|minZoom default is 0.  maxZoom default is 18.  Method to return scale from zoom.
 |=======================
 
 
-=== Managing multiple API Bindings
 
-Several organizations are now posting their public APIs in multiple SDKs for binding in multiple programming languages.
-Facebook is an example of approach that is common.
-Figure 2 shows the Facebook "Offer" request in http - other bindings of the Offer API are displayed when the SDK label across the top is selected.
-Similar examples can be found from https://stripe.com/docs/api[Stripe] and  https://www.planet.com/docs/v0/scenes/#data-products[Planet Labs].
+
+=== Geospatial API design based on open standards
+
+In order to avoid the difficulties identified in the first part of this Chapter; this section identifies several methods based on open standards for the design of Geospatial APIs.
+The methods described in the following paragraphs shown are:
+
+* Modeling the geospatial domain
+
+* API design based on geospatial requirements
+
+* API Specification and Management
+
+* OGC Essentials for API elements
+
+* Managing multiple API Bindings
+
+* Layered API design
+
+* API Security Patterns
+
+Each of the items in listed above are discussed in a section below.
+
+==== Modeling the geospatial domain
+
+In general, designing for a connected set of concepts in a domain will lead to more robust interactions with the resources, long term evolvability and fitness for use (http://www.mikestowe.com/blog/2014/11/what-is-spec-driven-development.php[Spec Driven Development]).  Design should consider an interconnected set of API resources with clear ideas and support of why and how API consumers will follow certain paths.
+This supports the objective that APIs may not just compete by features, but also by how easily and robustly they can be used (  http://dret.typepad.com/dretblog/2016/08/api-maps-hypermedia-api-design.html[API Maps: Hypermedia API Design])
+
+The CSIRO API Report (Annex B) makes the following observations about modeling the environmental data domain.
+
+* Observation 18: Involve domain specialists in resource design. In organizations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts and words with different meaning, e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.
+
+* Observation 19: Consider point, grid and trajectory abstractions. This has been used effectively in existing APIs as a way of delineating different data types.
+
+Multiple map APIs designed with consistent domain model will improve development using multiple APIs, e.g., a developer can use an open API to draw the map, open map data from multiple sources in combination with commercial APIs say for advanced features such as traffic or routing.  Capturing the geospatial domain in open Requirements Specifications provides for achieving such domain interoperability.
+
+==== API design based on geospatial requirements
+
+As discussed in Chapter 1, Requirements Specifications define protocols and schemas for interoperability across distributed heterogeneous distributed information systems.  APIs that implement the Requirement Specifications support such interoperability.
+
+The OGC Web Service (OWS) Standards are requirements specifications that define geospatial interoperability. The OWS Standards define data structures, behaviors and semantics for protocols based on http. The OWS Standards were initially defined based on a Service Oriented Architecture (SOA).  The OGC Web Map Service was defined with a service interface including multiple operations, e.g., GetMap.   OGC is currently reviewing the OWS Standards in a discussion will lead to addition of more RESTful protocols based on a Resource-Oriented Architecture (ROA).  (See https://portal.opengeospatial.org/files/?artifact_id=64860[OGC Testbed 11 REST Interface Engineering Report])
+
+Consistent with ROA and supportive of RESTful APIs, geospatial resources need to be identified in OGC standards.  Geospatial resources include: feature collection, feature, coverage, map, layer, trajectory, etc.  Relationships are also important to be modeled, e.g. topological associations between features, parent-child associations, etc.
+
+Based on identification of geospatial resources RESTful protocol signatures are being defined for OWS standards.  For example:
+
+http://ows.example.org/dataset/ows/featurecollection/featureID
+http://ows.example.org/dataset/ows/coverage/AvgLandTemp
+
+An example defing a relation between a requirements specification and implementing APIs is available in these two standards from the Intelligent Transport Systems (ITS) Domain:
+
+* Unified gateway protocol requirements and specification for vehicle-ITS-station gateway (V-ITS- SG) interface (ISO 13185-2)
+
+* Unified vehicle interface protocol (UVIP) server and client API specification (ISO 13185-3)
+
+Corresponding to services defined in ISO 13185-2, the UVIP Java Client API (ISO 13185-3) contains services that can be called by any application to execute a service.  A UVIP Client Application communicates with a UVIP Server Application.
+
+Resources, protocols, semantics and behaviors defined in Geospatial Requirement Specifications become the basis for API Specification and Management.
+
+==== API Specification and Management
+
+API specification and management are crucial software engineering functions for any organization using information technology.  As the popularity of APIs has grown in the past few years, so too have the tools, best practices and consulting services that support organizations in API specification and management.  While these tools were initially developed for organizations to manage their organization-specific APIs, the tools can also be considered for use in API design in an open standards context.  Here we consider one such tool: the Open API Specification formerly known as the Swagger specification.
+
+Documenting APIs can be aided by using the approach of the https://openapis.org/[OpenAPI Initiative (OAI)].
+OAI is focused on defining a vendor neutral API Description Format based on the Open API Specification (OAS).
+The approach will allow specification of REST APIs using modular sub-elements.
+Sub-elements can then live on their own and be shared by multiple APIs.
+More information about OAI and OAS is available in Annex C.
+
+Providing complete documentation of your API using OpenAPI is a
+https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice].
+This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
+
+Swagger was used in the https://portal.opengeospatial.org/files/?artifact_id=61224[OGC WaterML2.0 part 2 Interoperability Experiment] to document the CSIRO RESTful API.  The CSIRO API Report (Annex B) makes the following observations:
+
+* Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimize divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.
+
+* Observation 10: Avoid bleeding edge API description languages and response patterns. There has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.
+
+An advantage of documenting APIs with OAS is the industry-wide tools and practices that are based on OAS.  The first Figure below shows how OAS enables robust management of software development lifecycle activities.  The second figure below shows the automated generation of client libraries based on code generation tools.  Use of OAS also helps organizations with API response types, including error handling, link updates, moved and re-aggregated resources, etc.
+
+image::images/chapter-02-5e517.png[title=The OpenAPI Specification offers a simple format for writing REST service contracts]
+
+image::images/chapter-02-51bc4.png[title=OAS/Swagger API specification based tools]
+
+The CSIRO API report (Annex B) describes the OpenAPI Specification as a set of tools and services that help API developers generate documentation for APIs. The Swagger UI renders a documentation page that provides full description of endpoints, with in-line forms allowing test calls to be made to services. The UI can be generated from an API specification document, which could be handwritten or generated from a service.
+
+The specification of a service is done using JSON or YAML that follows the Swagger specification schema. A JSON Schema is available to validate specification documents. The specification defines all the standard parts of a RESTful API: the resource endpoints, supported functions (GET, POST, DELETE, OPTIONS etc.), media types, parameters, and responses.
+
+Consistent use of API Specification and Management practices such as the Open API Specification and its support environment will increase consistent use of elements across multiple APIs.  To increase the interoperability across geospatial APIs, use of OGC Essentials in OAS environment should be considered.
+
+==== OGC Essentials for API elements
+
+OGC Essentials as described in the Chapter 3 is a set of items defined in OGC standards and other open standards that can be used in defining geospatial APIs.
+
+Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
+There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.
+
+As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
+such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building APIs.
+The OGC approach to modular standards should help with using OGC Essentials separate from their defining standard.
+Requirements for modularity are defined in the
+https://portal.opengeospatial.org/files/?artifact_id=34762[The Specification Model - A Standard for Modular specifications (08-131r3)].
+
+Reuse of OGC Essentials will lead to consistency, accuracy and reuse across the various APIs.  For example consistently using CRS Well Known Text and the WMTS TileMatrixSet would reduce the variation across web mapping APIs that was identified at the beginning of this chapter.
+
+==== Managing multiple API Bindings
+
+Another aspect of API management is implementation of an API Specification in multiple bindings. Language bindings are part of API packages. Multiple organizations are now posting their public APIs with bindings for multiple SDKs.
+
+The Figure below shows the https://developers.facebook.com/docs/graph-api/reference/v2.7/offer[Facebook "Offer" API].
+When the figure was captured the API was shown in http.  Across the top of the image are the available language bindings: PHP, JavaScript, Android, iOS. On the Facebook API page, selecting one of the bindings while change the display to the API in that language.
 
 image::images/FBoffer.png[title=Managing multiple API Bindings,scaledwidth="80%"]
 
-Documenting APIs can be aided by using the approach of the https://openapis.org/[OpenAPI Initiative (OAI)].
-OAI is focused on defining a vendor neutral API Description Format based on the Swagger Specification.
-The approach will allow specification of REST APIs using modular sub-elements.
-Sub-elements can then live on their own and be shared by multiple APIs.
-There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.
-This would make the OGC Essentials more developer friendly.
+An example in the geospatial domain comes from https://www.mapbox.com/api-documentation/?language=cURL#map[Mapbox].
+The Mapbox API page lists API bindings in cURL, CLI, Python, JavaScript, Java, Swift/Objective-C.
 
-Providing complete documentation of your API using OpenAPI/Swagger is a
-https://www.w3.org/TR/dwbp/#documentYourAPI[W3C Data on the Web Best Practice].
-This best practice for APIs is being discussed in the http://www.opengeospatial.org/projects/groups/sdwwg[OGC/W3C Spatial Data on the Web Working Group].
+Managing multiple bindings can also involve using protocols other than http.  For example OGC SensorThings API can be implemented in either http or MQTT.  MQTT is used to enhance the SensorThings service publish and subscribe capabilities. SensorThings API follows OData’s specification for requesting entities.  Managing of multiple API Bindings need to also include managing bindings for multiple protocols.
+
+From an open standards point of view, consistent implementation of elements across bindings is critical to protocol level interoperability.  For example, OGC Essentials could be defined for multiple bindings.
+
+==== Layered API design
+
+The focus of API Design using Open Standards is most critical on external APIs.  Organizations design and use both external and internal APIs in the IT systems.  External APIs are those APIs that are made available external to the organization
+
+* External APIs - focused on the user needs - "Experience APIs"
+
+* Internal APIs - providing access to enterprise resources.
+
+Mapping external APIs to internal APIs with business logic integration in API Gateways is depicted in the Figure below.
+
+Graphic
+- API Consumer
+- External API (including Security)
+- Business Logic (repeat multiple levels as necessary)
+- Internal APIs
+- Enterprise Assets and Data sources.
+
+image::images/chapter-02-80fef.png[title=Layered APIs,scaledwidth="40%"]
+Figure Source: http://www.slideshare.net/launchany/designing-apis-and-microservices-using-domaindriven-design[James Higginbotham]
+
+External APIs offered by API Gateways are the most fruitful focus for API design using open standards.  With the focus on external interfaces, comes the need to address security as part of the API design.
+
+
+==== API Security Patterns for geospatial
+
+Coordination with OGC Security DWG.
+
+http://www.opengeospatial.org/standards/sensorthings[The OGC SensorThings API] addresses security in section 7.7 by reference to ITU-T Y.2060
+
+
+=== Summary of API Design with Open Standards
+
+The Figure below provides a summary of the topics discussed above  Geospatial API Design using open standards.
+
+image::images/chapter-02-2cb28.png[]

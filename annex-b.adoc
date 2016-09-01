@@ -1,0 +1,81 @@
+== Annex B:  Web APIs for Environmental Data - CSIRO Report
+
+=== Introduction
+
+CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations on APIs for the Environmental data.
+
+"Web APIs for environmental data: State of the art investigation."
+Peter Taylor, CSIRO
+27th May 2016
+https://portal.opengeospatial.org/files/?artifact_id=68811&version=1
+
+Some excerpts from the report are listed in this annex.
+
+=== Executive Summary excerpts
+
+This report summarises existing practices for the publication of environmental data using Web APIs. The aim is to provide organisations with a well-informed basis to design consistent, cross-organisation Web APIs to access a range of environmental data products. While this report was conducted in a hydrology-specific activity (WIRADA), it takes a broader look at environmental data to contribute to a cross-domain view of Web APIs.
+
+Some organisations (e.g. NOAA and UK Met Office) look to be using Web APIs as a way of bringing existing legacy systems together and providing a more cohesive API experience for developers. However these approaches are in their infancy. They do not appear to be using well-defined, reusable APIs, which we would suggest to be adopted as-is. Yet there are lessons to be learned: some have identified basic abstractions that may be reusable, such as separation of value-types (text, image, scalar); observations and forecasts; points, grids, and trajectories, among others. These may then be used as generic access mechanisms across sub-domains, where such concepts are generally consistent.
+
+In this report we identify and provide brief overviews of the state of the art in Web API description languages (5.1), common response types (5.2) and management of Web APIs (5.3). This is an area of huge growth, following the proliferation of APIs on the Web. Consequently many of these practices are still immature, so we suggest being cautious when selecting API description languages and common response types.
+
+===  Survey of related domain APIs
+
+Section 4 of the report includes a survey of related domain APIs from these organizations and activities:
+
+- National Oceanic and Atmospheric Administration (NOAA)
+- UK Met Office – DataPoint
+- Forecast.io
+- USGS Water Data Services
+- Atlas of Living Australia
+- OGC SensorThings API
+- UK National Biodiversity Network
+- GeoServices API
+- Global Change Information System
+- UK Environmental Agency
+- Bathing Water Quality API
+- CKAN
+- Data Access Protocol (DAP), OpenDAP, Hyrax
+- THREDDS
+- ERDDAP
+
+
+=== Excerpts from Analysis
+
+The analysis in report is organized in these sections
+    - Web API description languages (5.1),
+    - common response types (5.2) and
+    - management of Web APIs (5.3).
+
+Section 5.1.1 considers the Swagger specifications. Swagger is now known as the OpenAPI Specification.
+
+Swagger is a set of tools and services that help API developers generate documentation for APIs. The Swagger UI renders a documentation page that provides full description of endpoints, with in-line forms allowing test calls to be made to services. The UI can be generated from an API specification document, which could be handwritten or generated from a service.
+
+The specification of a service is done using JSON or YAML that follows the Swagger specification schema20. A JSON Schema is available to validate specification documents21. The specification defines all the standard parts of a RESTful API: the resource endpoints, supported functions (GET, POST, DELETE, OPTIONS etc.), media types, parameters, and responses.
+
+Swagger was used in the WaterML2.0 part 2 Interoperability Experiment to document the CSIRO RESTful API22, as shown in Figure 15.
+
+=== Selected Observations
+
+Section 6 of the report provides observations in three areas of provisioning Web APIs:
+    - General: documentation styles, API presentation, building developer community;
+    - Technical: use of automated API documentation, API description languages, API managers, use of the HTTP standard, error and link encoding, versioning, being consistent; 
+    - Modelling the domain: modelling resources, use of domain-driven modelling, involving domain experts, use of abstractions, and relevant external activities.
+
+These observations were selected as relevant to API Design with open standards.
+
+- General
+    - Observation 2: Highly abstracted APIs can be difficult to understand and may be a barrier for new users. Trying to do too many things in a single API or Web Service can result in an overly complex, hard to understand API. Partitioning APIs into concrete API endpoints, each having clearly stated functions help to build understanding.
+    - Observation 5: Provide community resources, such as forums and easy feedback mechanisms, to allow users and developers to share experiences and issues. APIs are successful when they are used.
+    - Observation 8: Document common usages of your APIs that achieve certain goals, especially when they require multi-step requests to the API. For example, ‘I want to discover all observations available at a particular station’.
+
+- Technical
+
+    - Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimise divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.
+    - Observation 10: Avoid bleeding edge API description languages and response patterns. As discussed in 5.1 and 5.2, there has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.
+
+
+- Modelling the domain
+    - Observation 18: Involve domain specialists in resource design. In organisations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts (Bounded Contexts - (Fowler, 2014) and (Evans, 2003)) and words with different meaning (polysemes), e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.
+    - Observation 19: Consider point, grid and trajectory abstractions. This has been used effectively in existing APIs (e.g. DAP, NetCDF) as a way of delineating different data types.
+    - Observation 20: Monitor the outcomes of the joint W3C/OGC ‘Spatial Data on the Web’ working group50. It is working on general recommendations for publishing spatial data on the web in a consistent manner. These should be very useful in guiding convergence in some of the issues covered in this report.

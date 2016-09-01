@@ -18,7 +18,7 @@ This paper aims to help answer questions like:
 
 * If you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose?
 * If you are developing your API how can you include essential geospatial elements reused from previous best practice?
-* How to overcome “walls” of complexity and build on success of “pointy” APIs that they are small and simple
+* How to overcome “walls” of complexity and build on success of “pointy” APIs that are small and simple
 
 **Keywords**
 
