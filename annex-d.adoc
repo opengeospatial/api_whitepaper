@@ -1,0 +1,70 @@
+=== APIs and implementation independence
+
+Different APIs can provide different levels of isolation.
+An API package may be specific to a particular implementor,
+in which case the API provides an isolation level between the users and the details of the implementor's system
+while competitor systems offer different (often incompatible) APIs.
+Alternatively API packages can be defined by a neutral organization,
+which encourages various vendors to provide implementations of the same API.
+Whether the later alternative is straightforward or difficult depends on the kind of APIs and the target programming language:
+
+1. Data structures and operations defined in human-readable text formats like XML, JSON, WKT, CQL
+   or key-value pairs in URL can be vendor-neutral in practically every programming languages.
+2. Data structures and operations defined natively in a programming language can be vendor-neutral
+   if that language supports interfaces or something equivalent (e.g. "traits").
+   Not all programming languages have this support.
+
+While choice 1 (text formats) is more portable,
+choice 2 (declarative code) usually offers better performances,
+more customization opportunities with _method overriding_,
+and is sometime easier to implement (by contrast, parsing a GML, WKT or CQL document can be challenging).
+The following list summarizes some programming language capabilities regarding above choices:
+
+[float]
+==== Java and C#
+
+**Text formats:** data structures can be parsed with the help of any standard-compliant library.
+No format is privileged by the language.
+The Java Developer Kit (JDK) provides XML support in standard Java installations,
+but this support is often used indirectly through third-party libraries for easier access to data.
+
+**Declarative code:** data accesses and operation contracts can be defined natively in the Java language as interfaces.
+Those interfaces can be shipped by a neutral organization independently of any implementation.
+Interoperability is facilitated by the separation between applications that call API functions, and libraries that implement API.
+Using the interfaces' API, developers can ignore the underlying implementation.
+
+The C# language can have the same capabilities than the Java language regarding API independence.
+
+[float]
+==== JavaScript
+
+**Text formats:** data structures in JSON format can be parsed natively.
+Other text formats require library support.
+
+**Declarative code:** the JavaScript language does not have interfaces.
+Data structures and operations in JavaScript are linked to a specific implementation.
+A neutral organization may provide recommendations about APIs in JavaScript,
+but can not enforce that API by shipping JavaScript interfaces separately.
+
+[float]
+==== C/C++
+
+**Text formats:** data structures can be parsed with the help of any standard-compliant library.
+
+**Declarative code:** data accesses and operation contracts in the C language
+are more closely tied to a particular implementation than in the Java language.
+A limited degree of implementation independence can be achieved by dynamic linking (as opposite to static linking).
+More extensive implementation independence, similar to the Java level, can be achieved in C
+by systematic usage of pointer to functions for every function calls.
+For example the Java Native Interfaces (JNI) in C use this technic.
+The C++ language allows usage of the same technic more easily than in C.
+
+[float]
+==== REST and other WebAPIs
+
+**Text formats:** data structures can be parsed with the help of a standard-compliant library
+in the language selected for the client-side application.
+Since that language is often JavaScript, the JSON format tends to be privileged.
+
+**Declarative code:** since WebAPI is a concept rather than a specific programming language,
+the level of API implementation independence in declarative code is the one of the programming language selected for the application.

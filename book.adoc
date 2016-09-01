@@ -61,3 +61,5 @@ include::annex-c.adoc[]
 include::annex-d.adoc[]
 
 include::annex-e.adoc[]
+
+include::annex-d.adoc[]
