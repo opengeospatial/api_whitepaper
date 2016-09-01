@@ -41,8 +41,9 @@ editor or the submitters:
 |Gary Gale          |What 3 Words
 |Arnulf Christl     |Metaspatial
 |Josh Lieberman     |Tumbling Walls
-|Carl Reed          |personal contribution
+|Carl Reed          |Carl Reed and Associates
 |John Herring       |Oracle
+|Martin Desruisseaux    |Geomatys
 |David Blodgett     |USGS
 |Scott Simmons      |OGC
 |Bart de Lathower   |OGC
