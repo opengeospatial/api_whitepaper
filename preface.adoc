@@ -22,15 +22,20 @@ Annexes are provided on these topics:
 * E. Open APIs and Licensing
 
 
-This paper aims to help answer questions like:
+The main themes of paper are:
 
-* If you want to publish geospatial data on the web right now, what are the easiest ways to do so, considering fit-for-purpose?
-* If you are developing your API how can you include essential geospatial elements reused from previous best practice?
-* How to overcome “walls” of complexity and build on success of “pointy” APIs that are small and simple
+* **APIs are popular** because they are an effective method for rapid software development in particular for distributed systems.  Examples of successful geospatial mapping APIs are listed in Annex A:   Google Maps, OpenLayers, MapQuest API for OpenStreetMap, Leaflet, Esri ArcGIS REST and Mapbox
+
+* The proliferation of **API variations degrade interoperability** defined by web protocols.  The examples in Annex A show such variations in several parameters including "Zoom" level.   A summary of the differences of Zoom is provided in Chapter 2, Table 1 - Comparison of Map-related attributes from several APIs.
+
+* **Protocols provide interoperability** when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in Figure in Chapter 1.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly **consistent use of OGC Essentials** will improve interoperability (See Chapter 3)
+
+* API implementation experience should be used to **improve the OGC Web Service Protocols**.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 2 and 3).
+
 
 **Keywords**
 
-ogcdoc, OGC documents, api, standards
+ogcdoc, OGC documents, api, protocol, interoperabiity, standards
 
 <<<
 
@@ -57,3 +62,5 @@ editor or the submitters:
 |Bart de Lathower   |OGC
 |George Percivall   |OGC
 |=======================
+
+<<<

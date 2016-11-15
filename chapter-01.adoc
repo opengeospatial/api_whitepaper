@@ -172,3 +172,5 @@ http://dev.twitter.com/overview/documentation[Twitter]
 * APIs are interfaces that implement requirements for protocols or data models
 * OGC Web Service standards specify web protocols based on http.
 * OWS standards have been implemented in numerous APIs - see Chapter 2.
+
+<<<

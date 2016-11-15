@@ -1,3 +1,4 @@
+<<<
 == Open standards and APIs.
 
 To be effective a standard must be used.

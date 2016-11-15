@@ -1,0 +1,2374 @@
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>book.adoc</title>
+      <style>
+        #wrapper {width: 960px; margin: 0 auto;}
+        /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+body{-webkit-font-smoothing:antialiased}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+
+      </style>
+      <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/asciidoc.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/yaml.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/dockerfile.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/makefile.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/rust.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/haskell.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/typescript.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/scss.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/less.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/handlebars.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/groovy.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/scala.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/bash.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/ini.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+      <div id="wrapper">
+        <div class="article">
+          <h1>OGC® Open Geospatial APIs - White Paper</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>OGC Document 16-019r3<br></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>External identifier of this OGC® document: TBD<br>
+URL for this OGC® document: TBD<br>
+Internal reference number of this OGC® document: OGC 16-019r3<br>
+Version:<br>
+Category: OGC® White Paper <br>
+Editor: George Percivall<br>
+Previous Version: <br>
+Publication Date: 2016-TBD<br>
+Approval Date: 2016-TBD<br>
+Submission Date:  <br></p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2016 Open Geospatial Consortium.</p>
+</div>
+<div class="paragraph">
+<p>To obtain additional rights of use, visit <a href="http://www.opengeospatial.org/legal/">http://www.opengeospatial.org/legal/</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Warning</strong></p>
+</div>
+<div class="paragraph">
+<p>This document is not an OGC Standard.
+This document is an OGC White Paper and is therefore not an official position of the OGC membership.
+It is distributed for review and comment.
+It is subject to change without notice and may not be referred to as an OGC Standard.
+Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements</p>
+</div>
+<div class="paragraph">
+<p>Document type: OGC® White Paper<br>
+Document stage: Prepared for review at OGC TC December 2016<br>
+Document language: English<br></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>Preface</strong></p>
+</div>
+<div class="paragraph">
+<p>OGC defines interfaces that enable interoperability of geospatial applications.
+API’s are a popular method to implement interfaces for accessing spatial data.
+This White Paper provides a discussion of Application Programming Interfaces (APIs)
+to support discussion of possible actions in the Open Geospatial Consortium (OGC).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chapter 1 – What is an API?</p>
+</li>
+<li>
+<p>Chapter 2 – API Design using Open Standards</p>
+</li>
+<li>
+<p>Chapter 3 – OGC API Essentials</p>
+</li>
+<li>
+<p>Chapter 4 – Open Standards and APIs.</p>
+</li>
+<li>
+<p>Chapter 5 – Summary of ideas for OGC activities for Open APIs</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Annexes are provided on these topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A. Examples of Web Mapping APIs</p>
+</li>
+<li>
+<p>B. Web APIs for Environmental Data - CSIRO Report</p>
+</li>
+<li>
+<p>C. The Open API Initiative and Specification</p>
+</li>
+<li>
+<p>D. APIs and implementation independence</p>
+</li>
+<li>
+<p>E. Open APIs and Licensing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The main themes of paper are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>APIs are popular</strong> because they are an effective method for rapid software development in particular for distributed systems.  Examples of successful geospatial mapping APIs are listed in Annex A:   Google Maps, OpenLayers, MapQuest API for OpenStreetMap, Leaflet, Esri ArcGIS REST and Mapbox</p>
+</li>
+<li>
+<p>The proliferation of <strong>API variations degrade interoperability</strong> defined by web protocols.  The examples in Annex A show such variations in several parameters including "Zoom" level.   A summary of the differences of Zoom is provided in Chapter 2, Table 1 - Comparison of Map-related attributes from several APIs.</p>
+</li>
+<li>
+<p><strong>Protocols provide interoperability</strong> when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in Figure in Chapter 1.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly <strong>consistent use of OGC Essentials</strong> will improve interoperability (See Chapter 3)</p>
+</li>
+<li>
+<p>API implementation experience should be used to <strong>improve the OGC Web Service Protocols</strong>.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 2 and 3).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Keywords</strong></p>
+</div>
+<div class="paragraph">
+<p>ogcdoc, OGC documents, api, protocol, interoperabiity, standards</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>Submitters of this document</strong></p>
+</div>
+<div class="paragraph">
+<p>All questions regarding this white paper should be directed to the
+editor or the submitters:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Document Contributors</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Affiliation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chris Holmes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Planet Labs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dave Wesloh</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NGA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chuck Heazel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WiSC Enterprises</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gary Gale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">What 3 Words</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arnulf Christl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metaspatial</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Josh Lieberman</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tumbling Walls</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carl Reed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carl Reed and Associates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Herring</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oracle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Martin Desruisseaux</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geomatys</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David Blodgett</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USGS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scott Simmons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bart de Lathower</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">George Percivall</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OGC</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_what_is_an_api">1. What is an API?</a>
+<ul class="sectlevel2">
+<li><a href="#_api_defined">1.1. API defined</a></li>
+<li><a href="#_apis_in_context">1.2. APIs in context</a></li>
+<li><a href="#_diversity_of_apis">1.3. Diversity of APIs</a></li>
+<li><a href="#_summary">1.4. Summary</a></li>
+</ul>
+</li>
+<li><a href="#_api_design_using_open_standards">2. API Design using Open Standards</a>
+<ul class="sectlevel2">
+<li><a href="#_objectives_of_api_design">2.1. Objectives of API Design</a></li>
+<li><a href="#_geospatial_api_design_based_on_open_standards">2.2. Geospatial API design based on open standards</a></li>
+<li><a href="#_summary_of_api_design_with_open_standards">2.3. Summary of API Design with Open Standards</a></li>
+</ul>
+</li>
+<li><a href="#_ogc_api_essentials">3. OGC API Essentials</a>
+<ul class="sectlevel2">
+<li><a href="#_the_idea_of_ogc_api_essentials">3.1. The Idea of OGC API Essentials</a></li>
+<li><a href="#_ogc_api_essentials_initial_list">3.2. OGC API Essentials - initial list</a></li>
+<li><a href="#_moving_forward_on_ogc_api_essentials">3.3. Moving forward on OGC API Essentials</a></li>
+</ul>
+</li>
+<li><a href="#_open_standards_and_apis">4. Open standards and APIs.</a>
+<ul class="sectlevel2">
+<li><a href="#_what_is_an_open_standard">4.1. What is an Open Standard?</a></li>
+<li><a href="#_what_is_an_open_standards_setting_organization">4.2. What is an open standards setting organization?</a></li>
+<li><a href="#_the_value_of_open_standards">4.3. The Value of Open Standards</a></li>
+<li><a href="#_so_many_apis">4.4. So Many APIs</a></li>
+<li><a href="#_licenses_for_apis">4.5. Licenses for APIs</a></li>
+<li><a href="#_open_standards_and_apis_2">4.6. Open Standards and APIs</a></li>
+</ul>
+</li>
+<li><a href="#_summary_of_ideas_for_ogc_activities_for_open_apis">5. Summary of ideas for OGC activities for Open APIs</a></li>
+<li><a href="#_web_mapping_api_examples_2">Appendix A: Web Mapping API examples</a></li>
+<li><a href="#_web_apis_for_environmental_data_csiro_report">Appendix B: Web APIs for Environmental Data - CSIRO Report</a></li>
+<li><a href="#_the_open_api_initiative_and_specification">Appendix C: The Open API Initiative and Specification</a></li>
+<li><a href="#_apis_and_implementation_independence">Appendix D: APIs and implementation independence</a></li>
+<li><a href="#_open_apis_and_licensing">Appendix E: Open APIs and Licensing</a></li>
+</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_an_api"><a class="anchor" href="#_what_is_an_api"></a>1. What is an API?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_api_defined"><a class="anchor" href="#_api_defined"></a>1.1. API defined</h3>
+<div class="paragraph">
+<p>This chapter discusses software engineering definitions for APIs.</p>
+</div>
+<div class="paragraph">
+<p><strong>API (Application Programming Interface)</strong> - An interface that is defined in terms of a set of functions and procedures,
+and enables a program to gain access to facilities within an application.
+(Definition from Dictionary of Computer Science - Oxford Quick Reference, 2016)</p>
+</div>
+<div class="paragraph">
+<p><strong>Interface</strong> - a shared boundary between two functional units,
+defined by various characteristics pertaining to the functions, physical interconnections, signal exchanges,
+and other characteristics, as appropriate (Definition from ISO/IEC 2382:2015 Information technology - Vocabulary)</p>
+</div>
+<div class="paragraph">
+<p>The value of APIs is to provide well-known interfaces between components of a software system.
+APIs are useful in software development as they support modularity.
+Well defined interfaces allow separation of functionality into independent, interchangeable modules.
+APIs are often materialized as web-services,
+but are also commonly targeted at a specific programming language, typically Javascript.</p>
+</div>
+<div class="paragraph">
+<p>APIs are popular today as they allow an organization to publize their APIs for reuse.
+There are now over 12,000 public APIs available across a wide range of market sectors,
+a thirtyfold increase since 2006 - see <a href="http://www.programmableweb.com/">ProgrammableWeb</a>.
+Some public APIs handle billions of requests per day.
+Public APIs enable an ecosystem that developers from other organizations use to access the functionality provided behind the APIs.
+APIs are closely related to role of "platforms".
+For example the Facebook API provides functionality used by multiple organizations
+thereby advancing the market value of the Facebook platform.
+APIs may promote “stickiness” and "lock-in" to a platform.</p>
+</div>
+<div class="paragraph">
+<p>Public APIs may or may not be Open APIs.
+Being "public" means that the API is visible and accessible outside of the organization that owns the API.
+The organization that controls and promotes the API owns the API.
+Open APIs are similar to open standards in that Open APIs are managed as a public good and managed in an open process.
+Open APIs adhere to open principles such as those defined by <a href="https://open-stand.org/about-us/principles/">OpenStand</a>:<br>
+1. Cooperation,<br>
+2. Adherence to Principles (including broad consensus),<br>
+3. Collective Empowerment,<br>
+4. Availability, and<br>
+5. Voluntary Adoption.<br>
+OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_apis_in_context"><a class="anchor" href="#_apis_in_context"></a>1.2. APIs in context</h3>
+<div class="paragraph">
+<p>APIs are tools used by software engineers and developers to design modular and interoperable systems.
+From an OGC open standards perspective, APIs are understood in the context of requirement specifications and implementing code.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/APIinContext.png" alt="APIinContext.png">
+</div>
+<div class="title">Figure 1. APIs in Context</div>
+</div>
+<div class="paragraph">
+<p><strong>Requirements Specifications</strong> are documents that define aspects of a protocol or data model to solve an interoperability problem.
+A protocol is the set of requirements that end points in a distributed system use when they communicate.
+The requirements may be written in plain text or in a technology neutral modeling language like UML.
+OGC standards specify requirements for interfaces and encodings using a modular approach (OGC 08-131r3).
+Implementations of an OGC standard must satisfy requirements as demonstrated by passing conformance tests.
+The requirements apply across multiple API implementations.</p>
+</div>
+<div class="paragraph">
+<p><strong>APIs</strong> are interfaces that when backed by implementing code satisfy an interoperability need that may be documented in a Requirements Specification.
+ The API package is a set of structure, function and procedure protocol definitions written in declarative statements that enables a program to access an application package containing implementations for these functions and procedures using these protocols.
+ For bindings in most programming languages (C++, JAVA and other Object Oriented languages) the declarative code can be initially generated from UML defining the abstract API, using Model Drive Architecture (MDA) to produce the appropriate protocols.
+ Implementations may use any procedures they deem appropriate as long at the functional requirements of the original specification are upheld.</p>
+</div>
+<div class="paragraph">
+<p><strong>Applications</strong> are software programs accessible by an API that meet user needs.
+Applications are distinct from system software including the operating system and system utilities.
+Applications implement algorithms to provide functionality behind APIs.
+The particulars of the algorithm are distinct from the protocols.
+A development strategy is to implement methods in the simplest manner possible
+and then do system testing and measurement to identify performance issues to optimize code,
+which is usually an algorithmic issue and independent of the protocol definitions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_diversity_of_apis"><a class="anchor" href="#_diversity_of_apis"></a>1.3. Diversity of APIs</h3>
+<div class="paragraph">
+<p>The <a href="https://en.wikipedia.org/wiki/Application_programming_interface">application programming interface (API)</a> entry on Wikipedia
+defines API as an interface that supports modularity and separation of components.
+The components can be implemented independently with the API serving as the common point of exchange.
+It is the notion of "API as an Interface" that makes it relevant to the activities of the OGC.</p>
+</div>
+<div class="paragraph">
+<p>As defined in <a href="https://portal.opengeospatial.org/files/?artifact_id=64860">OGC® Testbed 11 REST Interface Engineering Report</a>,
+OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs
+without knowing details of their internal implementation.</p>
+</div>
+<div class="paragraph">
+<p>The APIs listed next show the diversity of the API concept
+while still retaining the core concept that "APIs are interfaces."</p>
+</div>
+<div class="sect3">
+<h4 id="_ogc_geoapi_standard"><a class="anchor" href="#_ogc_geoapi_standard"></a>1.3.1. OGC GeoAPI Standard</h4>
+<div class="paragraph">
+<p><a href="http://www.geoapi.org/">The OGC GeoAPI standard</a> provides a set of Java language programming interfaces for geospatial applications.
+The GeoAPI interfaces closely follow the abstract model and concrete specifications published collaboratively by
+the <a href="http://www.isotc211.org/">International Organization for Standardization</a> (ISO) in its 19100 series of documents and
+the <a href="http://www.opengeospatial.org/">Open Geospatial Consortium</a> (OGC) in its abstract and implementation standards.</p>
+</div>
+<div class="paragraph">
+<p>The GeoAPI interfaces provide a layer which separates client code from application code, which implements the API.
+This follows a similar pattern to the well-known <a href="http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/">JDBC API</a>
+which provides a standardized interface to databases.
+Clients can use the JDBC API without concern for the particular implementation which they will use.
+Various groups have implemented different subsets of GeoAPI,
+see the <a href="http://www.geoapi.org/implementations.html">list of known implementations</a> for details.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ogc_sensorthings_api"><a class="anchor" href="#_ogc_sensorthings_api"></a>1.3.2. OGC SensorThings API</h4>
+<div class="paragraph">
+<p><a href="http://www.opengeospatial.org/standards/sensorthings">The OGC SensorThings API</a> provides an open, geospatial-enabled and unified way to interconnect the Internet of Things (IoT) devices, data, and applications over the Web. At a high level the OGC SensorThings API provides two main functionalities and each function is handled by a part. The two parts are the Sensing part and the Tasking part. The Sensing part provides a standard way to manage and retrieve observations and metadata from heterogeneous IoT sensor systems. The Tasking part is planned as a future work activity and will be defined in a separate document as the Part II of the SensorThings API.</p>
+</div>
+<div class="paragraph">
+<p>The SensorThings API part 1 identifies resources as entities that are relevant to IoT Sensing, e.g., Thing, Observation, Location, Sensor. SensorThings API  then grounds entities into entity sets and identifies URI components for requesting CRUD actions on those resources.  The CRUD actions are specified using the HTTP protocol as well as MQTT protocol.  MQTT is used to enhance the SensorThings service publish and subscribe capabilities. SensorThings API follows OData’s specification for requesting entities. However, SensorThings API does not follow the OData Common Schema Definition Language and should not be seen as an OData compliant API. SensorThings API’s future work will explore possible harmonization between SensorThings API and OData.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ogc_netcdf_standard"><a class="anchor" href="#_ogc_netcdf_standard"></a>1.3.3. OGC NetCDF Standard</h4>
+<div class="paragraph">
+<p><a href="http://www.opengeospatial.org/standards/netcdf">The OGC netCDF Standard</a> is a set of data formats that support the creation, access, and sharing of array-oriented scientific data. The netCDF data model and encodings are particularly well suited to providing data in forms familiar to atmospheric and oceanic scientists.</p>
+</div>
+<div class="paragraph">
+<p>Related to the data model and encodings listed in the netCDF standard are a set of APIs. Considering the popularity of the netCDF APIs they may be included in future extensions of the OGC netCDF standard. Bindings for C, Fortran, C++, Java are described in the <a href="http://portal.opengeospatial.org/files/?artifact_id=43733">CF-netCDF Core and Extensions Primer.</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apis_and_the_web_webapis"><a class="anchor" href="#_apis_and_the_web_webapis"></a>1.3.4. APIs and the Web - WebAPIs</h4>
+<div class="paragraph">
+<p>The Web follows the Internet approach of <a href="https://www.w3.org/TR/webarch/#protocol-interop">Protocol-Based Interoperability</a>
+where the protocols specify the syntax, semantics, and sequencing constraints of the messages interchanged.
+Protocols designed to be resilient in the face of widely varying environments have helped the Web scale and have facilitated communication across multiple trust boundaries.
+Traditional APIs do not always take these constraints into account.
+One effect of protocol-based design is that the technology shared among components often lasts longer than the components themselves.
+To support Web development the concept of a WebAPI was defined.
+A <a href="https://en.wikipedia.org/wiki/Web_API">WebAPI</a> is an API for either a web server or a web browser.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Web_Programming_API.svg.png" alt="Web Programming API.svg.png">
+</div>
+<div class="title">Figure 2. WebAPIs</div>
+</div>
+<h4 id="_ogc_protocols_for_webapis" class="float">OGC Protocols for WebAPIs</h4>
+<div class="paragraph">
+<p><a href="http://www.opengeospatial.org/standards">OGC Web Service (OWS) Standards</a> define Protocols that can be implemented as WebAPIs.
+The OWS standards are Requirements Specifications that define a protocol and in some cases a data model.
+The OWS standards include WMS, WMTS, WFS, WCS, WPS, WCPS, SOS, SPS, CSW, and OpenLS.</p>
+</div>
+<div class="paragraph">
+<p>The OWS standards define requirements to be satisfied by both client-side and server-side WebAPIs.
+The OWS standards as currently written do not specify the declarative statements needed for an API package.
+The OWS standards do not specify API design rather they specify protocols that provide requirements for APIs.
+Multiple APIs with differing designs can satisfy the OWS requirements (See Section 2 Web Mapping examples for further discussion).</p>
+</div>
+<div class="paragraph">
+<p>The OWS standards are the basis for OGC Conformance Tests that are used to confirm that functional requirements are met by implementations.
+OGC Compliance Tests have predominantly focused on server-side testing, while more recently client-side compliance tests have been defined for WMS.</p>
+</div>
+<h4 id="_rest_architecture_for_ogc_web_services" class="float">REST Architecture for OGC Web Services</h4>
+<div class="paragraph">
+<p>REST (Representational State Transfer) is a term coined by Roy Fielding in his doctoral dissertation
+to describe an architectural style for “distributed hypermedia systems” such as the Worldwide Web that
+are to have desirable characteristics including separation of concerns, scalability, resiliency, visibility, and reliability.
+The REST architectural style rests on five constraints on how computing systems are configured and component interactions are carried out
+(see for example <a href="http://www.restapitutorial.com/">= A RESTful Tutorial</a>).
+Examples of non-open standard RESTful web mapping APIs are provided in Chapter 2.</p>
+</div>
+<div class="paragraph">
+<p>OGC Web Services (OWS) were defined before the publication of REST principles.
+OGC has evaluated the implications of REST vis-a-vis OWS finding that the existing OWS Standards have aspects of REST
+but also that OGC services should be migrated to, or at least make available as more RESTful bindings.
+For example, <a href="https://portal.opengeospatial.org/files/?artifact_id=64860">The OGC Testbed 11 REST Interface Engineering Report</a>
+defines possible uniform practices for developing bindings or interaction styles for OGC Web services that appropriately leverage REST principles.
+OGC Testbed 12 continues these developements and will conclude later this year.</p>
+</div>
+<div class="paragraph">
+<p>One aspect of this analysis is the use of Landing Pages to document APIs.
+The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.
+In this pattern, users follow links from one resource to the next.
+Each resource provides the information needed to proceed to the next set of resources.
+This pattern assumes a simple protocol (URLs over HTTP).
+Landing Pages are an emerging approach to document an API using this pattern.
+A landing page is a collection of web pages which document the API.
+The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities.</p>
+</div>
+<div class="paragraph">
+<p>Two examples of landing page APIs are:
+<a href="http://developer.deere.com/#/home/landing">John Deer</a> and
+<a href="http://dev.twitter.com/overview/documentation">Twitter</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summary"><a class="anchor" href="#_summary"></a>1.4. Summary</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>APIs are interfaces that implement requirements for protocols or data models</p>
+</li>
+<li>
+<p>OGC Web Service standards specify web protocols based on http.</p>
+</li>
+<li>
+<p>OWS standards have been implemented in numerous APIs - see Chapter 2.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_design_using_open_standards"><a class="anchor" href="#_api_design_using_open_standards"></a>2. API Design using Open Standards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Chapter discusses API design by considering the variation in existing geospatial APIs as the motivation for proposing API design based on open standards.  The objective is to promote wide spread interoperability based on open API design while maintaining competitive opportunities.</p>
+</div>
+<div class="sect2">
+<h3 id="_objectives_of_api_design"><a class="anchor" href="#_objectives_of_api_design"></a>2.1. Objectives of API Design</h3>
+<div class="paragraph">
+<p>The recent proliferation of APIs for geospatial applications has degraded the interoperability previously established by open standards.  This degradation is do both to the variability of API practices across the IT industry as well as variability in geospatial APIs specifically.</p>
+</div>
+<div class="paragraph">
+<p>Advancements in API practices is needed across the software development profession. "APIs are often difficult to use, and programmers at all levels, from novices to experts, repeatedly spend significant time learning new APIs. APIs are also often used incorrectly, resulting in bugs and sometimes significant security problems." (<a href="http://cacm.acm.org/magazines/2016/6/202645-improving-api-usability/">"Improving API Usability" in the Communications of the ACM</a>)</p>
+</div>
+<div class="paragraph">
+<p>The publication of geospatial data using APIs is advancing in many organizations.
+"Web APIs for Environmental Data", a report from CSIRO (See Annex B), provides organizations with a well-informed basis to design consistent, cross-organization APIs for access to a range of environmental data products.  Observations in the CSIRO report and listed in this Chapter provide examples of opportunities for improving geospatial API design.</p>
+</div>
+<div class="sect3">
+<h4 id="_web_mapping_api_examples"><a class="anchor" href="#_web_mapping_api_examples"></a>2.1.1. Web Mapping API examples</h4>
+<div class="paragraph">
+<p>This section provides examples of variation across existing geospatial APIs to demonstrate the need for improved API design practices.
+Web mapping APIs define interfaces to access maps over the web.
+While web mapping APIs are defined in multiple programming languages,
+the examples in this chapter focus on JavaScript.</p>
+</div>
+<div class="paragraph">
+<p>APIs for web mapping were listed in
+<a href="http://www.programmableweb.com/news/top-10-mapping-apis-google-maps-microsoft-bing-maps-and-mapquest/analysis/2015/02/23">The Programmable Web</a>
+with the "top ten" being: Google Maps, Microsoft Bing Maps, OpenLayers, Foursquare, OpenStreetMap, MapQuest, Mapbox, CartoDB, Esri, and Yahoo.
+Some of these APIs implement the WMS Protocol either explicitly or as an extension - others do not support WMS, defining their own semantics and syntax for web mapping.</p>
+</div>
+<div class="paragraph">
+<p>Annex A lists details and code snippets for these Web Mapping API examples: Google Maps, OpenLayers, MapQuest API for OpenStreetMap, Leaflet.  Additionally two more RESTful examples are listed in Annex A: Esri ArcGIS REST and Mapbox.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variation_in_web_mapping_apis"><a class="anchor" href="#_variation_in_web_mapping_apis"></a>2.1.2. Variation in Web Mapping APIs</h4>
+<div class="paragraph">
+<p>The Web Mapping APIs listed in the Annex A use similar concepts sometimes in attributes differing names.
+The Table below lists two such attributes  - "Center" and "Zoom" - that are in the four example APIs.  "Center" is the center point of the web map to be displayed.  "Zoom" is related to the scale of the web map to be displayed.  The concepts for these attributes are similar in each API but the precise specification is different in each case.</p>
+</div>
+<div class="paragraph">
+<p>The variability of similar concepts across different APIs as seen in Table 1 suggests an opportunity to quickly converge on a small set of "essential" attributes usable across otherwise disparate APIs.  This simple example motivates the discussion about geospatial domain mapping and OGC Essentials for geospatial APIs based on open standards.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Comparison of Map-related attributes from several APIs</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">API</th>
+<th class="tableblock halign-left valign-top">Center</th>
+<th class="tableblock halign-left valign-top">Zoom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Google Maps</strong>
+</p><p class="tableblock"> <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">Map</a> constructor class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://developers.google.com/maps/documentation/javascript/reference#LatLng">LatLng</a> which is a point in geographical coordinates: latitude and longitude.
+</p><p class="tableblock">(CRS is not discussed on the page where LatLng is defined)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out, and larger zoom levels zoom in at a higher resolution.  (Examples of Zoom range from 0 to 21)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Open Layers</strong>
+</p><p class="tableblock"><a href="http://openlayers.org/en/v3.13.0/apidoc/ol.View.html">ol.Map</a> object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ol.Coordinate - a 2D coordinate.  The coordinate system is specified with the projection option. Default is undefined, and layer sources will not be fetched if this is not set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zoomFactor	used to determine the resolution constraint. Default is 2.
+ Available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MapQuest for OSM</strong>
+</p><p class="tableblock"><a href="http://open.mapquestapi.com/staticmap/#getmap">getmap</a> method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A center point for the map image.
+</p><p class="tableblock">(CRS unspecified)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer between 1 and  18 (<a href="http://open.mapquestapi.com/staticmap/zoomToScale.html">A table relating zoom to scale</a> is defined.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Leaflet</strong>
+</p><p class="tableblock"><a href="http://leafletjs.com/reference-1.0.0.html#map-factory">L.Map</a> factory class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LatLng geographic point as the center of the map.
+</p><p class="tableblock">(No CRS specified for LatLng but altitude is height of WGS84 ellipsoid)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minZoom default is 0.  maxZoom default is 18.  Method to return scale from zoom.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_interoperability_across_multiple_map_servers"><a class="anchor" href="#_interoperability_across_multiple_map_servers"></a>2.1.3. Interoperability across Multiple Map Servers</h4>
+<div class="paragraph">
+<p>Interoperability is a primary objective of the OGC.  Consistent semantics across multiple servers independent of underlying API leads to interoperability and the ability to merge results from the multiple servers.  The figure below was created by making individual requests to several map services (the text in each “square” indicates the name of the server).  The figure illustrates what can be done if services use the same indexing systems.  The figure uses the “indexing system” defined in the WMTS Simple.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/MultipleMaps.png" alt="MultipleMaps.png">
+</div>
+<div class="title">Figure 3. Multiple Maps with common semantics - Interoperablity (Source: Joan Maso)</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geospatial_api_design_based_on_open_standards"><a class="anchor" href="#_geospatial_api_design_based_on_open_standards"></a>2.2. Geospatial API design based on open standards</h3>
+<div class="paragraph">
+<p>In order to avoid the difficulties identified in the first part of this Chapter; this section identifies several methods based on open standards for the design of Geospatial APIs.
+The methods described in the following paragraphs shown are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modeling the geospatial domain</p>
+</li>
+<li>
+<p>API design based on geospatial requirements</p>
+</li>
+<li>
+<p>API Specification and Management</p>
+</li>
+<li>
+<p>OGC Essentials for API elements</p>
+</li>
+<li>
+<p>Managing multiple API Bindings</p>
+</li>
+<li>
+<p>Layered API design</p>
+</li>
+<li>
+<p>API Security Patterns</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each of the items in listed above are discussed in a section below.</p>
+</div>
+<div class="sect3">
+<h4 id="_modeling_the_geospatial_domain"><a class="anchor" href="#_modeling_the_geospatial_domain"></a>2.2.1. Modeling the geospatial domain</h4>
+<div class="paragraph">
+<p>In general, designing for a connected set of concepts in a domain will lead to more robust interactions with the resources, long term evolvability and fitness for use (<a href="http://www.mikestowe.com/blog/2014/11/what-is-spec-driven-development.php">Spec Driven Development</a>).  Design should consider an interconnected set of API resources with clear ideas and support of why and how API consumers will follow certain paths.
+This supports the objective that APIs may not just compete by features, but also by how easily and robustly they can be used (  <a href="http://dret.typepad.com/dretblog/2016/08/api-maps-hypermedia-api-design.html">API Maps: Hypermedia API Design</a>)</p>
+</div>
+<div class="paragraph">
+<p>The CSIRO API Report (Annex B) makes the following observations about modeling the environmental data domain.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Observation 18: Involve domain specialists in resource design. In organizations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts and words with different meaning, e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.</p>
+</li>
+<li>
+<p>Observation 19: Consider point, grid and trajectory abstractions. This has been used effectively in existing APIs as a way of delineating different data types.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Multiple map APIs designed with consistent domain model will improve development using multiple APIs, e.g., a developer can use an open API to draw the map, open map data from multiple sources in combination with commercial APIs say for advanced features such as traffic or routing.  Capturing the geospatial domain in open Requirements Specifications provides for achieving such domain interoperability.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_design_based_on_geospatial_requirements"><a class="anchor" href="#_api_design_based_on_geospatial_requirements"></a>2.2.2. API design based on geospatial requirements</h4>
+<div class="paragraph">
+<p>As discussed in Chapter 1, Requirements Specifications define protocols and schemas for interoperability across distributed heterogeneous distributed information systems.  APIs that implement the Requirement Specifications support such interoperability.</p>
+</div>
+<div class="paragraph">
+<p>The OGC Web Service (OWS) Standards are requirements specifications that define geospatial interoperability. The OWS Standards define data structures, behaviors and semantics for protocols based on http. The OWS Standards were initially defined based on a Service Oriented Architecture (SOA).  The OGC Web Map Service was defined with a service interface including multiple operations, e.g., GetMap.   OGC is currently reviewing the OWS Standards in a discussion will lead to addition of more RESTful protocols based on a Resource-Oriented Architecture (ROA).  (See <a href="https://portal.opengeospatial.org/files/?artifact_id=64860">OGC Testbed 11 REST Interface Engineering Report</a>)</p>
+</div>
+<div class="paragraph">
+<p>Consistent with ROA and supportive of RESTful APIs, geospatial resources need to be identified in OGC standards.  Geospatial resources include: feature collection, feature, coverage, map, layer, trajectory, etc.  Relationships are also important to be modeled, e.g. topological associations between features, parent-child associations, etc.</p>
+</div>
+<div class="paragraph">
+<p>Based on identification of geospatial resources RESTful protocol signatures are being defined for OWS standards.  For example:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://ows.example.org/dataset/ows/featurecollection/featureID" class="bare">http://ows.example.org/dataset/ows/featurecollection/featureID</a>
+<a href="http://ows.example.org/dataset/ows/coverage/AvgLandTemp" class="bare">http://ows.example.org/dataset/ows/coverage/AvgLandTemp</a></p>
+</div>
+<div class="paragraph">
+<p>An example defing a relation between a requirements specification and implementing APIs is available in these two standards from the Intelligent Transport Systems (ITS) Domain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unified gateway protocol requirements and specification for vehicle-ITS-station gateway (V-ITS- SG) interface (ISO 13185-2)</p>
+</li>
+<li>
+<p>Unified vehicle interface protocol (UVIP) server and client API specification (ISO 13185-3)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Corresponding to services defined in ISO 13185-2, the UVIP Java Client API (ISO 13185-3) contains services that can be called by any application to execute a service.  A UVIP Client Application communicates with a UVIP Server Application.</p>
+</div>
+<div class="paragraph">
+<p>Resources, protocols, semantics and behaviors defined in Geospatial Requirement Specifications become the basis for API Specification and Management.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_specification_and_management"><a class="anchor" href="#_api_specification_and_management"></a>2.2.3. API Specification and Management</h4>
+<div class="paragraph">
+<p>API specification and management are crucial software engineering functions for any organization using information technology.  As the popularity of APIs has grown in the past few years, so too have the tools, best practices and consulting services that support organizations in API specification and management.  While these tools were initially developed for organizations to manage their organization-specific APIs, the tools can also be considered for use in API design in an open standards context.  Here we consider one such tool: the Open API Specification formerly known as the Swagger specification.</p>
+</div>
+<div class="paragraph">
+<p>Documenting APIs can be aided by using the approach of the <a href="https://openapis.org/">OpenAPI Initiative (OAI)</a>.
+OAI is focused on defining a vendor neutral API Description Format based on the Open API Specification (OAS).
+The approach will allow specification of REST APIs using modular sub-elements.
+Sub-elements can then live on their own and be shared by multiple APIs.
+More information about OAI and OAS is available in Annex C.</p>
+</div>
+<div class="paragraph">
+<p>Providing complete documentation of your API using OpenAPI is a
+<a href="https://www.w3.org/TR/dwbp/#documentYourAPI">W3C Data on the Web Best Practice</a>.
+This best practice for APIs is being discussed in the <a href="http://www.opengeospatial.org/projects/groups/sdwwg">OGC/W3C Spatial Data on the Web Working Group</a>.</p>
+</div>
+<div class="paragraph">
+<p>Swagger was used in the <a href="https://portal.opengeospatial.org/files/?artifact_id=61224">OGC WaterML2.0 part 2 Interoperability Experiment</a> to document the CSIRO RESTful API.  The CSIRO API Report (Annex B) makes the following observations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimize divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.</p>
+</li>
+<li>
+<p>Observation 10: Avoid bleeding edge API description languages and response patterns. There has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An advantage of documenting APIs with OAS is the industry-wide tools and practices that are based on OAS.  The first Figure below shows how OAS enables robust management of software development lifecycle activities.  The second figure below shows the automated generation of client libraries based on code generation tools.  Use of OAS also helps organizations with API response types, including error handling, link updates, moved and re-aggregated resources, etc.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter-02-5e517.png" alt="chapter 02 5e517.png">
+</div>
+<div class="title">Figure 4. The OpenAPI Specification offers a simple format for writing REST service contracts</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter-02-51bc4.png" alt="chapter 02 51bc4.png">
+</div>
+<div class="title">Figure 5. OAS/Swagger API specification based tools</div>
+</div>
+<div class="paragraph">
+<p>The CSIRO API report (Annex B) describes the OpenAPI Specification as a set of tools and services that help API developers generate documentation for APIs. The Swagger UI renders a documentation page that provides full description of endpoints, with in-line forms allowing test calls to be made to services. The UI can be generated from an API specification document, which could be handwritten or generated from a service.</p>
+</div>
+<div class="paragraph">
+<p>The specification of a service is done using JSON or YAML that follows the Swagger specification schema. A JSON Schema is available to validate specification documents. The specification defines all the standard parts of a RESTful API: the resource endpoints, supported functions (GET, POST, DELETE, OPTIONS etc.), media types, parameters, and responses.</p>
+</div>
+<div class="paragraph">
+<p>Consistent use of API Specification and Management practices such as the Open API Specification and its support environment will increase consistent use of elements across multiple APIs.  To increase the interoperability across geospatial APIs, use of OGC Essentials in OAS environment should be considered.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ogc_essentials_for_api_elements"><a class="anchor" href="#_ogc_essentials_for_api_elements"></a>2.2.4. OGC Essentials for API elements</h4>
+<div class="paragraph">
+<p>OGC Essentials as described in the Chapter 3 is a set of items defined in OGC standards and other open standards that can be used in defining geospatial APIs.</p>
+</div>
+<div class="paragraph">
+<p>Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
+There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.</p>
+</div>
+<div class="paragraph">
+<p>As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
+such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building APIs.
+The OGC approach to modular standards should help with using OGC Essentials separate from their defining standard.
+Requirements for modularity are defined in the
+<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">The Specification Model - A Standard for Modular specifications (08-131r3)</a>.</p>
+</div>
+<div class="paragraph">
+<p>Reuse of OGC Essentials will lead to consistency, accuracy and reuse across the various APIs.  For example consistently using CRS Well Known Text and the WMTS TileMatrixSet would reduce the variation across web mapping APIs that was identified at the beginning of this chapter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_managing_multiple_api_bindings"><a class="anchor" href="#_managing_multiple_api_bindings"></a>2.2.5. Managing multiple API Bindings</h4>
+<div class="paragraph">
+<p>Another aspect of API management is implementation of an API Specification in multiple bindings. Language bindings are part of API packages. Multiple organizations are now posting their public APIs with bindings for multiple SDKs.</p>
+</div>
+<div class="paragraph">
+<p>The Figure below shows the <a href="https://developers.facebook.com/docs/graph-api/reference/v2.7/offer">Facebook "Offer" API</a>.
+When the figure was captured the API was shown in http.  Across the top of the image are the available language bindings: PHP, JavaScript, Android, iOS. On the Facebook API page, selecting one of the bindings while change the display to the API in that language.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FBoffer.png" alt="FBoffer.png">
+</div>
+<div class="title">Figure 6. Managing multiple API Bindings</div>
+</div>
+<div class="paragraph">
+<p>An example in the geospatial domain comes from <a href="https://www.mapbox.com/api-documentation/?language=cURL#map">Mapbox</a>.
+The Mapbox API page lists API bindings in cURL, CLI, Python, JavaScript, Java, Swift/Objective-C.</p>
+</div>
+<div class="paragraph">
+<p>Managing multiple bindings can also involve using protocols other than http.  For example OGC SensorThings API can be implemented in either http or MQTT.  MQTT is used to enhance the SensorThings service publish and subscribe capabilities. SensorThings API follows OData’s specification for requesting entities.  Managing of multiple API Bindings need to also include managing bindings for multiple protocols.</p>
+</div>
+<div class="paragraph">
+<p>From an open standards point of view, consistent implementation of elements across bindings is critical to protocol level interoperability.  For example, OGC Essentials could be defined for multiple bindings.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_layered_api_design"><a class="anchor" href="#_layered_api_design"></a>2.2.6. Layered API design</h4>
+<div class="paragraph">
+<p>The focus of API Design using Open Standards is most critical on external APIs.  Organizations design and use both external and internal APIs in the IT systems.  External APIs are those APIs that are made available external to the organization</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>External APIs - focused on the user needs - "Experience APIs"</p>
+</li>
+<li>
+<p>Internal APIs - providing access to enterprise resources.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mapping external APIs to internal APIs with business logic integration in API Gateways is depicted in the Figure below.</p>
+</div>
+<div class="paragraph">
+<p>Graphic
+- API Consumer
+- External API (including Security)
+- Business Logic (repeat multiple levels as necessary)
+- Internal APIs
+- Enterprise Assets and Data sources.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter-02-80fef.png" alt="chapter 02 80fef.png">
+</div>
+<div class="title">Figure 7. Layered APIs</div>
+</div>
+<div class="paragraph">
+<p>Figure Source: <a href="http://www.slideshare.net/launchany/designing-apis-and-microservices-using-domaindriven-design">James Higginbotham</a></p>
+</div>
+<div class="paragraph">
+<p>External APIs offered by API Gateways are the most fruitful focus for API design using open standards.  With the focus on external interfaces, comes the need to address security as part of the API design.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_security_patterns_for_geospatial"><a class="anchor" href="#_api_security_patterns_for_geospatial"></a>2.2.7. API Security Patterns for geospatial</h4>
+<div class="paragraph">
+<p>API security patterns should be developed in coordination with OGC Security DWG.  Initial discussion with the OGC Security SWG focused on a recommendation about "well defined contract around the API" - this comment based on Digital Globe experiences.  For example its important that there be strong typing of XML or JSON so if you have enumerations they are not unbounded.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.opengeospatial.org/standards/sensorthings">The OGC SensorThings API</a> addresses security in section 7.7 by reference to ITU-T Y.2060</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summary_of_api_design_with_open_standards"><a class="anchor" href="#_summary_of_api_design_with_open_standards"></a>2.3. Summary of API Design with Open Standards</h3>
+<div class="paragraph">
+<p>The Figure below provides a summary of the topics discussed above  Geospatial API Design using open standards.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter-02-2cb28.png" alt="chapter 02 2cb28.png">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ogc_api_essentials"><a class="anchor" href="#_ogc_api_essentials"></a>3. OGC API Essentials</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_idea_of_ogc_api_essentials"><a class="anchor" href="#_the_idea_of_ogc_api_essentials"></a>3.1. The Idea of OGC API Essentials</h3>
+<div class="paragraph">
+<p>OGC API Essentials as proposed in this Chapter are a small subset of the capabilities defined in OGC standards and other open standards
+which would be very useful to developers for the Internet and Web of geospatial information.</p>
+</div>
+<div class="paragraph">
+<p>Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
+Many OGC standards are already modular.
+Requirements for modularity are defined in the
+<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">The Specification Model - A Standard for Modular specifications (08-131r3)</a>.
+As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
+such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web APIs.</p>
+</div>
+<div class="paragraph">
+<p>This approach identifies pieces that are standardized and easy to use.
+It is anticipated that this will raise awareness of OGC in API providers.
+Reuse of OGC API Essentials will lead to consistency, accuracy and reuse across the various APIs.
+And ideally there are lots of small client libraries that can be incorporated in to the libraries API producers provide.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_api_essentials_initial_list"><a class="anchor" href="#_ogc_api_essentials_initial_list"></a>3.2. OGC API Essentials - initial list</h3>
+<div class="paragraph">
+<p>The following specifications are an initial set of OGC Essential Standards to support <em>geospatial components for everyone</em>.
+Not all of the following specifications are OGC standards.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/sfs"><strong>OGC Simple Features for SQL</strong></a>:
+This standard defines the fundamental geometries and operations which underlie OGC standards.
+Simple features are based on two-or-fewer dimensional geometric (point, curve and surface) entities
+in 2 or 3 spatial dimensions with linear or planar interpolation between vertices.</p>
+</li>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/wkt-crs"><strong>OGC Well Known Text (WKT) for CRS</strong></a>:
+This Standard provides an updated version of WKT representation of coordinate reference systems.
+It extends the earlier WKT to allow for the description of coordinate operations.</p>
+</li>
+<li>
+<p><strong>Well Known Text (WKT) for Geometry</strong>: WKT for Geometry is currently specified in the
+<a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Features - Architecture</a> standard.
+A standalone standard is currently being developed.</p>
+</li>
+<li>
+<p><strong>Well Known Binary (WKB) for Geometry</strong>: This is a binary encoding of WKT for Geometry.
+WKB for Geometry is currently specified in the
+<a href="http://www.opengeospatial.org/standards/sfa">OGC Simple Features - Architecture</a> standard.
+A standalone standard is currently being developed including updates based on optimized ideas in GeoPackage and TinyWKB.</p>
+</li>
+<li>
+<p><a href="http://portal.opengeospatial.org/files/?artifact_id=42729"><strong>GML Simple Features</strong></a>:
+GML SF-O is aligned with OGC Simple Features for SQL including:
+Point, Curve (LineString), Surface (Polygon), Geometry, MultiPoint, MultiCurve,
+MultiSurface, and MultiGeometry.</p>
+</li>
+<li>
+<p><strong>OGC Common Query Language</strong>: CQL is the query language defined in the
+<a href="http://www.opengeospatial.org/standards/cat">OGC Catalogue standard</a></p>
+</li>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/filter"><strong>OGC Filter Encoding</strong></a>:
+This standard describes an XML and KVP encoding of a system neutral syntax for expressing projections,
+selection and sorting clauses collectively called a query expression.
+These components are modular and intended to be used together or individually.</p>
+</li>
+<li>
+<p><a href="http://docs.opengeospatial.org/is/13-082r2/13-082r2.html"><strong>OGC WMTS Simple</strong></a>:
+This profile of the OGC Web Map Tile Service defines two simple tile matrix sets:
+World Web Mercator TileMatrixSet and World CRS84 TileMatrixSet.</p>
+</li>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/geosparql"><strong>OGC GeoSPARQL</strong></a>
+defines a vocabulary for representing geospatial data in RDF,
+and it defines an extension to the SPARQL query language for processing geospatial data.</p>
+</li>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/geopackage"><strong>GeoPackage</strong></a> Features (with a single set SRID)
+and Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)</p>
+</li>
+<li>
+<p><a href="https://tools.ietf.org/html/rfc7946"><strong>GeoJSON</strong></a> defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents.</p>
+</li>
+<li>
+<p><a href="http://www.georss.org/"><strong>GeoRSS Simple</strong></a> supports basic geometries (point, line, box, polygon) in RSS.</p>
+</li>
+<li>
+<p><a href="http://www.opengeospatial.org/standards/owc"><strong>OWS Context</strong></a> is a container for a set of services or inline content to be shared among clients while maintaining a consistent interpretation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Several other specifications should be considered to be included in this list of essential specifications for open API design.
+Its important to limit the list to specifications which are "open" as defined in Chapter 4.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_moving_forward_on_ogc_api_essentials"><a class="anchor" href="#_moving_forward_on_ogc_api_essentials"></a>3.3. Moving forward on OGC API Essentials</h3>
+<div class="paragraph">
+<p>OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective.
+It would provide a common way to access pieces of OGC capability without having to implement a full OGC interface.
+"OWS Common Next Generation" need not look all that different inside if built from this perspective,
+but what differences there are would have quite an impact.</p>
+</div>
+<div class="paragraph">
+<p>Going beyond developing and maintaining an OGC API Essential list,
+there is additional value in OGC providing a form of concordance between the many and varied representation forms.
+Along the lines of “this is what a point comprises, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.
+Users of and developers of map APIs would see value in knowing that there&#8217;s a common way of representing a point, a line, a polygon
+and so on within an APIs or code library&#8217;s interface.</p>
+</div>
+<div class="paragraph">
+<p>OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality
+and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.
+There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on.
+Take a look at the sterling work done with <a href="https://github.com/phayes/geoPHP">GeoPHP</a>.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_open_standards_and_apis"><a class="anchor" href="#_open_standards_and_apis"></a>4. Open standards and APIs.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be effective a standard must be used.
+There are many routes by which a specification becomes an effective standard.
+In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
+Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
+ <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Simcoe in Standards and Public Policy</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_what_is_an_open_standard"><a class="anchor" href="#_what_is_an_open_standard"></a>4.1. What is an Open Standard?</h3>
+<div class="paragraph">
+<p>The OGC defines Open Standards as standards that are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Freely and publicly available – They are available free of charge and unencumbered by patents and other intellectual property.</p>
+</li>
+<li>
+<p>Non discriminatory – They are available to anyone, any organization, any time, anywhere with no restrictions.</p>
+</li>
+<li>
+<p>No license fees - There are no charges at any time for their use.</p>
+</li>
+<li>
+<p>Vendor neutral - They are vendor neutral in terms of their content and implementation concept and do not favor any vendor over another.</p>
+</li>
+<li>
+<p>Data neutral – The standards are independent of any data storage model or format.</p>
+</li>
+<li>
+<p>Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The OGC&#8217;s Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers,
+whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects.</p>
+</div>
+<div class="paragraph">
+<p>From <a href="https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards">Collaborative White Paper between the OGC and OSGeo</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_an_open_standards_setting_organization"><a class="anchor" href="#_what_is_an_open_standards_setting_organization"></a>4.2. What is an open standards setting organization?</h3>
+<div class="paragraph">
+<p>There are multiple definitions of open standards processes.
+This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The SSO must develop technical specifications.</p>
+</li>
+<li>
+<p>The SSO must be some type of legal entity.</p>
+</li>
+<li>
+<p>The SSO must have a well-defined, legally acceptable set of procedures and processes.</p>
+</li>
+<li>
+<p>The SSO must have a clear and legitimate IPR policy that requires, at a minimum, RAND licensing of all IPR included in its specifications.</p>
+</li>
+<li>
+<p>The technical specifications created by the organization must be implemented by two or more competing entities prior to specification release, following widespread, web-based public review of the specification.</p>
+</li>
+<li>
+<p>There should be reference implementations, competing implementations, and test methods to validate conformance as appropriate.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>[Cargill in <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Standards and Public Policy</a>].</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_value_of_open_standards"><a class="anchor" href="#_the_value_of_open_standards"></a>4.3. The Value of Open Standards</h3>
+<div class="paragraph">
+<p><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&amp;url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&amp;usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&amp;sig2=3OcyzglH1J3s2GqMHSQM0A">Geospatial Interoperability ROI study by NASA</a>:
+"Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%.
+This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs&#8230;&#8203;
+Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard.
+One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms,
+the same value could be achieved with $3.00 if the project were based on open standards."</p>
+</div>
+<div class="paragraph">
+<p>The NASA study provided important evidence that the adoption of standards can improve geospatial information sharing, foster improved decision-making, build business resilience, and lower maintenance and operations costs over time. <a href="http://www.ec-gis.org/sdi/ws/costbenefit2006/reports/report_sdi_crossbenefit%20.pdf">SDI Benefits Report</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.acilallen.com.au/cms_files/ACIL_spatial%20information_NewZealand.pdf">Spatial information in the New Zealand economy</a>:
+"A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand.
+Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.
+Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue.
+This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_so_many_apis"><a class="anchor" href="#_so_many_apis"></a>4.4. So Many APIs</h3>
+<div class="paragraph">
+<p>There are many APIs available - most are not open as defined in this section.
+<a href="http://www.programmableweb.com/apis/directory">The Programmable Web</a> lists over 14,000 APIs.
+<a href="http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/">Richardson:</a> identified that
+"The thousands of APIs are superficially similar but mutually incompatible:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>“Everyone has a slightly different view of basic real-world concepts like “person” and “event”.</p>
+</li>
+<li>
+<p>“This lack of agreement makes it impossible to create client-side software that can be reused between APIs.</p>
+</li>
+<li>
+<p>“It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_licenses_for_apis"><a class="anchor" href="#_licenses_for_apis"></a>4.5. Licenses for APIs</h3>
+<div class="paragraph">
+<p>See Annex E for discussion of OpenAPIs and Licensing</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt">OGC GeoAPI license</a> is language developed by OGC.  Perhaps we should use a license that has broader use.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/opengeospatial/teamengine/blob/master/LICENSE.txt">The OGC Compliance Team Engine</a> uses the Apache 2.0 license</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_open_standards_and_apis_2"><a class="anchor" href="#_open_standards_and_apis_2"></a>4.6. Open Standards and APIs</h3>
+<div class="paragraph">
+<p>Most APIs have a strong reliance on open standards:
+OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more.
+From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards.
+These API implementations of OGC standards are providing new requirements into the OGC standards process – and
+the ongoing discussions in the OGC about the role of APIs in the OGC standards development process.
+The OGC Members have developed several open APIs as part of the OGC standards process.
+So, the API itself can also be a standard. GeoAPI is an example.</p>
+</div>
+<div class="paragraph">
+<p>The steps listed in the next Chapter support the development of Open APIs.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_of_ideas_for_ogc_activities_for_open_apis"><a class="anchor" href="#_summary_of_ideas_for_ogc_activities_for_open_apis"></a>5. Summary of ideas for OGC activities for Open APIs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These actions are recommended in the context of the OWS Common revision:</p>
+</div>
+<div class="paragraph">
+<p><strong>OGC Web Services and REST</strong></p>
+</div>
+<div class="paragraph">
+<p>Building on several OGC activities and external contributions, update the OGC Web Services standards with changes that address RESTful principles.  This includes modeling the geospatial domain for example from OGC Testbed and Interoperability Experiment results.  Make OWS standards revisions in concert with the OWS Common Revision.  Standards Working Groups for each of the OWS Standards in concert with the OWS Common SWG should lead this effort.</p>
+</div>
+<div class="paragraph">
+<p><strong>OWS Common</strong></p>
+</div>
+<div class="paragraph">
+<p>Update the OWS Common standard using RESTful approaches including the identification of resources.  Include OGC Essentials in the OWS Common.  The OWS Common Standards Working Group should lead this effort.</p>
+</div>
+<div class="paragraph">
+<p><strong>OGC Essentials</strong></p>
+</div>
+<div class="paragraph">
+<p>Beginning with Chapter 3 of this White Paper establish an online version of OGC Essentials.  Make the elements of OGC Essentials readily availble for reuse in other standards and in APIs.  Support both the OGC and the broader community use of OGC Essentials.  Consider chartering a new SWG for OGC Essentials.
+Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements.
+Create a micro website aimed at developers building API&#8217;s, that introduces the useful pieces with references to the full OGC specs.
+And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).</p>
+</div>
+<div class="paragraph">
+<p><strong>OGC approach to API Security</strong></p>
+</div>
+<div class="paragraph">
+<p>The OGC Security DWG should review API-centric security standards and best practices.  The Security DWG should make recommendations on approaches for API security that are well suited to OGC member applications.</p>
+</div>
+<div class="paragraph">
+<p><strong>Open API Design in Interoperability Program</strong></p>
+</div>
+<div class="paragraph">
+<p>Prototype the API Design approach in an OGC Interoperability Program initiative, e.g., OGC Testbed 13.  The Interoperability Program working with Sponsoring organizations should define requirements that build on Section 2 approach.  This would include basing API design on the OWS Standards, OWS Common, OGC Essentials; working with the Open API Initiative for using OAS for OGC-based APIs; implement the OGC Security DWG recommendations for API Security; and prototype methods for managing multiple API bindings in the initiative.</p>
+</div>
+<div class="paragraph">
+<p><strong>APIs in Architecture DWG</strong></p>
+</div>
+<div class="paragraph">
+<p>The Architecture DWG should regularly review the progress of OGC activities regarding APIs.
+For example, managing of multiple API bindings should be discussed in the context of supporting multiple protocols.  OGC SensorThings has developed an approach that should be consider for other OGC Standards.
+Another topic to be considered is the note from John Herrring, Oracle, on how object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances.</p>
+</div>
+<div class="paragraph">
+<p><strong>Summary of OGC&#8217;s role</strong></p>
+</div>
+<div class="paragraph">
+<p>OGC can continue to lead the development of standards that embrace the full richness of geospatial information building on the approaches of</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Appreciate the leadership of innovative organizations</p>
+</li>
+<li>
+<p>Deliver high-end functionality for critical functions</p>
+</li>
+<li>
+<p>Inform the marketplace on geospatial accuracy</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Similar to how the OGC Web Mapping Testbed in 1999 resulted in a convergence of web mapping,
+OGC can now play a leading role in the supporting the world of APIs by defining OGC API Essentials and RESTful web mapping standards.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_web_mapping_api_examples_2"><a class="anchor" href="#_web_mapping_api_examples_2"></a>Appendix A: Web Mapping API examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Appendix provides several examples of web mapping APIs.
+This Appendix is referenced in Chapter 2 on API Design.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Maps</p>
+</li>
+<li>
+<p>OpenLayers</p>
+</li>
+<li>
+<p>MapQuest API for OpenStreetMap</p>
+</li>
+<li>
+<p>Leaflet</p>
+</li>
+<li>
+<p>Esri ArcGIS REST</p>
+</li>
+<li>
+<p>Mapbox</p>
+</li>
+</ul>
+</div>
+<h4 id="_google_maps" class="float">Google Maps</h4>
+<div class="paragraph">
+<p><a href="https://developers.google.com/maps">Google Maps APIs</a> are available for Android, iOS, web browsers in Javascript and via HTTP web services.
+The Google Maps API pulls from Google Map servers and may be configured to pull from other servers.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps JavaScript API</a> includes a constructor "Map" class,
+20 methods, 4 properties and multiple events.
+Objects of the google.maps.Map class define a single map on a page.
+There are two required options for every map: "center" and `"zoom". For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: -34.397, lng: 150.644},
+  zoom: 8
+});</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out,
+and larger zoom levels zoom in at a higher resolution.</p>
+</div>
+<div class="paragraph">
+<p>Center is of type <a href="https://developers.google.com/maps/documentation/javascript/reference#LatLng">LatLng</a>
+which is a point in geographical coordinates: latitude and longitude.
+This cautionary note is provided: "Although the default map projection associates longitude with the x-coordinate of the map,
+and latitude with the y-coordinate, the latitude coordinate is always written<em>first</em>, followed by the longitude.
+A separate page describes <a href="https://developers.google.com/maps/documentation/javascript/maptypes#MapCoordinates">MapCoordinates</a> including the use of <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">World Geodetic System WGS84</a>
+and <a href="https://en.wikipedia.org/wiki/Mercator_projection">Mercator projection</a>.</p>
+</div>
+<h4 id="_openlayers" class="float">OpenLayers</h4>
+<div class="paragraph">
+<p><a href="http://openlayers.org/">OpenLayers</a> is an open source library for displaying map data in web browsers.
+Open Layers can pull tiles from OSM, Bing, MapBox, Stamen, MapQuest and other sources.
+The OGC Web Services are supported.</p>
+</div>
+<div class="paragraph">
+<p>The core component of OpenLayers 3 is the map (ol.Map).
+For a map to render, a view, one or more layers, and a target container are needed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">var map = new ol.Map({
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 1
+  }),
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.MapQuest({layer: 'osm'})
+    })
+  ],
+  target: 'map'
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above snippet creates a map using a <a href="http://openlayers.org/en/v3.13.0/apidoc/ol.layer.Tile.html">``ol.layer.Tile``</a>
+to display <a href="http://openlayers.org/en/v3.13.0/apidoc/ol.source.MapQuest.html">``ol.source.MapQuest``</a> OSM data
+and render it to a DOM element with the id ``map``.</p>
+</div>
+<div class="paragraph">
+<p>An ol.View has a projection that determines the coordinate system of the center and the units for map resolution calculations.
+If not specified, the default projection is Spherical Mercator (EPSG:3857), with meters as map units.</p>
+</div>
+<div class="paragraph">
+<p>The zoom option is a convenient way to specify the map resolution.
+The available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution.</p>
+</div>
+<h4 id="_mapquest_api_for_openstreetmap" class="float">MapQuest API for OpenStreetMap</h4>
+<div class="paragraph">
+<p><a href="http://open.mapquestapi.com/staticmap/#getmap">The MapQuest Open API</a> accesses MapQuest Open tiles (made from OSM data).
+The method ``"getmap"`` takes a latitude/longitude pair and will center the static map image over that center point.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">var SAMPLE_POST = HOST_URL + '/staticmap/v4/getmap?key=YOUR_KEY_HERE&amp;size=400,200&amp;zoom=10&amp;center=40.0378,-76.305801';
+
+function showBasicURL() {
+    var safe = SAMPLE_POST;
+    document.getElementById('basicSampleUrl').innerHTML = safe.replace(/&lt;/g, '&lt;').replace(/&gt;/g, '&gt;');;
+};
+
+function doClick() {
+    var newURL = SAMPLE_POST.replace('YOUR_KEY_HERE', APP_KEY);
+    document.getElementById('basicImage').innerHTML = '';
+};</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example Request Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">center</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A center point for the map image.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40.039401,-76.307078</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zoom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies zoom level for the map image.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A valid zoom integer. See <a href="http://open.mapquestapi.com/staticmap/zoomToScale.html">Zoom to Scale Mapping</a> for information on scales versus zoom levels.</p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_leaflet" class="float">Leaflet</h4>
+<div class="paragraph">
+<p><a href="http://leafletjs.com/">Leaflet</a> is an open-source JavaScript library for interactive maps.
+L.map is the central class of the <a href="http://leafletjs.com/reference-1.0.0.html">Leaflet API</a>
+used to create a map on a page and manipulate it.
+<a href="http://leafletjs.com/reference-1.0.0.html#tilelayer-wms">TileLayer.WMS</a> is used
+to display WMS services as tile layers on the map.</p>
+</div>
+<div class="paragraph">
+<p>Example of Leaflet Map class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">// initialize the map on the "map" div with a given center and zoom
+var map = L.map('map', {
+    center: [51.505, -0.09],
+    zoom: 13
+});</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Factory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>L.map</strong> (&lt;HTMLElement String&gt; id, &lt;<a href="http://leafletjs.com/reference-1.0.0.html#map-options">Map options</a>&gt; options? )</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instantiates a map object given a div element (or its id) and optionally an object literal with map options described below.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Two of the Map State Options</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>center</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://leafletjs.com/reference-1.0.0.html#latlng">LatLng</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial geographical center of the map.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>zoom</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial map zoom.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The LatLng type is a geographical point with a latitude and longitude.
+No CRS is identify in the Leaflet API page for the LatLng coordinates.</p>
+</div>
+<h3 id="_esri_arcgis_rest" class="float">Esri ArcGIS REST</h3>
+<div class="paragraph">
+<p><a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html">The ArcGIS REST API</a> offers resources for working
+within a Portal for ArcGIS implementation or within ArcGIS Online.
+<a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Map_Service/02r3000000w2000000/">The Map Service</a>
+offers access to contents of a map hosted on a server.
+<a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/">Export Map</a> operation
+is peformed on a map service resource and returns a map image.</p>
+</div>
+<div class="paragraph">
+<p>Example Usage: Export a map. Include only the bounding box.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StateCityHighway_USA/MapServer/export?bbox=-127.8,15.4,-63.5,60.5=</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example Request Parameter in Esri ArcGIS REST</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Details</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bbox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description: (Required) The extent (bounding box) of the exported image. Unless the bboxSR parameter has been specified, the bbox is assumed to be in the spatial reference of the map.
+</p><p class="tableblock">Syntax: &lt;xmin&gt;, &lt;ymin&gt;, &lt;xmax&gt;, &lt;ymax&gt;
+</p><p class="tableblock">Example: bbox=-104,35.6,-94.32,41
+</p><p class="tableblock">The bbox coordinates should always use a period as the decimal separator even in countries where traditionally a comma is used.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_mapbox" class="float">Mapbox</h3>
+<div class="paragraph">
+<p><a href="https://www.mapbox.com/developers/api/">Mapbox web services</a> accept ``GET`` requests and support both HTTP and HTTPS.
+Access to Mapbox web services requires an access token, which connects API requests to an account.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.mapbox.com/developers/api/static/">Mapbox static maps</a> are standalone images that can be displayed on web
+and mobile devices.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://api.mapbox.com/v4/{mapid}/{lon},{lat},{z}/{width}x{height}.{format}?access_token=&lt;your access token&gt;
+https://api.mapbox.com/v4/{mapid}/{overlay}/{lon},{lat},{z}/{width}x{height}.{format}?access_token=&lt;your access token&gt;
+https://api.mapbox.com/v4/{mapid}/{overlay}/auto/{width}x{height}.{format}?access_token=&lt;your access token&gt;</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Examples
+https://api.mapbox.com/v4/mapbox.streets/-73.99,40.70,13/500x300.png?access_token=&lt;your%20access%20token&gt;
+https://api.mapbox.com/v4/mapbox.streets/pin-s-bus+f44(-73.99,40.70,13)/-73.99,40.70,13/500x300.png?access_token=&lt;your%20access%20token&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://www.mapbox.com/developers/api/maps/#tiles">Mapbox tile maps</a> request a 256x256 image tile or UTFGrid for a given {mapid}. The {z}, {x}, and {y} parameters must be integer coordinates describing the tile position according to the XYZ tiling scheme. The tile {format}defaults to png but can be used to adjust the image quality, format, and scale factor.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://api.mapbox.com/v4/{mapid}/{z}/{x}/{y}.{format}?access_token=&lt;your access token&gt;</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Examples
+https://api.mapbox.com/v4/mapbox.streets/0/0/0.png?access_token=&lt;your%20access%20token&gt;
+https://api.mapbox.com/v4/mapbox.streets/0/0/0.jpg?access_token=&lt;your%20access%20token&gt;
+https://api.mapbox.com/v4/mapbox.edf947b8/5/6/11.grid.json?access_token=&lt;your%20access%20token&gt;</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_web_apis_for_environmental_data_csiro_report"><a class="anchor" href="#_web_apis_for_environmental_data_csiro_report"></a>Appendix B: Web APIs for Environmental Data - CSIRO Report</h2>
+<div class="sectionbody">
+<h3 id="_introduction" class="float">Introduction</h3>
+<div class="paragraph">
+<p>CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations on APIs for the Environmental data.</p>
+</div>
+<div class="paragraph">
+<p>"Web APIs for environmental data: State of the art investigation."
+Peter Taylor, CSIRO
+27th May 2016
+<a href="https://portal.opengeospatial.org/files/?artifact_id=68811&amp;version=1" class="bare">https://portal.opengeospatial.org/files/?artifact_id=68811&amp;version=1</a></p>
+</div>
+<div class="paragraph">
+<p>Some excerpts from the report are listed in this annex.</p>
+</div>
+<h3 id="_executive_summary_excerpts" class="float">Executive Summary excerpts</h3>
+<div class="paragraph">
+<p>This report summarises existing practices for the publication of environmental data using Web APIs. The aim is to provide organisations with a well-informed basis to design consistent, cross-organisation Web APIs to access a range of environmental data products. While this report was conducted in a hydrology-specific activity (WIRADA), it takes a broader look at environmental data to contribute to a cross-domain view of Web APIs.</p>
+</div>
+<div class="paragraph">
+<p>Some organisations (e.g. NOAA and UK Met Office) look to be using Web APIs as a way of bringing existing legacy systems together and providing a more cohesive API experience for developers. However these approaches are in their infancy. They do not appear to be using well-defined, reusable APIs, which we would suggest to be adopted as-is. Yet there are lessons to be learned: some have identified basic abstractions that may be reusable, such as separation of value-types (text, image, scalar); observations and forecasts; points, grids, and trajectories, among others. These may then be used as generic access mechanisms across sub-domains, where such concepts are generally consistent.</p>
+</div>
+<div class="paragraph">
+<p>In this report we identify and provide brief overviews of the state of the art in Web API description languages (5.1), common response types (5.2) and management of Web APIs (5.3). This is an area of huge growth, following the proliferation of APIs on the Web. Consequently many of these practices are still immature, so we suggest being cautious when selecting API description languages and common response types.</p>
+</div>
+<h3 id="_survey_of_related_domain_apis" class="float">Survey of related domain APIs</h3>
+<div class="paragraph">
+<p>Section 4 of the report includes a survey of related domain APIs from these organizations and activities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>National Oceanic and Atmospheric Administration (NOAA)</p>
+</li>
+<li>
+<p>UK Met Office – DataPoint</p>
+</li>
+<li>
+<p>Forecast.io</p>
+</li>
+<li>
+<p>USGS Water Data Services</p>
+</li>
+<li>
+<p>Atlas of Living Australia</p>
+</li>
+<li>
+<p>OGC SensorThings API</p>
+</li>
+<li>
+<p>UK National Biodiversity Network</p>
+</li>
+<li>
+<p>GeoServices API</p>
+</li>
+<li>
+<p>Global Change Information System</p>
+</li>
+<li>
+<p>UK Environmental Agency</p>
+</li>
+<li>
+<p>Bathing Water Quality API</p>
+</li>
+<li>
+<p>CKAN</p>
+</li>
+<li>
+<p>Data Access Protocol (DAP), OpenDAP, Hyrax</p>
+</li>
+<li>
+<p>THREDDS</p>
+</li>
+<li>
+<p>ERDDAP</p>
+</li>
+</ul>
+</div>
+<h3 id="_excerpts_from_analysis" class="float">Excerpts from Analysis</h3>
+<div class="paragraph">
+<p>The analysis in report is organized in these sections
+    - Web API description languages (5.1),
+    - common response types (5.2) and
+    - management of Web APIs (5.3).</p>
+</div>
+<div class="paragraph">
+<p>Section 5.1.1 considers the Swagger specifications. Swagger is now known as the OpenAPI Specification.</p>
+</div>
+<div class="paragraph">
+<p>Swagger is a set of tools and services that help API developers generate documentation for APIs. The Swagger UI renders a documentation page that provides full description of endpoints, with in-line forms allowing test calls to be made to services. The UI can be generated from an API specification document, which could be handwritten or generated from a service.</p>
+</div>
+<div class="paragraph">
+<p>The specification of a service is done using JSON or YAML that follows the Swagger specification schema20. A JSON Schema is available to validate specification documents21. The specification defines all the standard parts of a RESTful API: the resource endpoints, supported functions (GET, POST, DELETE, OPTIONS etc.), media types, parameters, and responses.</p>
+</div>
+<div class="paragraph">
+<p>Swagger was used in the WaterML2.0 part 2 Interoperability Experiment to document the CSIRO RESTful API22, as shown in Figure 15.</p>
+</div>
+<h3 id="_selected_observations" class="float">Selected Observations</h3>
+<div class="paragraph">
+<p>Section 6 of the report provides observations in three areas of provisioning Web APIs:
+    - General: documentation styles, API presentation, building developer community;
+    - Technical: use of automated API documentation, API description languages, API managers, use of the HTTP standard, error and link encoding, versioning, being consistent; 
+    - Modelling the domain: modelling resources, use of domain-driven modelling, involving domain experts, use of abstractions, and relevant external activities.</p>
+</div>
+<div class="paragraph">
+<p>These observations were selected as relevant to API Design with open standards.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>General</p>
+</li>
+<li>
+<p>Observation 2: Highly abstracted APIs can be difficult to understand and may be a barrier for new users. Trying to do too many things in a single API or Web Service can result in an overly complex, hard to understand API. Partitioning APIs into concrete API endpoints, each having clearly stated functions help to build understanding.</p>
+</li>
+<li>
+<p>Observation 5: Provide community resources, such as forums and easy feedback mechanisms, to allow users and developers to share experiences and issues. APIs are successful when they are used.</p>
+</li>
+<li>
+<p>Observation 8: Document common usages of your APIs that achieve certain goals, especially when they require multi-step requests to the API. For example, ‘I want to discover all observations available at a particular station’.</p>
+</li>
+<li>
+<p>Technical</p>
+</li>
+<li>
+<p>Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimise divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.</p>
+</li>
+<li>
+<p>Observation 10: Avoid bleeding edge API description languages and response patterns. As discussed in 5.1 and 5.2, there has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.</p>
+</li>
+<li>
+<p>Modelling the domain</p>
+</li>
+<li>
+<p>Observation 18: Involve domain specialists in resource design. In organisations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts (Bounded Contexts - (Fowler, 2014) and (Evans, 2003)) and words with different meaning (polysemes), e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.</p>
+</li>
+<li>
+<p>Observation 19: Consider point, grid and trajectory abstractions. This has been used effectively in existing APIs (e.g. DAP, NetCDF) as a way of delineating different data types.</p>
+</li>
+<li>
+<p>Observation 20: Monitor the outcomes of the joint W3C/OGC ‘Spatial Data on the Web’ working group50. It is working on general recommendations for publishing spatial data on the web in a consistent manner. These should be very useful in guiding convergence in some of the issues covered in this report.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_open_api_initiative_and_specification"><a class="anchor" href="#_the_open_api_initiative_and_specification"></a>Appendix C: The Open API Initiative and Specification</h2>
+<div class="sectionbody">
+<h3 id="_openapi_overview" class="float">OpenAPI Overview</h3>
+<div class="paragraph">
+<p>The goal of the <a href="https://openapis.org/specification">OpenAPI Specification</a> is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.</p>
+</div>
+<div class="paragraph">
+<p>The capabilities of a service are described in the structure of the OpenAPI Specification. Not all services can be described by OpenAPI&#8212;&#8203;this specification is not intended to cover every possible use-case of a REST-ful API. OpenAPI does not define a specific development process such as design-first or code-first. It does facilitate either technique by establishing clear interactions with a REST API.</p>
+</div>
+<div class="paragraph">
+<p>A starting point for OpenAPI is this <a href="https://github.com/OAI/OpenAPI-Specification">GitHub project</a> where you will find the information about the OpenAPI Specification, a simple static sample of what it looks like, and some general information regarding the project.</p>
+</div>
+<h3 id="_openapi_governance_and_mission" class="float">OpenAPI Governance and Mission</h3>
+<div class="paragraph">
+<p>The <a href="https://openapis.org/governance">Governance and Mission</a> of the Open API Initiative (OAI) is to provide an open source, technical community, within which industry participants may easily contribute to building a vendor-neutral, portable and an open specification for providing technical metadata for REST APIs - the “Open API Description Format” (OADF).</p>
+</div>
+<div class="paragraph">
+<p>The Open API Initiative is be composed of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Corporate members (OAI Members) that have executed an OAI Membership Agreement to sponsor the activities of the OAI Community</p>
+</li>
+<li>
+<p>Business Governance Board (BGB);  The Business Governance Board is intended to provide a minimalist governance structure around the development and use of the OAI trademarks.  The intention is for the OAI to operate by consensus. However, if consensus cannot be achieved, the Business Governance Board shall vote on a decision.</p>
+</li>
+<li>
+<p>Technical Developer Community (“TDC”), open to any participant, whether an OAI Member or not; The TDC will only accept influence through contributions; the primary means for any organization to influence the technical direction of the OADF is via contribution or service as maintainers.</p>
+</li>
+<li>
+<p>Technical Oversight Board (“TOB”). The TOB is responsible for managing conflicts, violations of procedures or guidelines and any cross-project or high-level issues that cannot be resolved in the TDC</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Core Values. The TDC and TOB shall reflect and adhere to the following values for its activities and the OADF:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open access: information on the OAI, its proceedings, this charter and the OADF themselves shall be publicly available for viewing on the web.</p>
+</li>
+<li>
+<p>Collaborative: interested parties shall have the means to freely contribute ideas, solutions, commentary and other input to the evolution of the OADF.</p>
+</li>
+<li>
+<p>Meritocratic and contribution driven development: influence on the development of the OADF is based purely on the importance and merit of the contributions made.</p>
+</li>
+<li>
+<p>Pragmatic. The OADF should prioritize to solve real world problems over supporting academic / abstract concepts.</p>
+</li>
+<li>
+<p>Extendable. The OADF should allow domain-specific extensions to adhering definitions - enabling the use of the OADF without having to be in conflict with their core functionality.</p>
+</li>
+<li>
+<p>Stable. The OADF should evolve in a pace that allows adopters to support its functionality within a “reasonable timeframe”; its evolution should favor the aim to provide a stable foundation for API metadata over adding new functionality as any immediate needs arise.</p>
+</li>
+<li>
+<p>Intellectual Property Neutral: the OADF must be available for use free of charge to members and non-members alike. This usage applies to commercial and non-commercial use by any individual organization complying with a set of non-discriminatory usage principles set forth by the Business Governance Board.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>IP Policy.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>All new inbound specification or code contributions to the OAI shall be made under the Apache License, Version 2.0 (available at <a href="http://www.apache.org/licenses/LICENSE-2.0" class="bare">http://www.apache.org/licenses/LICENSE-2.0</a>) accompanied by a Developer Certificate of Origin sign-off (<a href="http://developercertificate.org" class="bare">http://developercertificate.org</a>);</p>
+</li>
+<li>
+<p>All outbound specifications or code will be made available under the Apache License, Version 2.0.</p>
+</li>
+<li>
+<p>All documentation will be received and made available by OAI under the Creative Commons Attribution 4.0 International License.</p>
+</li>
+</ol>
+</div>
+<h3 id="_relevance_to_ogc" class="float">Relevance to OGC</h3>
+<div class="paragraph">
+<p>A telecon was held of OAI and OGC staff members on 2016-08-11 to discuss each others organization and to consider possible coordination.</p>
+</div>
+<div class="paragraph">
+<p>Main points of the discussion from OGC were:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OGC is a standards and incubator for geospatial technology</p>
+</li>
+<li>
+<p>OGC is advancing a discussion about geospatial APIs</p>
+</li>
+<li>
+<p>We are looking at API best practices beyond geospatial.</p>
+</li>
+<li>
+<p>An OGC member suggested we look at OpenAPI or Swagger</p>
+</li>
+<li>
+<p>Could the OpenAPI spec be a basis for geospatial API design?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After the telecon the OAI staff provided a series of relevant links, from the OAI web site and external links that highlight the value of the OpenAPI Specification:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://openapis.org/news/blogs/2016/08/open-api-initiative-six-months-and-counting-recording">Open API Initiative: Six months and counting</a></p>
+</li>
+<li>
+<p><a href="https://openapis.org/news/blogs/2016/07/you-can-get-involved-creating-openapi-specification-and-heres-how">You Can Get Involved in Creating the OpenAPI Specification, And Here&#8217;s How</a></p>
+</li>
+<li>
+<p><a href="https://openapis.org/news/blogs/2016/05/grpc-rest-and-openapi-specification">gRPC with REST and OpenAPI Specification</a></p>
+</li>
+<li>
+<p><a href="https://developer.capitalone.com/blog-post/leapfrogging-with-rest-api-design/">Leapfrogging with REST API Design - Capital One DevExchange</a></p>
+</li>
+<li>
+<p><a href="https://www.docusign.com/blog/swagger-to-the-max/">Swagger to the Max (DocuSign)</a></p>
+</li>
+<li>
+<p><a href="https://apis.guru/browse-apis/">An unofficial, non-exhautive list of APIs leveraging the OAS Specification</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example of OAI activities is how Capital One was able to leverage the assistance from other OAI members before launching their open source code generation tool, now available on <a href="https://github.com/capitalone/oas-nodegen">GitHub</a>.</p>
+</div>
+<h3 id="_summary_graphic" class="float">Summary Graphic</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/annex-c-15459.png" alt="annex c 15459.png">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apis_and_implementation_independence"><a class="anchor" href="#_apis_and_implementation_independence"></a>Appendix D: APIs and implementation independence</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Different APIs can provide different levels of isolation.
+An API package may be specific to a particular implementor,
+in which case the API provides an isolation level between the users and the details of the implementor&#8217;s system
+while competitor systems offer different (often incompatible) APIs.
+Alternatively API packages can be defined by a neutral organization,
+which encourages various vendors to provide implementations of the same API.
+Whether the later alternative is straightforward or difficult depends on the kind of APIs and the target programming language:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data structures and operations defined in human-readable text formats like XML, JSON, WKT, CQL
+or key-value pairs in URL can be vendor-neutral in practically every programming languages.</p>
+</li>
+<li>
+<p>Data structures and operations defined natively in a programming language can be vendor-neutral
+if that language supports interfaces or something equivalent (e.g. "traits").
+Not all programming languages have this support.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>While choice 1 (text formats) is more portable,
+choice 2 (declarative code) usually offers better performances,
+more customization opportunities with <em>method overriding</em>,
+and is sometime easier to implement (by contrast, parsing a GML, WKT or CQL document can be challenging).
+The following list summarizes some programming language capabilities regarding above choices:</p>
+</div>
+<h4 id="_java_and_c" class="float">Java and C#</h4>
+<div class="paragraph">
+<p><strong>Text formats:</strong> data structures can be parsed with the help of any standard-compliant library.
+No format is privileged by the language.
+The Java Developer Kit (JDK) provides XML support in standard Java installations,
+but this support is often used indirectly through third-party libraries for easier access to data.</p>
+</div>
+<div class="paragraph">
+<p><strong>Declarative code:</strong> data accesses and operation contracts can be defined natively in the Java language as interfaces.
+Those interfaces can be shipped by a neutral organization independently of any implementation.
+Interoperability is facilitated by the separation between applications that call API functions, and libraries that implement API.
+Using the interfaces' API, developers can ignore the underlying implementation.</p>
+</div>
+<div class="paragraph">
+<p>The C# language can have the same capabilities than the Java language regarding API independence.</p>
+</div>
+<h4 id="_javascript" class="float">JavaScript</h4>
+<div class="paragraph">
+<p><strong>Text formats:</strong> data structures in JSON format can be parsed natively.
+Other text formats require library support.</p>
+</div>
+<div class="paragraph">
+<p><strong>Declarative code:</strong> the JavaScript language does not have interfaces.
+Data structures and operations in JavaScript are linked to a specific implementation.
+A neutral organization may provide recommendations about APIs in JavaScript,
+but can not enforce that API by shipping JavaScript interfaces separately.</p>
+</div>
+<h4 id="_c_c" class="float">C/C++</h4>
+<div class="paragraph">
+<p><strong>Text formats:</strong> data structures can be parsed with the help of any standard-compliant library.</p>
+</div>
+<div class="paragraph">
+<p><strong>Declarative code:</strong> data accesses and operation contracts in the C language
+are more closely tied to a particular implementation than in the Java language.
+A limited degree of implementation independence can be achieved by dynamic linking (as opposite to static linking).
+More extensive implementation independence, similar to the Java level, can be achieved in C
+by systematic usage of pointer to functions for every function calls.
+For example the Java Native Interfaces (JNI) in C use this technic.
+The C++ language allows usage of the same technic more easily than in C.</p>
+</div>
+<h4 id="_rest_and_other_webapis" class="float">REST and other WebAPIs</h4>
+<div class="paragraph">
+<p><strong>Text formats:</strong> data structures can be parsed with the help of a standard-compliant library
+in the language selected for the client-side application.
+Since that language is often JavaScript, the JSON format tends to be privileged.</p>
+</div>
+<div class="paragraph">
+<p><strong>Declarative code:</strong> since WebAPI is a concept rather than a specific programming language,
+the level of API implementation independence in declarative code is the one of the programming language selected for the application.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_open_apis_and_licensing"><a class="anchor" href="#_open_apis_and_licensing"></a>Appendix E: Open APIs and Licensing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This annex was written by Carl Reed, PhD, Carl Reed and Associates</p>
+</div>
+<div class="paragraph">
+<p>This annex discusses issues and decisions you must make for licensing an Open API (<a href="http://www.opengeospatial.org/blog/4511" class="bare">http://www.opengeospatial.org/blog/4511</a>). As stated in that blog, OGC standards are implemented in many software and application business models: Open Source, Open Source Commercial, Proprietary, and various combinations. In most situations, the use of OGC standards is enabled through some sort of API. The API allows developers, client applications and other services to have access to the functionality provided by implementing one or more OGC standard(s) as part of an API. What a developer can do – and cannot do – with the API is spelled out in the license associated with that API.</p>
+</div>
+<div class="paragraph">
+<p>There are a wide range of possible licenses you can select from (see URLs below). The ability to choose a license best suited for your Open API is good. However, at the same time that variety of choice can make selecting a license difficult. There are at least a dozen different licenses that can be used for an API.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, this annex is meant to be informative and to help you think about what are the requirements for your Open API license and to select the most appropriate license for your Open API. The final decision on which license to use must be grounded in your business model and business/community requirements.</p>
+</div>
+<div class="paragraph">
+<p>There is a very broad selection of licensing options that you can choose for an Open API. Some of the more commonly used licenses are Apache 2.0, GPL, LGPL, and MIT. Each of these licenses specifies different rules for the use of an API. When selecting a license, you have to evaluate the rules of the license and how it lines up with the objectives and goals you have for your API. These rules typically cover topics like permissiveness, copyright restrictions, derivative works, liability, etc.</p>
+</div>
+<div class="paragraph">
+<p>The objectives for your Open API license may be similar to the objectives of a software license. These objectives can be summarized as 1.) defining the rules for using the API and 2.) limiting your liability in case of API failure. In either case remember that you are selecting a license for an Open API. Therefore, select a license that does not restrict anyone from using the API and developing applications based on the API.  The success of an open API program will depend on its ability to attract external developers and help them create truly valuable new apps that people actually want to use. Open API publishers need to engage developers and they need to make sure these developers are successful. Selecting the wrong license can severely inhibit success!</p>
+</div>
+<div class="paragraph">
+<p>Three terms that you will always encounter when dealing with licensing Open APIs are “copyleft”, “permissive”, and “derivative works”.</p>
+</div>
+<div class="paragraph">
+<p>"Copyleft" refers to licenses that allow derivative works but require them to use the same license as the original work.  <a href="https://jxself.org/what-is-copyleft.shtml" class="bare">https://jxself.org/what-is-copyleft.shtml</a></p>
+</div>
+<div class="paragraph">
+<p>A "permissive" license is simply a non-copyleft open source license — one that guarantees the freedoms to use, modify, and redistribute, but that permits proprietary derivative works.</p>
+</div>
+<div class="paragraph">
+<p>An absolute definition of “derivative work” is difficult. This is partly due to the fact that US Copyright law is a bit ambiguous on this subject and does not say anything about software.  I had one lawyer explain it to me this way, “The primary indication of whether a new program is a derivative work is whether the source code of the original program was used, modified, translated or otherwise changed in any way to create the new program.  If not, then I would argue that there is not a derivative work”.  Oracle versus Google is an example of how these ambiguities in terms of software and APIs can impact business. (<a href="https://en.wikipedia.org/wiki/Oracle_America,_Inc._v._Google,_Inc." class="bare">https://en.wikipedia.org/wiki/Oracle_America,_Inc._v._Google,_Inc.</a>)</p>
+</div>
+<div class="paragraph">
+<p>Additionally, there are other aspects related to the license and the terms of use for the API. Some of these considerations are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure that you clearly identify the subject of the license. Providing such metadata as the full name of the API, version number, and subject of the API is important as the user of the API is provided a clear statement of the API being used.</p>
+</li>
+<li>
+<p>Consider the scope of rights. The scope of rights of an Open API license reflects what can be done with your API. For example, the clauses of the Google Maps API terms include the following: "If you develop a Maps API Implementation for use by other users, you must: (a) display to the users of your Maps API Implementation the link to Google&#8217;s Terms of Use as presented through the Service or described in the Maps APIs Documentation . . .” and so forth.</p>
+</li>
+<li>
+<p>Remember that in many cases an Open API provides access to proprietary processing services. You need to consider the terms of use for the underlying services/software.</p>
+</li>
+<li>
+<p>Another characteristic of your offering to consider in licensing is attribution. Will you have a requirement that any implementation or derivative work acknowledges your organization?</p>
+</li>
+<li>
+<p>If the API provides access to data, you then also need to consider the terms of use for your data repository or other data that your API is exposing.</p>
+</li>
+<li>
+<p>If there are financial considerations, such as a fee for a large number of transactions, then these need to be clearly stated.</p>
+</li>
+<li>
+<p>Do not change the terms of the license you choose. When you license an API, do not impose your personal views or requirements on others. Users of your API cannot take the legal and financial risk and as such may not implement your API.</p>
+</li>
+<li>
+<p>Finally, any license or terms of use that you decide on should have a very clearly stated limitation of liability. These limits are usually stated in licenses used with Open APIs and Open Source.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A very easy to read list of considerations and characteristics of a license that is to be used with an “open” work such as an Open API is <a href="http://opendefinition.org/od/2.1/en/" class="bare">http://opendefinition.org/od/2.1/en/</a> .</p>
+</div>
+<div class="paragraph">
+<p>There are many good information resources on licensing for Open APIs, Source, and Data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A nice app for doing an initial selection of a license that meets your Open API business and/or community requirements: <a href="http://choosealicense.com/" class="bare">http://choosealicense.com/</a></p>
+</li>
+<li>
+<p>A summary table showing the key characteristics of all the commonly used license for open source and Open APIs: <a href="https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses" class="bare">https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please read and research about licensing options before discussing license requirements within your organization and ultimately with legal counsel.  Legal counsel will make suggestions but the final decision will be yours or your organizations. You need to understand the licensing options within the context of your business and/or community requirements.</p>
+</div>
+</div>
+</div>
+        </div>
+      </div>
+    </body>
+  </html>

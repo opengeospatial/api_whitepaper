@@ -32,6 +32,8 @@ The Table below lists two such attributes  - "Center" and "Zoom" - that are in t
 
 The variability of similar concepts across different APIs as seen in Table 1 suggests an opportunity to quickly converge on a small set of "essential" attributes usable across otherwise disparate APIs.  This simple example motivates the discussion about geospatial domain mapping and OGC Essentials for geospatial APIs based on open standards.
 
+<<<
+
 .Comparison of Map-related attributes from several APIs
 [options="header"]
 |=======================
@@ -66,6 +68,11 @@ http://leafletjs.com/reference-1.0.0.html#map-factory[L.Map] factory class
 |minZoom default is 0.  maxZoom default is 18.  Method to return scale from zoom.
 |=======================
 
+==== Interoperability across Multiple Map Servers
+
+Interoperability is a primary objective of the OGC.  Consistent semantics across multiple servers independent of underlying API leads to interoperability and the ability to merge results from the multiple servers.  The figure below was created by making individual requests to several map services (the text in each “square” indicates the name of the server).  The figure illustrates what can be done if services use the same indexing systems.  The figure uses the “indexing system” defined in the WMTS Simple.
+
+image::images/MultipleMaps.png[title=Multiple Maps with common semantics - Interoperablity (Source: Joan Maso)]
 
 
 
@@ -214,7 +221,7 @@ External APIs offered by API Gateways are the most fruitful focus for API design
 
 ==== API Security Patterns for geospatial
 
-Coordination with OGC Security DWG.
+API security patterns should be developed in coordination with OGC Security DWG.  Initial discussion with the OGC Security SWG focused on a recommendation about "well defined contract around the API" - this comment based on Digital Globe experiences.  For example its important that there be strong typing of XML or JSON so if you have enumerations they are not unbounded.
 
 http://www.opengeospatial.org/standards/sensorthings[The OGC SensorThings API] addresses security in section 7.7 by reference to ITU-T Y.2060
 
@@ -224,3 +231,5 @@ http://www.opengeospatial.org/standards/sensorthings[The OGC SensorThings API] a
 The Figure below provides a summary of the topics discussed above  Geospatial API Design using open standards.
 
 image::images/chapter-02-2cb28.png[]
+
+<<<

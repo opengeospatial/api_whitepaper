@@ -1,3 +1,4 @@
+<<<
 == Summary of ideas for OGC activities for Open APIs
 
 These actions are recommended in the context of the OWS Common revision:
