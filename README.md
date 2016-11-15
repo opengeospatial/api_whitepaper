@@ -5,12 +5,12 @@
 
 This paper covers these topics
 - What is an API?
-- API Design using Open Standards
+- API Design using Open Standards for Interoperability
 - OGC API Essentials
 - Open standards and APIs
 - OGC support for open APIs
 
-OGC Document 16-019r2
+OGC Document 16-019r3
 
 ------
 ### About
