@@ -1,18 +1,11 @@
 <<<
 [appendix]
-== Web APIs for Environmental Data - CSIRO Report
+== Web APIs for Environmental Data - a Report from CSIRO
 
 [float]
 === Introduction
 
-CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations on APIs for the Environmental data.
-
-"Web APIs for environmental data: State of the art investigation."
-Peter Taylor, CSIRO
-27th May 2016
-https://portal.opengeospatial.org/files/?artifact_id=68811&version=1
-
-Some excerpts from the report are listed in this annex.
+CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations about defining and using APIs to access Environmental data:  " https://portal.opengeospatial.org/files/?artifact_id=68811&version=1[Web APIs for environmental data: State of the art investigation.] " Peter Taylor, CSIRO 27th May 2016.  Recommendations from the report are in the body of this white paper.  Additional excerpts from the report are listed in this Appendix.
 
 [float]
 === Executive Summary excerpts
@@ -70,18 +63,18 @@ Section 6 of the report provides observations in three areas of provisioning Web
 
 These observations were selected as relevant to API Design with open standards.
 
-- General
+** General
     - Observation 2: Highly abstracted APIs can be difficult to understand and may be a barrier for new users. Trying to do too many things in a single API or Web Service can result in an overly complex, hard to understand API. Partitioning APIs into concrete API endpoints, each having clearly stated functions help to build understanding.
     - Observation 5: Provide community resources, such as forums and easy feedback mechanisms, to allow users and developers to share experiences and issues. APIs are successful when they are used.
     - Observation 8: Document common usages of your APIs that achieve certain goals, especially when they require multi-step requests to the API. For example, ‘I want to discover all observations available at a particular station’.
 
-- Technical
+** Technical
 
     - Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimise divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.
     - Observation 10: Avoid bleeding edge API description languages and response patterns. As discussed in 5.1 and 5.2, there has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.
 
 
-- Modelling the domain
+** Modelling the domain
     - Observation 18: Involve domain specialists in resource design. In organisations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts (Bounded Contexts - (Fowler, 2014) and (Evans, 2003)) and words with different meaning (polysemes), e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.
     - Observation 19: Consider point, grid and trajectory abstractions. This has been used effectively in existing APIs (e.g. DAP, NetCDF) as a way of delineating different data types.
     - Observation 20: Monitor the outcomes of the joint W3C/OGC ‘Spatial Data on the Web’ working group50. It is working on general recommendations for publishing spatial data on the web in a consistent manner. These should be very useful in guiding convergence in some of the issues covered in this report.

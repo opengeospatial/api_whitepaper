@@ -8,10 +8,10 @@ This White Paper provides a discussion of Application Programming Interfaces (AP
 to support discussion of possible actions in the Open Geospatial Consortium (OGC).
 
 * Chapter 1 – What is an API?
-* Chapter 2 – API Design using Open Standards
-* Chapter 3 – OGC API Essentials
-* Chapter 4 – Open Standards and APIs.
-* Chapter 5 – Summary of ideas for OGC activities for Open APIs
+* Chapter 2 - Need for Interoperability across APIs
+* Chapter 3 – API Design using Open Standards
+* Chapter 4 – OGC API Essentials
+* Chapter 5 – Open Standards and APIs
 
 Annexes are provided on these topics:
 
@@ -28,9 +28,9 @@ The main themes of paper are:
 
 * The proliferation of **API variations degrade interoperability** defined by web protocols.  The examples in Annex A show such variations in several parameters including "Zoom" level.   A summary of the differences of Zoom is provided in Chapter 2, Table 1 - Comparison of Map-related attributes from several APIs.
 
-* **Protocols provide interoperability** when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in Figure in Chapter 1.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly **consistent use of OGC Essentials** will improve interoperability (See Chapter 3)
+* **Protocols provide interoperability** when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in the Figure at the end of Chapter 2.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly **consistent use of OGC Essentials** will improve interoperability (See Chapter 4).
 
-* API implementation experience should be used to **improve the OGC Web Service Protocols**.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 2 and 3).
+* API implementation experience should be used to **improve the OGC Web Service Protocols**.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 3 and 4).
 
 
 **Keywords**

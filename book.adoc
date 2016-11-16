@@ -1,7 +1,7 @@
 
 = OGC® Open Geospatial APIs - White Paper
 
-OGC Document 16-019r3 +
+OGC Document 16-019r4 +
 
 ''''
 
@@ -12,12 +12,12 @@ OGC Document 16-019r3 +
 :toclevels: 3
 :numbered:
 :sectanchors:
-:source-highlighter: pygments
+:source-highlighter:
 
 
 External identifier of this OGC® document: TBD +
 URL for this OGC® document: TBD +
-Internal reference number of this OGC® document: OGC 16-019r3 +
+Internal reference number of this OGC® document: OGC 16-019r4 +
 Version: +
 Category: OGC® White Paper  +
 Editor: George Percivall +

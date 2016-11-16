@@ -1,88 +1,94 @@
 <<<
-== Open standards and APIs.
+== OGC API Essentials
 
-To be effective a standard must be used.
-There are many routes by which a specification becomes an effective standard.
-In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
-Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
- http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Simcoe in Standards and Public Policy].
+=== The Idea of OGC API Essentials
 
-=== What is an Open Standard?
+OGC API Essentials as proposed in this Chapter are a small subset of items specified in OGC standards and other open standards
+which would be very useful to developers for the Internet and Web of geospatial information.
 
-The OGC defines Open Standards as standards that are:
+Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
+Many OGC standards are already modular.
+Requirements for modularity are defined in the
+https://portal.opengeospatial.org/files/?artifact_id=34762[The Specification Model - A Standard for Modular specifications (08-131r3)].
+As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
+such as Well Known Text, GeoJSON, WMTS, CQL/Filter, GeoPackage, etc. are useful in building Web APIs.
 
-1. Freely and publicly available – They are available free of charge and unencumbered by patents and other intellectual property.
-2. Non discriminatory – They are available to anyone, any organization, any time, anywhere with no restrictions.
-3. No license fees - There are no charges at any time for their use.
-4. Vendor neutral - They are vendor neutral in terms of their content and implementation concept and do not favor any vendor over another.
-5. Data neutral – The standards are independent of any data storage model or format.
-6. Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
+This approach identifies pieces that are standardized and easy to use.
+It is anticipated that this will raise awareness of OGC in API providers.
+Reuse of OGC API Essentials will lead to consistency, accuracy and reuse across the various APIs.
+And ideally there are lots of small client libraries that can be incorporated in to the libraries API producers provide.
 
-The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers,
-whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects.
+=== OGC API Essentials - initial list
 
-From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]
+The following specifications are an initial set of OGC Essential Standards to support 'geospatial components for everyone'.
+Not all of the following specifications are OGC standards.
 
-=== What is an open standards setting organization?
+*   http://www.opengeospatial.org/standards/sfs[**OGC Simple Features for SQL**]:
+    This standard defines the fundamental geometries and operations which underlie OGC standards.
+    Simple features are based on two-or-fewer dimensional geometric (point, curve and surface) entities
+    in 2 or 3 spatial dimensions with linear or planar interpolation between vertices.
 
-There are multiple definitions of open standards processes.
-This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
+*   http://www.opengeospatial.org/standards/wkt-crs[**OGC Well Known Text (WKT) for CRS**]:
+    This Standard provides an updated version of WKT representation of coordinate reference systems.
+    It extends the earlier WKT to allow for the description of coordinate operations.
 
-1. The SSO must develop technical specifications.
-2. The SSO must be some type of legal entity.
-3. The SSO must have a well-defined, legally acceptable set of procedures and processes.
-4. The SSO must have a clear and legitimate IPR policy that requires, at a minimum, RAND licensing of all IPR included in its specifications.
-5. The technical specifications created by the organization must be implemented by two or more competing entities prior to specification release, following widespread, web-based public review of the specification.
-6. There should be reference implementations, competing implementations, and test methods to validate conformance as appropriate.
+*   **Well Known Text (WKT) for Geometry**: WKT for Geometry is currently specified in the
+    http://www.opengeospatial.org/standards/sfa[OGC Simple Features - Architecture] standard.
+    A standalone standard is currently being developed.
 
-[Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
+*   **Well Known Binary (WKB) for Geometry**: This is a binary encoding of WKT for Geometry.
+    WKB for Geometry is currently specified in the
+    http://www.opengeospatial.org/standards/sfa[OGC Simple Features - Architecture] standard.
+    A standalone standard is currently being developed including updates based on optimized ideas in GeoPackage and TinyWKB.
 
+*   http://portal.opengeospatial.org/files/?artifact_id=42729[**GML Simple Features**]:
+    GML SF-O is aligned with OGC Simple Features for SQL including:
+    Point, Curve (LineString), Surface (Polygon), Geometry, MultiPoint, MultiCurve,
+    MultiSurface, and MultiGeometry.
 
-=== The Value of Open Standards
+*   **OGC Common Query Language**: CQL is the query language defined in the
+    http://www.opengeospatial.org/standards/cat[OGC Catalogue standard]
 
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&sig2=3OcyzglH1J3s2GqMHSQM0A[Geospatial Interoperability ROI study by NASA]:
-"Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%.
-This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs...
-Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard.
-One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms,
-the same value could be achieved with $3.00 if the project were based on open standards."
+*   http://www.opengeospatial.org/standards/filter[**OGC Filter Encoding**]:
+    This standard describes an XML and KVP encoding of a system neutral syntax for expressing projections,
+    selection and sorting clauses collectively called a query expression.
+    These components are modular and intended to be used together or individually.
 
-The NASA study provided important evidence that the adoption of standards can improve geospatial information sharing, foster improved decision-making, build business resilience, and lower maintenance and operations costs over time. http://www.ec-gis.org/sdi/ws/costbenefit2006/reports/report_sdi_crossbenefit%20.pdf[SDI Benefits Report]
+*   http://docs.opengeospatial.org/is/13-082r2/13-082r2.html[**OGC WMTS Simple**]:
+    This profile of the OGC Web Map Tile Service defines two simple tile matrix sets:
+    World Web Mercator TileMatrixSet and World CRS84 TileMatrixSet.
 
-http://www.acilallen.com.au/cms_files/ACIL_spatial%20information_NewZealand.pdf[Spatial information in the New Zealand economy]:
-"A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand.
-Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.
-Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue.
-This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."
+*   http://www.opengeospatial.org/standards/geosparql[**OGC GeoSPARQL**]
+    defines a vocabulary for representing geospatial data in RDF,
+    and it defines an extension to the SPARQL query language for processing geospatial data.
 
-=== So Many APIs
+*   http://www.opengeospatial.org/standards/geopackage[*GeoPackage*] Features (with a single set SRID)
+    and Simplified GeoPackage Tiles (just a direct representation of Simple Tiles scheme above)
 
-There are many APIs available - most are not open as defined in this section.
-http://www.programmableweb.com/apis/directory[The Programmable Web] lists over 14,000 APIs.
-http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/[Richardson:] identified that
-"The thousands of APIs are superficially similar but mutually incompatible:
+*   https://tools.ietf.org/html/rfc7946[**GeoJSON**] defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents.
 
-* “Everyone has a slightly different view of basic real-world concepts like “person” and “event”.
-* “This lack of agreement makes it impossible to create client-side software that can be reused between APIs.
-* “It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."
+*   http://www.georss.org/[**GeoRSS Simple**] supports basic geometries (point, line, box, polygon) in RSS.
 
-=== Licenses for APIs
+* http://www.opengeospatial.org/standards/owc[*OWS Context*] is a container for a set of services or inline content to be shared among clients while maintaining a consistent interpretation.
 
-See Annex E for discussion of OpenAPIs and Licensing
-
-https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt[OGC GeoAPI license] is language developed by OGC.  Perhaps we should use a license that has broader use.
-
-https://github.com/opengeospatial/teamengine/blob/master/LICENSE.txt[The OGC Compliance Team Engine] uses the Apache 2.0 license
+Several other specifications should be considered to be included in this list of essential specifications for open API design.
+Its important to limit the list to specifications which are "open" as defined in Chapter 5.
 
 
-=== Open Standards and APIs
+=== Moving forward on OGC API Essentials
 
-Most APIs have a strong reliance on open standards:
-OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more.
-From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards.
-These API implementations of OGC standards are providing new requirements into the OGC standards process – and
-the ongoing discussions in the OGC about the role of APIs in the OGC standards development process.
-The OGC Members have developed several open APIs as part of the OGC standards process.
-So, the API itself can also be a standard. GeoAPI is an example.
+OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective.
+It would provide a common way to access pieces of OGC capability without having to implement a full OGC interface.
+"OWS Common Next Generation" need not look all that different inside if built from this perspective,
+but what differences there are would have quite an impact.
 
-The steps listed in the next Chapter support the development of Open APIs.
+Going beyond developing and maintaining an OGC API Essential list,
+there is additional value in OGC providing a form of concordance between the many and varied representation forms.
+Along the lines of “this is what a point comprises, and here’s how it looks in GeoJSON, here’s how it looks in WKT” and so on.
+Users of and developers of map APIs would see value in knowing that there's a common way of representing a point, a line, a polygon
+and so on within an APIs or code library's interface.
+
+OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality
+and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.
+There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on.
+For example, consider the approach taken with https://github.com/phayes/geoPHP[GeoPHP].

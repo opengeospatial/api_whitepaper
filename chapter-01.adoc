@@ -1,3 +1,9 @@
+//////
+comment
+//////
+
+<<<
+
 == What is an API?
 
 === API defined
@@ -19,10 +25,7 @@ APIs are often materialized as web-services,
 but are also commonly targeted at a specific programming language, typically Javascript.
 
 APIs are popular today as they allow an organization to publize their APIs for reuse.
-There are now over 12,000 public APIs available across a wide range of market sectors,
-a thirtyfold increase since 2006 - see http://www.programmableweb.com/[ProgrammableWeb].
-Some public APIs handle billions of requests per day.
-Public APIs enable an ecosystem that developers from other organizations use to access the functionality provided behind the APIs.
+Public APIs enable developers from other organizations to access the functionality provided behind the APIs.
 APIs are closely related to role of "platforms".
 For example the Facebook API provides functionality used by multiple organizations
 thereby advancing the market value of the Facebook platform.
@@ -38,7 +41,7 @@ Open APIs adhere to open principles such as those defined by https://open-stand.
 3. Collective Empowerment, +
 4. Availability, and +
 5. Voluntary Adoption. +
-OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.
+OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.  (See Chapter 5 for more on the meaning and values of "Open".)
 
 === APIs in context
 
@@ -50,10 +53,10 @@ image::images/APIinContext.png[title=APIs in Context,scaledwidth="40%"]
 
 **Requirements Specifications** are documents that define aspects of a protocol or data model to solve an interoperability problem.
 A protocol is the set of requirements that end points in a distributed system use when they communicate.
-The requirements may be written in plain text or in a technology neutral modeling language like UML.
+The requirements may be written in plain text or in a technology neutral modeling language like UML.  Web Protocol specifications include http structures that can be directly used in APIs.
 OGC standards specify requirements for interfaces and encodings using a modular approach (OGC 08-131r3).
 Implementations of an OGC standard must satisfy requirements as demonstrated by passing conformance tests.
-The requirements apply across multiple API implementations.
+The requirements in a specification can apply across multiple API implementations.
 
 **APIs** are interfaces that when backed by implementing code satisfy an interoperability need that may be documented in a Requirements Specification.
  The API package is a set of structure, function and procedure protocol definitions written in declarative statements that enables a program to access an application package containing implementations for these functions and procedures using these protocols.
@@ -79,7 +82,7 @@ As defined in https://portal.opengeospatial.org/files/?artifact_id=64860[OGC® T
 OGC Document 15-052r1, an API is an interface definition that permits invoking services from application programs
 without knowing details of their internal implementation.
 
-The APIs listed next show the diversity of the API concept
+The OGC APIs listed next show the diversity of the API concept
 while still retaining the core concept that "APIs are interfaces."
 
 ==== OGC GeoAPI Standard
@@ -143,34 +146,16 @@ REST (Representational State Transfer) is a term coined by Roy Fielding in his d
 to describe an architectural style for “distributed hypermedia systems” such as the Worldwide Web that
 are to have desirable characteristics including separation of concerns, scalability, resiliency, visibility, and reliability.
 The REST architectural style rests on five constraints on how computing systems are configured and component interactions are carried out
-(see for example http://www.restapitutorial.com/[= A RESTful Tutorial]).
-Examples of non-open standard RESTful web mapping APIs are provided in Chapter 2.
+(see for example http://www.restapitutorial.com/[A RESTful Tutorial]).
+Examples of non-open standard RESTful web mapping APIs are provided in Appendix A.
 
 OGC Web Services (OWS) were defined before the publication of REST principles.
 OGC has evaluated the implications of REST vis-a-vis OWS finding that the existing OWS Standards have aspects of REST
 but also that OGC services should be migrated to, or at least make available as more RESTful bindings.
 For example, https://portal.opengeospatial.org/files/?artifact_id=64860[The OGC Testbed 11 REST Interface Engineering Report]
 defines possible uniform practices for developing bindings or interaction styles for OGC Web services that appropriately leverage REST principles.
-OGC Testbed 12 continues these developements and will conclude later this year.
-
-One aspect of this analysis is the use of Landing Pages to document APIs.
-The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.
-In this pattern, users follow links from one resource to the next.
-Each resource provides the information needed to proceed to the next set of resources.
-This pattern assumes a simple protocol (URLs over HTTP).
-Landing Pages are an emerging approach to document an API using this pattern.
-A landing page is a collection of web pages which document the API.
-The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities.
-
-Two examples of landing page APIs are:
-http://developer.deere.com/#/home/landing[John Deer] and
-http://dev.twitter.com/overview/documentation[Twitter]
+OGC Testbed 12 continues these developments and will conclude late in 2016.
 
 
-=== Summary
-
-* APIs are interfaces that implement requirements for protocols or data models
-* OGC Web Service standards specify web protocols based on http.
-* OWS standards have been implemented in numerous APIs - see Chapter 2.
 
 <<<

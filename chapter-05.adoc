@@ -1,44 +1,73 @@
 <<<
-== Summary of ideas for OGC activities for Open APIs
+== Open Standards and APIs.
 
-These actions are recommended in the context of the OWS Common revision:
 
-**OGC Web Services and REST**
+=== What is an Open Standard?
 
-Building on several OGC activities and external contributions, update the OGC Web Services standards with changes that address RESTful principles.  This includes modeling the geospatial domain for example from OGC Testbed and Interoperability Experiment results.  Make OWS standards revisions in concert with the OWS Common Revision.  Standards Working Groups for each of the OWS Standards in concert with the OWS Common SWG should lead this effort.
+The OGC defines Open Standards as standards that are:
 
-**OWS Common**
+1. Freely and publicly available – They are available free of charge and unencumbered by patents and other intellectual property.
+2. Non discriminatory – They are available to anyone, any organization, any time, anywhere with no restrictions.
+3. No license fees - There are no charges at any time for their use.
+4. Vendor neutral - They are vendor neutral in terms of their content and implementation concept and do not favor any vendor over another.
+5. Data neutral – The standards are independent of any data storage model or format.
+6. Defined, documented, and approved by a formal, member driven consensus process. The consensus group remains in charge of changes and no single entity controls the standard.
 
-Update the OWS Common standard using RESTful approaches including the identification of resources.  Include OGC Essentials in the OWS Common.  The OWS Common Standards Working Group should lead this effort.
+The OGC's Open Standards are specifications for interfaces and encodings that enable interoperability between geoprocessing systems from different developers,
+whether employed by proprietary product vendors, independent integrators, application developers or active in Open Source projects.
 
-**OGC Essentials**
+From https://wiki.osgeo.org/wiki/Open_Source_and_Open_Standards#Open_Standards[Collaborative White Paper between the OGC and OSGeo]
 
-Beginning with Chapter 3 of this White Paper establish an online version of OGC Essentials.  Make the elements of OGC Essentials readily availble for reuse in other standards and in APIs.  Support both the OGC and the broader community use of OGC Essentials.  Consider chartering a new SWG for OGC Essentials.
-Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements.
-Create a micro website aimed at developers building API's, that introduces the useful pieces with references to the full OGC specs.
-And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).
+=== What is an Open Standards Setting Organization?
 
-**OGC approach to API Security**
+There are multiple definitions of open standards processes.
+This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)
 
-The OGC Security DWG should review API-centric security standards and best practices.  The Security DWG should make recommendations on approaches for API security that are well suited to OGC member applications.
+1. The SSO must develop technical specifications.
+2. The SSO must be some type of legal entity.
+3. The SSO must have a well-defined, legally acceptable set of procedures and processes.
+4. The SSO must have a clear and legitimate IPR policy that requires, at a minimum, RAND licensing of all IPR included in its specifications.
+5. The technical specifications created by the organization must be implemented by two or more competing entities prior to specification release, following widespread, web-based public review of the specification.
+6. There should be reference implementations, competing implementations, and test methods to validate conformance as appropriate.
 
-**Open API Design in Interoperability Program**
+[List from Cargill in http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Standards and Public Policy]].
 
-Prototype the API Design approach in an OGC Interoperability Program initiative, e.g., OGC Testbed 13.  The Interoperability Program working with Sponsoring organizations should define requirements that build on Section 2 approach.  This would include basing API design on the OWS Standards, OWS Common, OGC Essentials; working with the Open API Initiative for using OAS for OGC-based APIs; implement the OGC Security DWG recommendations for API Security; and prototype methods for managing multiple API bindings in the initiative.
 
-**APIs in Architecture DWG**
+=== The Value of Open Standards
 
-The Architecture DWG should regularly review the progress of OGC activities regarding APIs.
-For example, managing of multiple API bindings should be discussed in the context of supporting multiple protocols.  OGC SensorThings has developed an approach that should be consider for other OGC Standards.
-Another topic to be considered is the note from John Herrring, Oracle, on how object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances.
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&sig2=3OcyzglH1J3s2GqMHSQM0A[Geospatial Interoperability ROI study by NASA]:
+"Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%.
+This ROI is a “Savings to Investment” ratio. This can be interpreted as for every $1.00 spent on investment, $1.19 is saved on Operations and Maintenance costs...
+Overall, the project that adopted and implemented geospatial interoperability standards saved 26.2% compared to the project that relied upon a proprietary standard.
+One way to interpret this result is that for every $4.00 spent on projects based on proprietary platforms,
+the same value could be achieved with $3.00 if the project were based on open standards."
 
-**Summary of OGC's role**
+The NASA study provided important evidence that the adoption of standards can improve geospatial information sharing, foster improved decision-making, build business resilience, and lower maintenance and operations costs over time. http://www.ec-gis.org/sdi/ws/costbenefit2006/reports/report_sdi_crossbenefit%20.pdf[SDI Benefits Report]
 
-OGC can continue to lead the development of standards that embrace the full richness of geospatial information building on the approaches of
+http://www.acilallen.com.au/cms_files/ACIL_spatial%20information_NewZealand.pdf[Spatial information in the New Zealand economy]:
+"A range of barriers to the adoption of spatial information have constrained uptake and limited the ability to reap additional benefits in New Zealand.
+Past and current barriers notably include problems in accessing data, inconsistency in data standards, and a general lack of skills and knowledge relating to modern spatial information technology.
+Had key barriers been removed it is estimated that New Zealand could have benefited from an additional $481 million in productivity-related benefits in 2008, generating at least $100 million in government revenue.
+This ‘cost’ of the presence of barriers will rise with each year that passes, as the nation’s capacity to adopt is increasing continually and pent-up demand is growing."
 
-* Appreciate the leadership of innovative organizations
-* Deliver high-end functionality for critical functions
-* Inform the marketplace on geospatial accuracy
 
-Similar to how the OGC Web Mapping Testbed in 1999 resulted in a convergence of web mapping,
-OGC can now play a leading role in the supporting the world of APIs by defining OGC API Essentials and RESTful web mapping standards.
+=== Licenses for APIs
+
+There is a very broad selection of licensing options that you can choose for an Open API.  See Annex E for discussion of OpenAPIs and Licensing.
+
+Two licenses currently in use on OGC activities:
+
+** https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt[OGC GeoAPI license] was developed specifically for this OGC standard.  Future revisions might consider a license defined more generally.
+
+** https://github.com/opengeospatial/teamengine/blob/master/LICENSE.txt[The OGC Compliance Team Engine] uses the Apache 2.0 license
+
+
+=== How to get Open Standards and APIs
+
+To be effective a standard must be used.
+There are many routes by which a specification becomes an effective standard.
+In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
+Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
+ http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy[Simcoe in Standards and Public Policy].
+
+The OGC approach combining implementation in the OGC Interoperability Program with the consensus process of the OGC Standards Program has been effective in developing open consensus standards backed by multiple implementations from independent organizations.  Future activities based on this API White Paper are anticipated in both the Standards Program and the Interoperability Program.

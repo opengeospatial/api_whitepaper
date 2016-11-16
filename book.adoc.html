@@ -442,13 +442,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>OGC Document 16-019r3<br></p>
+<p>OGC Document 16-019r4<br></p>
 </div>
 <hr>
 <div class="paragraph">
 <p>External identifier of this OGC® document: TBD<br>
 URL for this OGC® document: TBD<br>
-Internal reference number of this OGC® document: OGC 16-019r3<br>
+Internal reference number of this OGC® document: OGC 16-019r4<br>
 Version:<br>
 Category: OGC® White Paper <br>
 Editor: George Percivall<br>
@@ -494,16 +494,16 @@ to support discussion of possible actions in the Open Geospatial Consortium (OGC
 <p>Chapter 1 – What is an API?</p>
 </li>
 <li>
-<p>Chapter 2 – API Design using Open Standards</p>
+<p>Chapter 2 - Need for Interoperability across APIs</p>
 </li>
 <li>
-<p>Chapter 3 – OGC API Essentials</p>
+<p>Chapter 3 – API Design using Open Standards</p>
 </li>
 <li>
-<p>Chapter 4 – Open Standards and APIs.</p>
+<p>Chapter 4 – OGC API Essentials</p>
 </li>
 <li>
-<p>Chapter 5 – Summary of ideas for OGC activities for Open APIs</p>
+<p>Chapter 5 – Open Standards and APIs</p>
 </li>
 </ul>
 </div>
@@ -541,10 +541,10 @@ to support discussion of possible actions in the Open Geospatial Consortium (OGC
 <p>The proliferation of <strong>API variations degrade interoperability</strong> defined by web protocols.  The examples in Annex A show such variations in several parameters including "Zoom" level.   A summary of the differences of Zoom is provided in Chapter 2, Table 1 - Comparison of Map-related attributes from several APIs.</p>
 </li>
 <li>
-<p><strong>Protocols provide interoperability</strong> when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in Figure in Chapter 1.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly <strong>consistent use of OGC Essentials</strong> will improve interoperability (See Chapter 3)</p>
+<p><strong>Protocols provide interoperability</strong> when implemented consistently across APIs.   The OGC WMTS protocol when implemented across multiple APIs enables interoperability as demonstrated in the Figure at the end of Chapter 2.   By using consistently using the WMTS TileMatrixSet, graphics returned from several APIs can provide a consistent, composite map.  Similarly <strong>consistent use of OGC Essentials</strong> will improve interoperability (See Chapter 4).</p>
 </li>
 <li>
-<p>API implementation experience should be used to <strong>improve the OGC Web Service Protocols</strong>.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 2 and 3).</p>
+<p>API implementation experience should be used to <strong>improve the OGC Web Service Protocols</strong>.  Several RESTful approaches for defining OWS protocols based on resource types are being considered in OGC.  Further, this white paper recommends that OGC consider activities that provide for consistent implementation of OWS protocols across multiple APIs (See in particular Chapters 3 and 4).</p>
 </li>
 </ul>
 </div>
@@ -630,6 +630,7 @@ editor or the submitters:</p>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -639,36 +640,44 @@ editor or the submitters:</p>
 <li><a href="#_api_defined">1.1. API defined</a></li>
 <li><a href="#_apis_in_context">1.2. APIs in context</a></li>
 <li><a href="#_diversity_of_apis">1.3. Diversity of APIs</a></li>
-<li><a href="#_summary">1.4. Summary</a></li>
 </ul>
 </li>
-<li><a href="#_api_design_using_open_standards">2. API Design using Open Standards</a>
+<li><a href="#_need_for_interoperability_across_apis">2. Need for Interoperability across APIs</a>
 <ul class="sectlevel2">
-<li><a href="#_objectives_of_api_design">2.1. Objectives of API Design</a></li>
-<li><a href="#_geospatial_api_design_based_on_open_standards">2.2. Geospatial API design based on open standards</a></li>
-<li><a href="#_summary_of_api_design_with_open_standards">2.3. Summary of API Design with Open Standards</a></li>
+<li><a href="#_the_proliferation_of_public_apis">2.1. The Proliferation of Public APIs</a></li>
+<li><a href="#_example_variations_in_web_mapping_apis">2.2. Example variations in Web Mapping APIs</a></li>
+<li><a href="#_interoperability_across_multiple_map_servers">2.3. Interoperability across Multiple Map Servers</a></li>
 </ul>
 </li>
-<li><a href="#_ogc_api_essentials">3. OGC API Essentials</a>
+<li><a href="#_geospatial_api_design_based_on_open_standards">3. Geospatial API design based on open standards</a>
 <ul class="sectlevel2">
-<li><a href="#_the_idea_of_ogc_api_essentials">3.1. The Idea of OGC API Essentials</a></li>
-<li><a href="#_ogc_api_essentials_initial_list">3.2. OGC API Essentials - initial list</a></li>
-<li><a href="#_moving_forward_on_ogc_api_essentials">3.3. Moving forward on OGC API Essentials</a></li>
+<li><a href="#_modeling_geospatial_domain_resources">3.1. Modeling Geospatial Domain Resources</a></li>
+<li><a href="#_api_design_based_on_geospatial_requirements">3.2. API design based on geospatial requirements</a></li>
+<li><a href="#_api_specification_and_management">3.3. API Specification and Management</a></li>
+<li><a href="#_ogc_essentials_for_api_elements">3.4. OGC Essentials for API elements</a></li>
+<li><a href="#_managing_multiple_api_bindings">3.5. Managing multiple API Bindings</a></li>
+<li><a href="#_layered_api_design">3.6. Layered API design</a></li>
+<li><a href="#_api_security_patterns_for_geospatial">3.7. API Security Patterns for geospatial</a></li>
 </ul>
 </li>
-<li><a href="#_open_standards_and_apis">4. Open standards and APIs.</a>
+<li><a href="#_ogc_api_essentials">4. OGC API Essentials</a>
 <ul class="sectlevel2">
-<li><a href="#_what_is_an_open_standard">4.1. What is an Open Standard?</a></li>
-<li><a href="#_what_is_an_open_standards_setting_organization">4.2. What is an open standards setting organization?</a></li>
-<li><a href="#_the_value_of_open_standards">4.3. The Value of Open Standards</a></li>
-<li><a href="#_so_many_apis">4.4. So Many APIs</a></li>
-<li><a href="#_licenses_for_apis">4.5. Licenses for APIs</a></li>
-<li><a href="#_open_standards_and_apis_2">4.6. Open Standards and APIs</a></li>
+<li><a href="#_the_idea_of_ogc_api_essentials">4.1. The Idea of OGC API Essentials</a></li>
+<li><a href="#_ogc_api_essentials_initial_list">4.2. OGC API Essentials - initial list</a></li>
+<li><a href="#_moving_forward_on_ogc_api_essentials">4.3. Moving forward on OGC API Essentials</a></li>
 </ul>
 </li>
-<li><a href="#_summary_of_ideas_for_ogc_activities_for_open_apis">5. Summary of ideas for OGC activities for Open APIs</a></li>
-<li><a href="#_web_mapping_api_examples_2">Appendix A: Web Mapping API examples</a></li>
-<li><a href="#_web_apis_for_environmental_data_csiro_report">Appendix B: Web APIs for Environmental Data - CSIRO Report</a></li>
+<li><a href="#_open_standards_and_apis">5. Open Standards and APIs.</a>
+<ul class="sectlevel2">
+<li><a href="#_what_is_an_open_standard">5.1. What is an Open Standard?</a></li>
+<li><a href="#_what_is_an_open_standards_setting_organization">5.2. What is an Open Standards Setting Organization?</a></li>
+<li><a href="#_the_value_of_open_standards">5.3. The Value of Open Standards</a></li>
+<li><a href="#_licenses_for_apis">5.4. Licenses for APIs</a></li>
+<li><a href="#_how_to_get_open_standards_and_apis">5.5. How to get Open Standards and APIs</a></li>
+</ul>
+</li>
+<li><a href="#_web_mapping_api_examples">Appendix A: Web Mapping API examples</a></li>
+<li><a href="#_web_apis_for_environmental_data_a_report_from_csiro">Appendix B: Web APIs for Environmental Data - a Report from CSIRO</a></li>
 <li><a href="#_the_open_api_initiative_and_specification">Appendix C: The Open API Initiative and Specification</a></li>
 <li><a href="#_apis_and_implementation_independence">Appendix D: APIs and implementation independence</a></li>
 <li><a href="#_open_apis_and_licensing">Appendix E: Open APIs and Licensing</a></li>
@@ -702,10 +711,7 @@ but are also commonly targeted at a specific programming language, typically Jav
 </div>
 <div class="paragraph">
 <p>APIs are popular today as they allow an organization to publize their APIs for reuse.
-There are now over 12,000 public APIs available across a wide range of market sectors,
-a thirtyfold increase since 2006 - see <a href="http://www.programmableweb.com/">ProgrammableWeb</a>.
-Some public APIs handle billions of requests per day.
-Public APIs enable an ecosystem that developers from other organizations use to access the functionality provided behind the APIs.
+Public APIs enable developers from other organizations to access the functionality provided behind the APIs.
 APIs are closely related to role of "platforms".
 For example the Facebook API provides functionality used by multiple organizations
 thereby advancing the market value of the Facebook platform.
@@ -722,7 +728,7 @@ Open APIs adhere to open principles such as those defined by <a href="https://op
 3. Collective Empowerment,<br>
 4. Availability, and<br>
 5. Voluntary Adoption.<br>
-OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.</p>
+OGC standards go beyond OpenStand principles as all OGC standards are free to download and are royalty-free.  (See Chapter 5 for more on the meaning and values of "Open".)</p>
 </div>
 </div>
 <div class="sect2">
@@ -740,10 +746,10 @@ From an OGC open standards perspective, APIs are understood in the context of re
 <div class="paragraph">
 <p><strong>Requirements Specifications</strong> are documents that define aspects of a protocol or data model to solve an interoperability problem.
 A protocol is the set of requirements that end points in a distributed system use when they communicate.
-The requirements may be written in plain text or in a technology neutral modeling language like UML.
+The requirements may be written in plain text or in a technology neutral modeling language like UML.  Web Protocol specifications include http structures that can be directly used in APIs.
 OGC standards specify requirements for interfaces and encodings using a modular approach (OGC 08-131r3).
 Implementations of an OGC standard must satisfy requirements as demonstrated by passing conformance tests.
-The requirements apply across multiple API implementations.</p>
+The requirements in a specification can apply across multiple API implementations.</p>
 </div>
 <div class="paragraph">
 <p><strong>APIs</strong> are interfaces that when backed by implementing code satisfy an interoperability need that may be documented in a Requirements Specification.
@@ -775,7 +781,7 @@ OGC Document 15-052r1, an API is an interface definition that permits invoking s
 without knowing details of their internal implementation.</p>
 </div>
 <div class="paragraph">
-<p>The APIs listed next show the diversity of the API concept
+<p>The OGC APIs listed next show the diversity of the API concept
 while still retaining the core concept that "APIs are interfaces."</p>
 </div>
 <div class="sect3">
@@ -852,8 +858,8 @@ OGC Compliance Tests have predominantly focused on server-side testing, while mo
 to describe an architectural style for “distributed hypermedia systems” such as the Worldwide Web that
 are to have desirable characteristics including separation of concerns, scalability, resiliency, visibility, and reliability.
 The REST architectural style rests on five constraints on how computing systems are configured and component interactions are carried out
-(see for example <a href="http://www.restapitutorial.com/">= A RESTful Tutorial</a>).
-Examples of non-open standard RESTful web mapping APIs are provided in Chapter 2.</p>
+(see for example <a href="http://www.restapitutorial.com/">A RESTful Tutorial</a>).
+Examples of non-open standard RESTful web mapping APIs are provided in Appendix A.</p>
 </div>
 <div class="paragraph">
 <p>OGC Web Services (OWS) were defined before the publication of REST principles.
@@ -861,67 +867,52 @@ OGC has evaluated the implications of REST vis-a-vis OWS finding that the existi
 but also that OGC services should be migrated to, or at least make available as more RESTful bindings.
 For example, <a href="https://portal.opengeospatial.org/files/?artifact_id=64860">The OGC Testbed 11 REST Interface Engineering Report</a>
 defines possible uniform practices for developing bindings or interaction styles for OGC Web services that appropriately leverage REST principles.
-OGC Testbed 12 continues these developements and will conclude later this year.</p>
-</div>
-<div class="paragraph">
-<p>One aspect of this analysis is the use of Landing Pages to document APIs.
-The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.
-In this pattern, users follow links from one resource to the next.
-Each resource provides the information needed to proceed to the next set of resources.
-This pattern assumes a simple protocol (URLs over HTTP).
-Landing Pages are an emerging approach to document an API using this pattern.
-A landing page is a collection of web pages which document the API.
-The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities.</p>
-</div>
-<div class="paragraph">
-<p>Two examples of landing page APIs are:
-<a href="http://developer.deere.com/#/home/landing">John Deer</a> and
-<a href="http://dev.twitter.com/overview/documentation">Twitter</a></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_summary"><a class="anchor" href="#_summary"></a>1.4. Summary</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>APIs are interfaces that implement requirements for protocols or data models</p>
-</li>
-<li>
-<p>OGC Web Service standards specify web protocols based on http.</p>
-</li>
-<li>
-<p>OWS standards have been implemented in numerous APIs - see Chapter 2.</p>
-</li>
-</ul>
+OGC Testbed 12 continues these developments and will conclude late in 2016.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_api_design_using_open_standards"><a class="anchor" href="#_api_design_using_open_standards"></a>2. API Design using Open Standards</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This Chapter discusses API design by considering the variation in existing geospatial APIs as the motivation for proposing API design based on open standards.  The objective is to promote wide spread interoperability based on open API design while maintaining competitive opportunities.</p>
 </div>
+<div class="sect1">
+<h2 id="_need_for_interoperability_across_apis"><a class="anchor" href="#_need_for_interoperability_across_apis"></a>2. Need for Interoperability across APIs</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_objectives_of_api_design"><a class="anchor" href="#_objectives_of_api_design"></a>2.1. Objectives of API Design</h3>
+<h3 id="_the_proliferation_of_public_apis"><a class="anchor" href="#_the_proliferation_of_public_apis"></a>2.1. The Proliferation of Public APIs</h3>
+<div class="paragraph">
+<p>This Chapter considers the variation in existing geospatial APIs as the motivation for proposing API design based on open standards.  The objective is to promote wide spread interoperability based on open API design while maintaining competitive opportunities.</p>
+</div>
+<div class="paragraph">
+<p>There are many public APIs. As of November 2016,
+<a href="http://www.programmableweb.com/apis/directory">The Programmable Web</a> listed over 16,000 public APIs. (See Chapter 5 for distinction between public and open.)  <a href="http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/">Richardson</a> identified challenges with the proliferation of APIs including<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Thousands of APIs are superficially similar but mutually incompatible</p>
+</li>
+<li>
+<p>Everyone has a slightly different view of basic real-world concepts like “person” and “event”</p>
+</li>
+<li>
+<p>This lack of agreement makes it impossible to create client-side software that can be reused between APIs</p>
+</li>
+<li>
+<p>It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>The recent proliferation of APIs for geospatial applications has degraded the interoperability previously established by open standards.  This degradation is do both to the variability of API practices across the IT industry as well as variability in geospatial APIs specifically.</p>
 </div>
 <div class="paragraph">
 <p>Advancements in API practices is needed across the software development profession. "APIs are often difficult to use, and programmers at all levels, from novices to experts, repeatedly spend significant time learning new APIs. APIs are also often used incorrectly, resulting in bugs and sometimes significant security problems." (<a href="http://cacm.acm.org/magazines/2016/6/202645-improving-api-usability/">"Improving API Usability" in the Communications of the ACM</a>)</p>
 </div>
-<div class="paragraph">
-<p>The publication of geospatial data using APIs is advancing in many organizations.
-"Web APIs for Environmental Data", a report from CSIRO (See Annex B), provides organizations with a well-informed basis to design consistent, cross-organization APIs for access to a range of environmental data products.  Observations in the CSIRO report and listed in this Chapter provide examples of opportunities for improving geospatial API design.</p>
 </div>
-<div class="sect3">
-<h4 id="_web_mapping_api_examples"><a class="anchor" href="#_web_mapping_api_examples"></a>2.1.1. Web Mapping API examples</h4>
+<div class="sect2">
+<h3 id="_example_variations_in_web_mapping_apis"><a class="anchor" href="#_example_variations_in_web_mapping_apis"></a>2.2. Example variations in Web Mapping APIs</h3>
 <div class="paragraph">
-<p>This section provides examples of variation across existing geospatial APIs to demonstrate the need for improved API design practices.
-Web mapping APIs define interfaces to access maps over the web.
+<p>Web mapping APIs define interfaces and bindings to access maps over the web.  This section provides examples of variation across existing geospatial APIs to demonstrate the need for improved API design practices.
 While web mapping APIs are defined in multiple programming languages,
 the examples in this chapter focus on JavaScript.</p>
 </div>
@@ -934,9 +925,6 @@ Some of these APIs implement the WMS Protocol either explicitly or as an extensi
 <div class="paragraph">
 <p>Annex A lists details and code snippets for these Web Mapping API examples: Google Maps, OpenLayers, MapQuest API for OpenStreetMap, Leaflet.  Additionally two more RESTful examples are listed in Annex A: Esri ArcGIS REST and Mapbox.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_variation_in_web_mapping_apis"><a class="anchor" href="#_variation_in_web_mapping_apis"></a>2.1.2. Variation in Web Mapping APIs</h4>
 <div class="paragraph">
 <p>The Web Mapping APIs listed in the Annex A use similar concepts sometimes in attributes differing names.
 The Table below lists two such attributes  - "Center" and "Zoom" - that are in the four example APIs.  "Center" is the center point of the web map to be displayed.  "Zoom" is related to the scale of the web map to be displayed.  The concepts for these attributes are similar in each API but the precise specification is different in each case.</p>
@@ -945,54 +933,17 @@ The Table below lists two such attributes  - "Center" and "Zoom" - that are in t
 <p>The variability of similar concepts across different APIs as seen in Table 1 suggests an opportunity to quickly converge on a small set of "essential" attributes usable across otherwise disparate APIs.  This simple example motivates the discussion about geospatial domain mapping and OGC Essentials for geospatial APIs based on open standards.</p>
 </div>
 <div style="page-break-after: always;"></div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Comparison of Map-related attributes from several APIs</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">API</th>
-<th class="tableblock halign-left valign-top">Center</th>
-<th class="tableblock halign-left valign-top">Zoom</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Google Maps</strong>
-</p><p class="tableblock"> <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">Map</a> constructor class</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://developers.google.com/maps/documentation/javascript/reference#LatLng">LatLng</a> which is a point in geographical coordinates: latitude and longitude.
-</p><p class="tableblock">(CRS is not discussed on the page where LatLng is defined)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zoom is a number where zoom "0" corresponds to a map of the Earth fully zoomed out, and larger zoom levels zoom in at a higher resolution.  (Examples of Zoom range from 0 to 21)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Open Layers</strong>
-</p><p class="tableblock"><a href="http://openlayers.org/en/v3.13.0/apidoc/ol.View.html">ol.Map</a> object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ol.Coordinate - a 2D coordinate.  The coordinate system is specified with the projection option. Default is undefined, and layer sources will not be fetched if this is not set.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">zoomFactor	used to determine the resolution constraint. Default is 2.
- Available zoom levels are determined by maxZoom (default: 28), zoomFactor (default: 2) and maxResolution.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MapQuest for OSM</strong>
-</p><p class="tableblock"><a href="http://open.mapquestapi.com/staticmap/#getmap">getmap</a> method</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A center point for the map image.
-</p><p class="tableblock">(CRS unspecified)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer between 1 and  18 (<a href="http://open.mapquestapi.com/staticmap/zoomToScale.html">A table relating zoom to scale</a> is defined.)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Leaflet</strong>
-</p><p class="tableblock"><a href="http://leafletjs.com/reference-1.0.0.html#map-factory">L.Map</a> factory class</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LatLng geographic point as the center of the map.
-</p><p class="tableblock">(No CRS specified for LatLng but altitude is height of WGS84 ellipsoid)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minZoom default is 0.  maxZoom default is 18.  Method to return scale from zoom.</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>Table.  Comparison of Map-related attributes from several APIs</p>
 </div>
-<div class="sect3">
-<h4 id="_interoperability_across_multiple_map_servers"><a class="anchor" href="#_interoperability_across_multiple_map_servers"></a>2.1.3. Interoperability across Multiple Map Servers</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/Table.png" alt="test">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interoperability_across_multiple_map_servers"><a class="anchor" href="#_interoperability_across_multiple_map_servers"></a>2.3. Interoperability across Multiple Map Servers</h3>
 <div class="paragraph">
 <p>Interoperability is a primary objective of the OGC.  Consistent semantics across multiple servers independent of underlying API leads to interoperability and the ability to merge results from the multiple servers.  The figure below was created by making individual requests to several map services (the text in each “square” indicates the name of the server).  The figure illustrates what can be done if services use the same indexing systems.  The figure uses the “indexing system” defined in the WMTS Simple.</p>
 </div>
@@ -1002,13 +953,16 @@ The Table below lists two such attributes  - "Center" and "Zoom" - that are in t
 </div>
 <div class="title">Figure 3. Multiple Maps with common semantics - Interoperablity (Source: Joan Maso)</div>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_geospatial_api_design_based_on_open_standards"><a class="anchor" href="#_geospatial_api_design_based_on_open_standards"></a>2.2. Geospatial API design based on open standards</h3>
+</div>
+<div class="sect1">
+<h2 id="_geospatial_api_design_based_on_open_standards"><a class="anchor" href="#_geospatial_api_design_based_on_open_standards"></a>3. Geospatial API design based on open standards</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>In order to avoid the difficulties identified in the first part of this Chapter; this section identifies several methods based on open standards for the design of Geospatial APIs.
-The methods described in the following paragraphs shown are:</p>
+<p>To address the challenges of API proliferation addressed in Chapter 2, this Chapter identifies several methods based on open standards for the design of Geospatial APIs based on open Requirement Specifications.<br>
+These topics are addressed in the following sections for this Chapter:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1036,12 +990,20 @@ The methods described in the following paragraphs shown are:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Each of the items in listed above are discussed in a section below.</p>
+<p>The Figure below provides a summary of the topics discussed above  Geospatial API Design using open standards.</p>
 </div>
-<div class="sect3">
-<h4 id="_modeling_the_geospatial_domain"><a class="anchor" href="#_modeling_the_geospatial_domain"></a>2.2.1. Modeling the geospatial domain</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter-02-2cb28.png" alt="chapter 02 2cb28.png">
+</div>
+</div>
 <div class="paragraph">
-<p>In general, designing for a connected set of concepts in a domain will lead to more robust interactions with the resources, long term evolvability and fitness for use (<a href="http://www.mikestowe.com/blog/2014/11/what-is-spec-driven-development.php">Spec Driven Development</a>).  Design should consider an interconnected set of API resources with clear ideas and support of why and how API consumers will follow certain paths.
+<p>The following sections includes Recommendations from "Web APIs for Environmental Data", a report from CSIRO (See Annex B).  The CSIRO report provides Recommendations as a basis to design consistent, cross-organization APIs for access to a range of environmental data products.  Observations from the CSIRO report and listed in this Chapter provide examples of opportunities for improving geospatial API design.</p>
+</div>
+<div class="sect2">
+<h3 id="_modeling_geospatial_domain_resources"><a class="anchor" href="#_modeling_geospatial_domain_resources"></a>3.1. Modeling Geospatial Domain Resources</h3>
+<div class="paragraph">
+<p>Designing for a connected set of concepts will lead to more robust interactions with domain resources, long term evolvability and fitness for use (<a href="http://www.mikestowe.com/blog/2014/11/what-is-spec-driven-development.php">Spec Driven Development</a>).  Design should consider an interconnected set of API resources with clear ideas and support of why and how API consumers will follow certain paths.
 This supports the objective that APIs may not just compete by features, but also by how easily and robustly they can be used (  <a href="http://dret.typepad.com/dretblog/2016/08/api-maps-hypermedia-api-design.html">API Maps: Hypermedia API Design</a>)</p>
 </div>
 <div class="paragraph">
@@ -1058,11 +1020,23 @@ This supports the objective that APIs may not just compete by features, but also
 </ul>
 </div>
 <div class="paragraph">
-<p>Multiple map APIs designed with consistent domain model will improve development using multiple APIs, e.g., a developer can use an open API to draw the map, open map data from multiple sources in combination with commercial APIs say for advanced features such as traffic or routing.  Capturing the geospatial domain in open Requirements Specifications provides for achieving such domain interoperability.</p>
+<p>Multiple map APIs designed with a consistent domain model will improve development using multiple APIs, e.g., a developer can use an open API to draw the map, open map data from multiple sources in combination with commercial APIs say for advanced features such as traffic or routing.  Capturing the geospatial domain in open Requirements Specifications provides for achieving such domain interoperability.</p>
+</div>
+<div class="paragraph">
+<p>One aspect of this analysis is the use of Landing Pages to document APIs.
+The advent of distributed Hypermedia, in particular the World Wide Web, has introduced a new pattern of distributed processing.
+In this pattern, users follow links from one resource to the next.
+Each resource provides the information needed to proceed to the next set of resources.
+This pattern assumes a simple protocol (URLs over HTTP).
+Landing Pages are an emerging approach to document an API using this pattern.
+A landing page is a collection of web pages which document the API.
+The web pages also include URLs which can be accessed using the HTTP protocol to exercise the advertised capabilities. Two examples of landing page APIs are:
+<a href="http://developer.deere.com/#/home/landing">John Deere</a> and
+<a href="http://dev.twitter.com/overview/documentation">Twitter</a></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_api_design_based_on_geospatial_requirements"><a class="anchor" href="#_api_design_based_on_geospatial_requirements"></a>2.2.2. API design based on geospatial requirements</h4>
+<div class="sect2">
+<h3 id="_api_design_based_on_geospatial_requirements"><a class="anchor" href="#_api_design_based_on_geospatial_requirements"></a>3.2. API design based on geospatial requirements</h3>
 <div class="paragraph">
 <p>As discussed in Chapter 1, Requirements Specifications define protocols and schemas for interoperability across distributed heterogeneous distributed information systems.  APIs that implement the Requirement Specifications support such interoperability.</p>
 </div>
@@ -1080,7 +1054,7 @@ This supports the objective that APIs may not just compete by features, but also
 <a href="http://ows.example.org/dataset/ows/coverage/AvgLandTemp" class="bare">http://ows.example.org/dataset/ows/coverage/AvgLandTemp</a></p>
 </div>
 <div class="paragraph">
-<p>An example defing a relation between a requirements specification and implementing APIs is available in these two standards from the Intelligent Transport Systems (ITS) Domain:</p>
+<p>An example defining a relation between a requirements specification and implementing APIs is available in these two standards from the Intelligent Transport Systems (ITS) Domain:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1099,8 +1073,8 @@ This supports the objective that APIs may not just compete by features, but also
 <p>Resources, protocols, semantics and behaviors defined in Geospatial Requirement Specifications become the basis for API Specification and Management.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_api_specification_and_management"><a class="anchor" href="#_api_specification_and_management"></a>2.2.3. API Specification and Management</h4>
+<div class="sect2">
+<h3 id="_api_specification_and_management"><a class="anchor" href="#_api_specification_and_management"></a>3.3. API Specification and Management</h3>
 <div class="paragraph">
 <p>API specification and management are crucial software engineering functions for any organization using information technology.  As the popularity of APIs has grown in the past few years, so too have the tools, best practices and consulting services that support organizations in API specification and management.  While these tools were initially developed for organizations to manage their organization-specific APIs, the tools can also be considered for use in API design in an open standards context.  Here we consider one such tool: the Open API Specification formerly known as the Swagger specification.</p>
 </div>
@@ -1154,14 +1128,14 @@ This best practice for APIs is being discussed in the <a href="http://www.openge
 <p>Consistent use of API Specification and Management practices such as the Open API Specification and its support environment will increase consistent use of elements across multiple APIs.  To increase the interoperability across geospatial APIs, use of OGC Essentials in OAS environment should be considered.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_ogc_essentials_for_api_elements"><a class="anchor" href="#_ogc_essentials_for_api_elements"></a>2.2.4. OGC Essentials for API elements</h4>
+<div class="sect2">
+<h3 id="_ogc_essentials_for_api_elements"><a class="anchor" href="#_ogc_essentials_for_api_elements"></a>3.4. OGC Essentials for API elements</h3>
 <div class="paragraph">
-<p>OGC Essentials as described in the Chapter 3 is a set of items defined in OGC standards and other open standards that can be used in defining geospatial APIs.</p>
+<p>OGC Essentials as described in the Chapter 4 is a set of items defined in OGC standards and other open standards that can be used in defining geospatial APIs.</p>
 </div>
 <div class="paragraph">
 <p>Discussions within the OGC have identified value in recommending small bits of OGC specifications for API providers to use.
-There would be great value in porting select OGC API Essentials (as defined in Chapter 3) to the OpenAPI specification.</p>
+There would be great value in porting select OGC API Essentials (as defined in Chapter 4) to the OpenAPI specification.</p>
 </div>
 <div class="paragraph">
 <p>As an alternative to requiring a full-fledged service interface, the OGC API Essentials highlight how modules,
@@ -1171,11 +1145,11 @@ Requirements for modularity are defined in the
 <a href="https://portal.opengeospatial.org/files/?artifact_id=34762">The Specification Model - A Standard for Modular specifications (08-131r3)</a>.</p>
 </div>
 <div class="paragraph">
-<p>Reuse of OGC Essentials will lead to consistency, accuracy and reuse across the various APIs.  For example consistently using CRS Well Known Text and the WMTS TileMatrixSet would reduce the variation across web mapping APIs that was identified at the beginning of this chapter.</p>
+<p>Reuse of OGC Essentials will lead to consistency, accuracy and reuse across the various APIs.  For example consistently using CRS Well Known Text and the WMTS TileMatrixSet would reduce the variation across web mapping APIs that was identified in Chapter 2.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_managing_multiple_api_bindings"><a class="anchor" href="#_managing_multiple_api_bindings"></a>2.2.5. Managing multiple API Bindings</h4>
+<div class="sect2">
+<h3 id="_managing_multiple_api_bindings"><a class="anchor" href="#_managing_multiple_api_bindings"></a>3.5. Managing multiple API Bindings</h3>
 <div class="paragraph">
 <p>Another aspect of API management is implementation of an API Specification in multiple bindings. Language bindings are part of API packages. Multiple organizations are now posting their public APIs with bindings for multiple SDKs.</p>
 </div>
@@ -1200,8 +1174,8 @@ The Mapbox API page lists API bindings in cURL, CLI, Python, JavaScript, Java, S
 <p>From an open standards point of view, consistent implementation of elements across bindings is critical to protocol level interoperability.  For example, OGC Essentials could be defined for multiple bindings.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_layered_api_design"><a class="anchor" href="#_layered_api_design"></a>2.2.6. Layered API design</h4>
+<div class="sect2">
+<h3 id="_layered_api_design"><a class="anchor" href="#_layered_api_design"></a>3.6. Layered API design</h3>
 <div class="paragraph">
 <p>The focus of API Design using Open Standards is most critical on external APIs.  Organizations design and use both external and internal APIs in the IT systems.  External APIs are those APIs that are made available external to the organization</p>
 </div>
@@ -1239,25 +1213,13 @@ The Mapbox API page lists API bindings in cURL, CLI, Python, JavaScript, Java, S
 <p>External APIs offered by API Gateways are the most fruitful focus for API design using open standards.  With the focus on external interfaces, comes the need to address security as part of the API design.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_api_security_patterns_for_geospatial"><a class="anchor" href="#_api_security_patterns_for_geospatial"></a>2.2.7. API Security Patterns for geospatial</h4>
+<div class="sect2">
+<h3 id="_api_security_patterns_for_geospatial"><a class="anchor" href="#_api_security_patterns_for_geospatial"></a>3.7. API Security Patterns for geospatial</h3>
 <div class="paragraph">
 <p>API security patterns should be developed in coordination with OGC Security DWG.  Initial discussion with the OGC Security SWG focused on a recommendation about "well defined contract around the API" - this comment based on Digital Globe experiences.  For example its important that there be strong typing of XML or JSON so if you have enumerations they are not unbounded.</p>
 </div>
 <div class="paragraph">
 <p><a href="http://www.opengeospatial.org/standards/sensorthings">The OGC SensorThings API</a> addresses security in section 7.7 by reference to ITU-T Y.2060</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_summary_of_api_design_with_open_standards"><a class="anchor" href="#_summary_of_api_design_with_open_standards"></a>2.3. Summary of API Design with Open Standards</h3>
-<div class="paragraph">
-<p>The Figure below provides a summary of the topics discussed above  Geospatial API Design using open standards.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/chapter-02-2cb28.png" alt="chapter 02 2cb28.png">
-</div>
 </div>
 <div style="page-break-after: always;"></div>
 <div style="page-break-after: always;"></div>
@@ -1265,12 +1227,12 @@ The Mapbox API page lists API bindings in cURL, CLI, Python, JavaScript, Java, S
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ogc_api_essentials"><a class="anchor" href="#_ogc_api_essentials"></a>3. OGC API Essentials</h2>
+<h2 id="_ogc_api_essentials"><a class="anchor" href="#_ogc_api_essentials"></a>4. OGC API Essentials</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_the_idea_of_ogc_api_essentials"><a class="anchor" href="#_the_idea_of_ogc_api_essentials"></a>3.1. The Idea of OGC API Essentials</h3>
+<h3 id="_the_idea_of_ogc_api_essentials"><a class="anchor" href="#_the_idea_of_ogc_api_essentials"></a>4.1. The Idea of OGC API Essentials</h3>
 <div class="paragraph">
-<p>OGC API Essentials as proposed in this Chapter are a small subset of the capabilities defined in OGC standards and other open standards
+<p>OGC API Essentials as proposed in this Chapter are a small subset of items specified in OGC standards and other open standards
 which would be very useful to developers for the Internet and Web of geospatial information.</p>
 </div>
 <div class="paragraph">
@@ -1289,7 +1251,7 @@ And ideally there are lots of small client libraries that can be incorporated in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_api_essentials_initial_list"><a class="anchor" href="#_ogc_api_essentials_initial_list"></a>3.2. OGC API Essentials - initial list</h3>
+<h3 id="_ogc_api_essentials_initial_list"><a class="anchor" href="#_ogc_api_essentials_initial_list"></a>4.2. OGC API Essentials - initial list</h3>
 <div class="paragraph">
 <p>The following specifications are an initial set of OGC Essential Standards to support <em>geospatial components for everyone</em>.
 Not all of the following specifications are OGC standards.</p>
@@ -1361,11 +1323,11 @@ and Simplified GeoPackage Tiles (just a direct representation of Simple Tiles sc
 </div>
 <div class="paragraph">
 <p>Several other specifications should be considered to be included in this list of essential specifications for open API design.
-Its important to limit the list to specifications which are "open" as defined in Chapter 4.</p>
+Its important to limit the list to specifications which are "open" as defined in Chapter 5.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_moving_forward_on_ogc_api_essentials"><a class="anchor" href="#_moving_forward_on_ogc_api_essentials"></a>3.3. Moving forward on OGC API Essentials</h3>
+<h3 id="_moving_forward_on_ogc_api_essentials"><a class="anchor" href="#_moving_forward_on_ogc_api_essentials"></a>4.3. Moving forward on OGC API Essentials</h3>
 <div class="paragraph">
 <p>OGC API Essentials could be part of the reworking of OWS Common from an implementer’s perspective.
 It would provide a common way to access pieces of OGC capability without having to implement a full OGC interface.
@@ -1383,24 +1345,17 @@ and so on within an APIs or code library&#8217;s interface.</p>
 <p>OGC can add value and be seen as a go-to for information by defining key geospatial constructs and functionality
 and being the “cross-walk” to allow people to negotiate between the many and varied way in which these are implemented in the real world.
 There would be major value in knowing how to easily transform between differing representations, say, transforming a point in GeoJSON to one in WKT and vice versa and so on.
-Take a look at the sterling work done with <a href="https://github.com/phayes/geoPHP">GeoPHP</a>.</p>
+For example, consider the approach taken with <a href="https://github.com/phayes/geoPHP">GeoPHP</a>.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_open_standards_and_apis"><a class="anchor" href="#_open_standards_and_apis"></a>4. Open standards and APIs.</h2>
+<h2 id="_open_standards_and_apis"><a class="anchor" href="#_open_standards_and_apis"></a>5. Open Standards and APIs.</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>To be effective a standard must be used.
-There are many routes by which a specification becomes an effective standard.
-In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
-Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
- <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Simcoe in Standards and Public Policy</a>.</p>
-</div>
 <div class="sect2">
-<h3 id="_what_is_an_open_standard"><a class="anchor" href="#_what_is_an_open_standard"></a>4.1. What is an Open Standard?</h3>
+<h3 id="_what_is_an_open_standard"><a class="anchor" href="#_what_is_an_open_standard"></a>5.1. What is an Open Standard?</h3>
 <div class="paragraph">
 <p>The OGC defines Open Standards as standards that are:</p>
 </div>
@@ -1435,7 +1390,7 @@ whether employed by proprietary product vendors, independent integrators, applic
 </div>
 </div>
 <div class="sect2">
-<h3 id="_what_is_an_open_standards_setting_organization"><a class="anchor" href="#_what_is_an_open_standards_setting_organization"></a>4.2. What is an open standards setting organization?</h3>
+<h3 id="_what_is_an_open_standards_setting_organization"><a class="anchor" href="#_what_is_an_open_standards_setting_organization"></a>5.2. What is an Open Standards Setting Organization?</h3>
 <div class="paragraph">
 <p>There are multiple definitions of open standards processes.
 This set of criteria is recent and typical of the OGC concept for an open Standards Setting Organization (SSO)</p>
@@ -1463,11 +1418,11 @@ This set of criteria is recent and typical of the OGC concept for an open Standa
 </ol>
 </div>
 <div class="paragraph">
-<p>[Cargill in <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Standards and Public Policy</a>].</p>
+<p>[List from Cargill in <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Standards and Public Policy</a>].</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_value_of_open_standards"><a class="anchor" href="#_the_value_of_open_standards"></a>4.3. The Value of Open Standards</h3>
+<h3 id="_the_value_of_open_standards"><a class="anchor" href="#_the_value_of_open_standards"></a>5.3. The Value of Open Standards</h3>
 <div class="paragraph">
 <p><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwjcv_7ogdfKAhVLWz4KHYofAU4QFggcMAA&amp;url=http%3A%2F%2Flasp.colorado.edu%2Fmedia%2Fprojects%2Fegy%2Ffiles%2FROI_Study.pdf&amp;usg=AFQjCNHG81OZPasR7pOJuqMwVXWnN5uJ1A&amp;sig2=3OcyzglH1J3s2GqMHSQM0A">Geospatial Interoperability ROI study by NASA</a>:
 "Of the projects considered for this study, the project that adopted and implemented geospatial interoperability standards had a risk-adjusted ROI of 119.0%.
@@ -1488,132 +1443,42 @@ This ‘cost’ of the presence of barriers will rise with each year that passes
 </div>
 </div>
 <div class="sect2">
-<h3 id="_so_many_apis"><a class="anchor" href="#_so_many_apis"></a>4.4. So Many APIs</h3>
+<h3 id="_licenses_for_apis"><a class="anchor" href="#_licenses_for_apis"></a>5.4. Licenses for APIs</h3>
 <div class="paragraph">
-<p>There are many APIs available - most are not open as defined in this section.
-<a href="http://www.programmableweb.com/apis/directory">The Programmable Web</a> lists over 14,000 APIs.
-<a href="http://blog.programmableweb.com/2013/10/07/api-design-is-stuck-in-2008/">Richardson:</a> identified that
-"The thousands of APIs are superficially similar but mutually incompatible:</p>
+<p>There is a very broad selection of licensing options that you can choose for an Open API.  See Annex E for discussion of OpenAPIs and Licensing.</p>
+</div>
+<div class="paragraph">
+<p>Two licenses currently in use on OGC activities:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>“Everyone has a slightly different view of basic real-world concepts like “person” and “event”.</p>
+<p><a href="https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt">OGC GeoAPI license</a> was developed specifically for this OGC standard.  Future revisions might consider a license defined more generally.</p>
 </li>
 <li>
-<p>“This lack of agreement makes it impossible to create client-side software that can be reused between APIs.</p>
-</li>
-<li>
-<p>“It’s not hard to find two APIs that do exactly the same thing but have nothing in common except the application/json media type."</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_licenses_for_apis"><a class="anchor" href="#_licenses_for_apis"></a>4.5. Licenses for APIs</h3>
-<div class="paragraph">
-<p>See Annex E for discussion of OpenAPIs and Licensing</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/opengeospatial/geoapi/blob/master/LICENSE.txt">OGC GeoAPI license</a> is language developed by OGC.  Perhaps we should use a license that has broader use.</p>
-</div>
-<div class="paragraph">
 <p><a href="https://github.com/opengeospatial/teamengine/blob/master/LICENSE.txt">The OGC Compliance Team Engine</a> uses the Apache 2.0 license</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_open_standards_and_apis_2"><a class="anchor" href="#_open_standards_and_apis_2"></a>4.6. Open Standards and APIs</h3>
-<div class="paragraph">
-<p>Most APIs have a strong reliance on open standards:
-OATH (authentication), OpenSearch (share search results), JSON, SOAP, ISO 8601 (date and time), and many more.
-From an OGC perspective, there are many (hundreds?) of APIs that reference OGC interface and encoding standards.
-These API implementations of OGC standards are providing new requirements into the OGC standards process – and
-the ongoing discussions in the OGC about the role of APIs in the OGC standards development process.
-The OGC Members have developed several open APIs as part of the OGC standards process.
-So, the API itself can also be a standard. GeoAPI is an example.</p>
-</div>
-<div class="paragraph">
-<p>The steps listed in the next Chapter support the development of Open APIs.</p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_summary_of_ideas_for_ogc_activities_for_open_apis"><a class="anchor" href="#_summary_of_ideas_for_ogc_activities_for_open_apis"></a>5. Summary of ideas for OGC activities for Open APIs</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>These actions are recommended in the context of the OWS Common revision:</p>
-</div>
-<div class="paragraph">
-<p><strong>OGC Web Services and REST</strong></p>
-</div>
-<div class="paragraph">
-<p>Building on several OGC activities and external contributions, update the OGC Web Services standards with changes that address RESTful principles.  This includes modeling the geospatial domain for example from OGC Testbed and Interoperability Experiment results.  Make OWS standards revisions in concert with the OWS Common Revision.  Standards Working Groups for each of the OWS Standards in concert with the OWS Common SWG should lead this effort.</p>
-</div>
-<div class="paragraph">
-<p><strong>OWS Common</strong></p>
-</div>
-<div class="paragraph">
-<p>Update the OWS Common standard using RESTful approaches including the identification of resources.  Include OGC Essentials in the OWS Common.  The OWS Common Standards Working Group should lead this effort.</p>
-</div>
-<div class="paragraph">
-<p><strong>OGC Essentials</strong></p>
-</div>
-<div class="paragraph">
-<p>Beginning with Chapter 3 of this White Paper establish an online version of OGC Essentials.  Make the elements of OGC Essentials readily availble for reuse in other standards and in APIs.  Support both the OGC and the broader community use of OGC Essentials.  Consider chartering a new SWG for OGC Essentials.
-Develop the approach of OGC API Essentials by establishing an SWG and public process to define a web friendly list of the elements.
-Create a micro website aimed at developers building API&#8217;s, that introduces the useful pieces with references to the full OGC specs.
-And it ideally would also link out to client library implementations (like geotools for cql / wkt, etc).</p>
-</div>
-<div class="paragraph">
-<p><strong>OGC approach to API Security</strong></p>
-</div>
-<div class="paragraph">
-<p>The OGC Security DWG should review API-centric security standards and best practices.  The Security DWG should make recommendations on approaches for API security that are well suited to OGC member applications.</p>
-</div>
-<div class="paragraph">
-<p><strong>Open API Design in Interoperability Program</strong></p>
-</div>
-<div class="paragraph">
-<p>Prototype the API Design approach in an OGC Interoperability Program initiative, e.g., OGC Testbed 13.  The Interoperability Program working with Sponsoring organizations should define requirements that build on Section 2 approach.  This would include basing API design on the OWS Standards, OWS Common, OGC Essentials; working with the Open API Initiative for using OAS for OGC-based APIs; implement the OGC Security DWG recommendations for API Security; and prototype methods for managing multiple API bindings in the initiative.</p>
-</div>
-<div class="paragraph">
-<p><strong>APIs in Architecture DWG</strong></p>
-</div>
-<div class="paragraph">
-<p>The Architecture DWG should regularly review the progress of OGC activities regarding APIs.
-For example, managing of multiple API bindings should be discussed in the context of supporting multiple protocols.  OGC SensorThings has developed an approach that should be consider for other OGC Standards.
-Another topic to be considered is the note from John Herrring, Oracle, on how object-oriented RPC (remote procedure call) SOA implementations can be mapped to a RESTful ROA implementations. The hypothesis is that abstract models in UML can be implemented as HTML instances.</p>
-</div>
-<div class="paragraph">
-<p><strong>Summary of OGC&#8217;s role</strong></p>
-</div>
-<div class="paragraph">
-<p>OGC can continue to lead the development of standards that embrace the full richness of geospatial information building on the approaches of</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Appreciate the leadership of innovative organizations</p>
-</li>
-<li>
-<p>Deliver high-end functionality for critical functions</p>
-</li>
-<li>
-<p>Inform the marketplace on geospatial accuracy</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_get_open_standards_and_apis"><a class="anchor" href="#_how_to_get_open_standards_and_apis"></a>5.5. How to get Open Standards and APIs</h3>
 <div class="paragraph">
-<p>Similar to how the OGC Web Mapping Testbed in 1999 resulted in a convergence of web mapping,
-OGC can now play a leading role in the supporting the world of APIs by defining OGC API Essentials and RESTful web mapping standards.</p>
+<p>To be effective a standard must be used.
+There are many routes by which a specification becomes an effective standard.
+In practice, many technologies emerge from a hybrid process that combines both proprietary and open standardization.
+Scant research explicitly asks when or why some standards are ultimately established in the marketplace while others are developed by Standard Setting organizations (SSOs)
+ <a href="http://www.cambridge.org/us/academic/subjects/economics/industrial-economics/standards-and-public-policy">Simcoe in Standards and Public Policy</a>.</p>
+</div>
+<div class="paragraph">
+<p>The OGC approach combining implementation in the OGC Interoperability Program with the consensus process of the OGC Standards Program has been effective in developing open consensus standards backed by multiple implementations from independent organizations.  Future activities based on this API White Paper are anticipated in both the Standards Program and the Interoperability Program.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_web_mapping_api_examples_2"><a class="anchor" href="#_web_mapping_api_examples_2"></a>Appendix A: Web Mapping API examples</h2>
+<h2 id="_web_mapping_api_examples"><a class="anchor" href="#_web_mapping_api_examples"></a>Appendix A: Web Mapping API examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This Appendix provides several examples of web mapping APIs.
@@ -1908,20 +1773,11 @@ https://api.mapbox.com/v4/mapbox.edf947b8/5/6/11.grid.json?access_token=&lt;your
 </div>
 </div>
 <div class="sect1">
-<h2 id="_web_apis_for_environmental_data_csiro_report"><a class="anchor" href="#_web_apis_for_environmental_data_csiro_report"></a>Appendix B: Web APIs for Environmental Data - CSIRO Report</h2>
+<h2 id="_web_apis_for_environmental_data_a_report_from_csiro"><a class="anchor" href="#_web_apis_for_environmental_data_a_report_from_csiro"></a>Appendix B: Web APIs for Environmental Data - a Report from CSIRO</h2>
 <div class="sectionbody">
 <h3 id="_introduction" class="float">Introduction</h3>
 <div class="paragraph">
-<p>CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations on APIs for the Environmental data.</p>
-</div>
-<div class="paragraph">
-<p>"Web APIs for environmental data: State of the art investigation."
-Peter Taylor, CSIRO
-27th May 2016
-<a href="https://portal.opengeospatial.org/files/?artifact_id=68811&amp;version=1" class="bare">https://portal.opengeospatial.org/files/?artifact_id=68811&amp;version=1</a></p>
-</div>
-<div class="paragraph">
-<p>Some excerpts from the report are listed in this annex.</p>
+<p>CSIRO - an OGC member - recently completed a report that provides very relevant analysis and observations about defining and using APIs to access Environmental data:  " <a href="https://portal.opengeospatial.org/files/?artifact_id=68811&amp;version=1">Web APIs for environmental data: State of the art investigation.</a> " Peter Taylor, CSIRO 27th May 2016.  Recommendations from the report are in the body of this white paper.  Additional excerpts from the report are listed in this Appendix.</p>
 </div>
 <h3 id="_executive_summary_excerpts" class="float">Executive Summary excerpts</h3>
 <div class="paragraph">
@@ -2019,7 +1875,8 @@ Peter Taylor, CSIRO
 <ul>
 <li>
 <p>General</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Observation 2: Highly abstracted APIs can be difficult to understand and may be a barrier for new users. Trying to do too many things in a single API or Web Service can result in an overly complex, hard to understand API. Partitioning APIs into concrete API endpoints, each having clearly stated functions help to build understanding.</p>
 </li>
@@ -2029,18 +1886,26 @@ Peter Taylor, CSIRO
 <li>
 <p>Observation 8: Document common usages of your APIs that achieve certain goals, especially when they require multi-step requests to the API. For example, ‘I want to discover all observations available at a particular station’.</p>
 </li>
+</ul>
+</div>
+</li>
 <li>
 <p>Technical</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Observation 9: Make use of automated API documentation where possible. These can often be synched directly with an implementation version, which helps to minimise divergence. Some also provide interactive (e.g. Swagger) documentation that allows inline requests to be made. This helps to lower the barrier of entry for developers and quickly builds understanding.</p>
 </li>
 <li>
 <p>Observation 10: Avoid bleeding edge API description languages and response patterns. As discussed in 5.1 and 5.2, there has been an explosion in the number of these. Picking a winner is difficult. Using an overly complex, non-supported service description framework and/or response structure can be an impediment to developers.</p>
 </li>
+</ul>
+</div>
+</li>
 <li>
 <p>Modelling the domain</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Observation 18: Involve domain specialists in resource design. In organisations as complex as multi-disciplinary environmental agencies, there won’t be a single information model or Web API to rule them all. Rather there exists multiple domain contexts (Bounded Contexts - (Fowler, 2014) and (Evans, 2003)) and words with different meaning (polysemes), e.g. what is a monitoring station? Any domain-level simplifications should be reviewed within these contexts to ensure they make sense.</p>
 </li>
@@ -2049,6 +1914,9 @@ Peter Taylor, CSIRO
 </li>
 <li>
 <p>Observation 20: Monitor the outcomes of the joint W3C/OGC ‘Spatial Data on the Web’ working group50. It is working on general recommendations for publishing spatial data on the web in a consistent manner. These should be very useful in guiding convergence in some of the issues covered in this report.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -2063,7 +1931,7 @@ Peter Taylor, CSIRO
 <p>The goal of the <a href="https://openapis.org/specification">OpenAPI Specification</a> is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.</p>
 </div>
 <div class="paragraph">
-<p>The capabilities of a service are described in the structure of the OpenAPI Specification. Not all services can be described by OpenAPI&#8212;&#8203;this specification is not intended to cover every possible use-case of a REST-ful API. OpenAPI does not define a specific development process such as design-first or code-first. It does facilitate either technique by establishing clear interactions with a REST API.</p>
+<p>The capabilities of a service are described in the structure of the OpenAPI Specification. Not all services can be described by OpenAPI&#8212;&#8203;this specification is not intended to cover every possible use-case of a RESTful API. OpenAPI does not define a specific development process such as design-first or code-first. It does facilitate either technique by establishing clear interactions with a REST API.</p>
 </div>
 <div class="paragraph">
 <p>A starting point for OpenAPI is this <a href="https://github.com/OAI/OpenAPI-Specification">GitHub project</a> where you will find the information about the OpenAPI Specification, a simple static sample of what it looks like, and some general information regarding the project.</p>

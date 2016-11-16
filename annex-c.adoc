@@ -8,7 +8,7 @@
 
 The goal of the https://openapis.org/specification[OpenAPI Specification] is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.
 
-The capabilities of a service are described in the structure of the OpenAPI Specification. Not all services can be described by OpenAPI--this specification is not intended to cover every possible use-case of a REST-ful API. OpenAPI does not define a specific development process such as design-first or code-first. It does facilitate either technique by establishing clear interactions with a REST API.
+The capabilities of a service are described in the structure of the OpenAPI Specification. Not all services can be described by OpenAPI--this specification is not intended to cover every possible use-case of a RESTful API. OpenAPI does not define a specific development process such as design-first or code-first. It does facilitate either technique by establishing clear interactions with a REST API.
 
 A starting point for OpenAPI is this https://github.com/OAI/OpenAPI-Specification[GitHub project] where you will find the information about the OpenAPI Specification, a simple static sample of what it looks like, and some general information regarding the project.
 
